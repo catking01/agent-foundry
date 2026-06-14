@@ -67,9 +67,9 @@ export const STRATEGIES: Record<string, StrategyProfile> = {
     id: 'quality_first',
     name: 'Quality First',
     description: 'Selective acceptance, heavy validation and audit, single route, high quality bar.',
-    maxComplexity: 8,
-    maxRisk: 5,
-    minRewardRatio: 150, // at least 150 reward per complexity point
+    maxComplexity: 9,
+    maxRisk: 6,
+    minRewardRatio: 100, // at least 100 reward per complexity point
     routeCount: (_c: number) => 0, // single route — let quality agents handle it
     manualValidate: true,
     manualAudit: true,
@@ -232,10 +232,10 @@ export function generateStrategyActions(
     }
   }
 
-  // 6. Upgrade workshops if strategy calls for it
-  if (profile.upgradeWorkshops && state.cash > 2000) {
+  // 6. Upgrade workshops if strategy calls for it (only when well-funded)
+  if (profile.upgradeWorkshops && state.cash > 8000) {
     for (const ws of Object.values(state.workshops)) {
-      if (state.cash < ws.upgradeCost * 1.5) continue // keep a buffer
+      if (state.cash < ws.upgradeCost * 2) continue // keep a large buffer
       actions.push({
         type: 'UPGRADE_WORKSHOP',
         workshopId: ws.id,

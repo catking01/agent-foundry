@@ -1,0 +1,27 @@
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/sim/validation.test.ts (9 tests) 5ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 5ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 6ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 21ms
+ ✓ tests/sim/replay.test.ts (7 tests) 27ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 74ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 286ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 61ms
+ ✓ tests/sim/audit.test.ts (7 tests) 5ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 4ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 25ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 249ms
+ ✓ tests/sim/rng.test.ts (8 tests) 41ms
+ ✓ tests/sim/tick.test.ts (6 tests) 65ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 4ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 3ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 591ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 481ms
+
+ Test Files  17 passed (17)
+      Tests  103 passed (103)
+   Start at  19:21:51
+   Duration  5.11s (transform 623ms, setup 0ms, collect 14.35s, tests 1.47s, environment 3ms, prepare 1.87s)
+

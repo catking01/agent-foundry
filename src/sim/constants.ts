@@ -10,7 +10,7 @@ export const GAME_VERSION = '0.1.0'
 export const TICKS_PER_DAY = 1
 
 // Economy
-export const STARTING_CASH = 40000
+export const STARTING_CASH = 70000
 export const STARTING_REPUTATION = 70
 export const STARTING_EVIDENCE_INTEGRITY = 80
 export const BASE_WORKSHOP_MAINTENANCE = 50
