@@ -1,0 +1,22 @@
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/sim/audit.test.ts (7 tests) 5ms
+ ✓ tests/sim/validation.test.ts (9 tests) 5ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 5ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 5ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 7ms
+ ✓ tests/sim/replay.test.ts (7 tests) 147ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 521ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 764ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 1040ms
+   ✓ Pipeline Closure — End to End > a starter order can complete from accept to delivered 583ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 63ms
+ ✓ tests/sim/tick.test.ts (6 tests) 16ms
+ ✓ tests/sim/rng.test.ts (8 tests) 39ms
+
+ Test Files  12 passed (12)
+      Tests  68 passed (68)
+   Start at  15:24:41
+   Duration  1.97s (transform 687ms, setup 0ms, collect 2.39s, tests 2.62s, environment 11ms, prepare 2.32s)
+
