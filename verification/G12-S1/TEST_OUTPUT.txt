@@ -1,0 +1,44 @@
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 4ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 4ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 19ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 47ms
+ ✓ tests/sim/replay.test.ts (7 tests) 15ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 82ms
+ ✓ tests/sim/validation.test.ts (9 tests) 7ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 344ms
+ ✓ tests/sim/audit.test.ts (7 tests) 4ms
+ ✓ tests/sim/balanceTuningRegression.test.ts (8 tests) 379ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 190ms
+ ✓ tests/sim/explainRun.test.ts (7 tests) 163ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 4ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 10ms
+ ✓ tests/sim/ledgerAggregation.test.ts (5 tests) 465ms
+ ✓ tests/sim/failureAttribution.test.ts (7 tests) 546ms
+ ✓ tests/sim/attributionReason.test.ts (4 tests) 292ms
+ ✓ tests/sim/g12ReportConsistency.test.ts (5 tests) 721ms
+   ✓ G12 Report Consistency > two independent report generations produce identical results 488ms
+ ✓ tests/sim/tick.test.ts (6 tests) 13ms
+ ✓ tests/sim/explanationConsistency.test.ts (6 tests) 587ms
+ ✓ tests/sim/rng.test.ts (8 tests) 13ms
+ ✓ tests/sim/rawRunEvidence.test.ts (4 tests) 1909ms
+   ✓ Raw Run Evidence > aggregates recomputed from raw runs match balance runner 1065ms
+   ✓ Raw Run Evidence > game-over rate recomputed from raw runs matches aggregate 832ms
+ ✓ tests/sim/longRunBalanceTuning.test.ts (7 tests) 4ms
+ ✓ tests/sim/balanceExport.test.ts (5 tests) 2494ms
+   ✓ Balance Export > full balance export includes all sections 1285ms
+   ✓ Balance Export > full balance export is valid JSON when serialized 1204ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 4ms
+ ✓ tests/sim/hardDominanceGate.test.ts (8 tests) 3ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 3ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 669ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 563ms
+ ✓ tests/sim/tradeoffPreservation.test.ts (8 tests) 3ms
+
+ Test Files  29 passed (29)
+      Tests  177 passed (177)
+   Start at  22:45:59
+   Duration  7.25s (transform 430ms, setup 0ms, collect 33.06s, tests 9.00s, environment 10ms, prepare 2.58s)
+

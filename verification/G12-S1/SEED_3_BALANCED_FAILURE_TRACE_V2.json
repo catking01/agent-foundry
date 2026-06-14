@@ -1,0 +1,258 @@
+{
+  "seed": 3,
+  "horizon": 100,
+  "strategyId": "balanced",
+  "strategyName": "Balanced",
+  "outcome": "GAME OVER: Evidence integrity failure: unable to prove any claims.",
+  "gameOver": true,
+  "gameOverReason": "Evidence integrity failure: unable to prove any claims.",
+  "finalTick": 19,
+  "ordersCompleted": 3,
+  "cashEnd": 78057,
+  "reputationEnd": 35.72,
+  "evidenceIntegrityEnd": 14,
+  "averageQuality": 3.9,
+  "cashBreakdown": {
+    "totalSalaries": 4617,
+    "totalMaintenance": 760,
+    "totalParallelRouteCost": 0,
+    "totalUpgradeCost": 0,
+    "totalCost": 5377,
+    "totalRevenue": 3434,
+    "netPosition": -1943
+  },
+  "topNegativeEvents": [
+    {
+      "tick": 9,
+      "eventType": "AUDIT_FAILED",
+      "severity": "high",
+      "detail": "Overclaim detected (gap: 4.6). Evidence gap detected (strength: 4.1). Hidden failure routes detected.",
+      "actorId": "agent-auditor-prime",
+      "targetId": "artifact-7-0da51"
+    },
+    {
+      "tick": 10,
+      "eventType": "LATE_DELIVERY",
+      "severity": "high",
+      "detail": "Late delivery of order-bug-fix",
+      "actorId": "agent-careful-verifier",
+      "targetId": "order-bug-fix"
+    },
+    {
+      "tick": 19,
+      "eventType": "AUDIT_FAILED",
+      "severity": "high",
+      "detail": "Overclaim detected (gap: 5.1). Evidence gap detected (strength: 3.4).",
+      "actorId": "agent-auditor-prime",
+      "targetId": "artifact-17-0406a"
+    },
+    {
+      "tick": 19,
+      "eventType": "LATE_DELIVERY",
+      "severity": "high",
+      "detail": "Late delivery of order-csv-cleaning",
+      "actorId": "agent-runtime-architect",
+      "targetId": "order-csv-cleaning"
+    },
+    {
+      "tick": 8,
+      "eventType": "VALIDATION_FAILED",
+      "severity": "medium",
+      "detail": "[Script] All script checks passed. [Agent] Overclaim detected. Quality issues found.",
+      "actorId": "agent-careful-verifier",
+      "targetId": "artifact-7-0da51"
+    },
+    {
+      "tick": 9,
+      "eventType": "VALIDATION_FAILED",
+      "severity": "medium",
+      "detail": "[Script] All script checks passed. [Agent] Overclaim detected.",
+      "actorId": "agent-careful-verifier",
+      "targetId": "artifact-8-040de"
+    },
+    {
+      "tick": 10,
+      "eventType": "AUDIT_FAILED",
+      "severity": "medium",
+      "detail": "Overclaim detected (gap: 4.9).",
+      "actorId": "agent-auditor-prime",
+      "targetId": "artifact-8-040de"
+    },
+    {
+      "tick": 17,
+      "eventType": "VALIDATION_FAILED",
+      "severity": "medium",
+      "detail": "[Script] All script checks passed. [Agent] Quality issues found.",
+      "actorId": "agent-careful-verifier",
+      "targetId": "artifact-16-03c25"
+    },
+    {
+      "tick": 18,
+      "eventType": "AUDIT_FAILED",
+      "severity": "medium",
+      "detail": "Hidden failure routes detected.",
+      "actorId": "agent-runtime-architect",
+      "targetId": "artifact-16-03c25"
+    },
+    {
+      "tick": 19,
+      "eventType": "AUDIT_FAILED",
+      "severity": "medium",
+      "detail": "Overclaim detected (gap: 5.1).",
+      "actorId": "agent-careful-verifier",
+      "targetId": "artifact-17-0406a"
+    }
+  ],
+  "evidenceDrops": [
+    {
+      "tick": 9,
+      "fromLevel": 80,
+      "delta": -23,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 10,
+      "fromLevel": 57,
+      "delta": -10,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 18,
+      "fromLevel": 47,
+      "delta": -8,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 19,
+      "fromLevel": 39,
+      "delta": -25,
+      "reason": "AUDIT_COMPLETED"
+    }
+  ],
+  "reputationPenalties": [
+    {
+      "tick": 9,
+      "delta": -17,
+      "reason": "VALIDATION_COMPLETED"
+    },
+    {
+      "tick": 10,
+      "delta": -8.480000000000004,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 18,
+      "delta": -5,
+      "reason": "VALIDATION_COMPLETED"
+    },
+    {
+      "tick": 19,
+      "delta": -20.439999999999998,
+      "reason": "AUDIT_COMPLETED"
+    }
+  ],
+  "bottlenecks": [
+    {
+      "stage": "planning",
+      "maxQueueDepth": 2,
+      "totalQueuedTicks": 6
+    },
+    {
+      "stage": "engineering",
+      "maxQueueDepth": 2,
+      "totalQueuedTicks": 5
+    },
+    {
+      "stage": "validation",
+      "maxQueueDepth": 2,
+      "totalQueuedTicks": 5
+    },
+    {
+      "stage": "audit",
+      "maxQueueDepth": 2,
+      "totalQueuedTicks": 5
+    },
+    {
+      "stage": "delivery",
+      "maxQueueDepth": 2,
+      "totalQueuedTicks": 5
+    }
+  ],
+  "criticalArtifacts": [
+    {
+      "id": "artifact-17-0406a",
+      "quality": 4,
+      "evidenceStrength": 3.4,
+      "claimLevel": 8.5,
+      "overclaimGap": 5.1,
+      "validationPassed": true,
+      "auditPassed": false,
+      "riskLevel": "medium"
+    },
+    {
+      "id": "artifact-8-040de",
+      "quality": 4.1,
+      "evidenceStrength": 5.1,
+      "claimLevel": 10,
+      "overclaimGap": 4.9,
+      "validationPassed": false,
+      "auditPassed": false,
+      "riskLevel": "medium"
+    },
+    {
+      "id": "artifact-7-0da51",
+      "quality": 3.5,
+      "evidenceStrength": 4.1,
+      "claimLevel": 8.7,
+      "overclaimGap": 4.6,
+      "validationPassed": false,
+      "auditPassed": false,
+      "riskLevel": "high"
+    },
+    {
+      "id": "artifact-9-15f2c",
+      "quality": 4.6,
+      "evidenceStrength": 6.9,
+      "claimLevel": 10,
+      "overclaimGap": 3.0999999999999996,
+      "validationPassed": true,
+      "auditPassed": false,
+      "riskLevel": "medium"
+    },
+    {
+      "id": "artifact-3-0989a",
+      "quality": 3.8,
+      "evidenceStrength": 5.6,
+      "claimLevel": 7.6,
+      "overclaimGap": 2,
+      "validationPassed": false,
+      "auditPassed": true,
+      "riskLevel": "low"
+    },
+    {
+      "id": "artifact-16-03c25",
+      "quality": 3.5,
+      "evidenceStrength": 5.6,
+      "claimLevel": 7.3,
+      "overclaimGap": 1.7000000000000002,
+      "validationPassed": false,
+      "auditPassed": false,
+      "riskLevel": "medium"
+    },
+    {
+      "id": "artifact-6-0f8c8",
+      "quality": 3.9,
+      "evidenceStrength": 4.6,
+      "claimLevel": 4.6,
+      "overclaimGap": 0,
+      "validationPassed": false,
+      "auditPassed": true,
+      "riskLevel": "low"
+    }
+  ],
+  "overclaimCount": 6,
+  "validationFailureCount": 5,
+  "auditFailureCount": 5,
+  "missedDeadlineCount": 2,
+  "totalLedgerEvents": 65
+}

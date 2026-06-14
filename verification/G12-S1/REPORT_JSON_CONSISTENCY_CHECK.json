@@ -1,0 +1,79 @@
+[
+  {
+    "strategyId": "speed_first",
+    "gameOver": true,
+    "gameOverReason": "Evidence integrity failure: unable to prove any claims.",
+    "evidenceIntegrityEnd": 16,
+    "reputationEnd": 10.600000000000001,
+    "ordersCompleted": 6,
+    "highSeverityEvents": 4,
+    "mediumSeverityEvents": 7,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY",
+      "VALIDATION_FAILED"
+    ],
+    "topBottleneck": "planning",
+    "evidenceDropCount": 4,
+    "reputationPenaltyCount": 7,
+    "overclaimCount": 3
+  },
+  {
+    "strategyId": "quality_first",
+    "gameOver": true,
+    "gameOverReason": "Bankruptcy: ran out of cash.",
+    "evidenceIntegrityEnd": 31,
+    "reputationEnd": 19.760000000000012,
+    "ordersCompleted": 7,
+    "highSeverityEvents": 7,
+    "mediumSeverityEvents": 8,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "LATE_DELIVERY",
+      "AUDIT_FAILED"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 6,
+    "reputationPenaltyCount": 11,
+    "overclaimCount": 5
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "gameOver": false,
+    "gameOverReason": null,
+    "evidenceIntegrityEnd": 27,
+    "reputationEnd": 25.24,
+    "ordersCompleted": 3,
+    "highSeverityEvents": 5,
+    "mediumSeverityEvents": 5,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 4,
+    "reputationPenaltyCount": 4,
+    "overclaimCount": 5
+  },
+  {
+    "strategyId": "balanced",
+    "gameOver": false,
+    "gameOverReason": null,
+    "evidenceIntegrityEnd": 34,
+    "reputationEnd": 40.96000000000001,
+    "ordersCompleted": 5,
+    "highSeverityEvents": 6,
+    "mediumSeverityEvents": 6,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 3,
+    "reputationPenaltyCount": 4,
+    "overclaimCount": 4
+  }
+]

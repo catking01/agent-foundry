@@ -1,0 +1,22 @@
+[
+  {
+    "strategyId": "speed_first",
+    "attributionIssues": 0,
+    "issues": []
+  },
+  {
+    "strategyId": "quality_first",
+    "attributionIssues": 0,
+    "issues": []
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "attributionIssues": 0,
+    "issues": []
+  },
+  {
+    "strategyId": "balanced",
+    "attributionIssues": 0,
+    "issues": []
+  }
+]

@@ -145,38 +145,52 @@ export function explainRun(
     state = advanceTick(state)
 
     // Track evidence/reputation changes from ledger
-    for (const event of state.ledger.slice(-20)) {
-      if (event.tick !== state.tick) continue // only events from this tick
+    const tickEvents = state.ledger.slice(-30).filter(
+      (e) => e.tick === state.tick
+    )
 
-      // Evidence drops
-      if (
-        event.eventType === 'ORDER_ACCEPTED' ||
-        event.eventType === 'ORDER_DELIVERED' ||
-        event.eventType === 'ORDER_DELIVERED_MANUAL'
-      ) {
-        const newEvidence = state.evidenceIntegrity
-        if (newEvidence < prevEvidence) {
-          evidenceDrops.push({
-            tick: state.tick,
-            fromLevel: prevEvidence,
-            delta: newEvidence - prevEvidence,
-            reason: `Evidence drop after ${event.eventType}`,
-          })
-        }
-        prevEvidence = newEvidence
-      }
+    // Evidence drops — capture actual drops with best-guess cause
+    const newEvidence = state.evidenceIntegrity
+    if (newEvidence < prevEvidence) {
+      const evidenceEvent = tickEvents.find((e) =>
+        e.eventType === 'AUDIT_COMPLETED' ||
+        e.eventType === 'ORDER_DELIVERED' ||
+        e.eventType === 'ORDER_DELIVERED_MANUAL' ||
+        e.eventType === 'MANUAL_AUDIT_RUN'
+      )
+      evidenceDrops.push({
+        tick: state.tick,
+        fromLevel: prevEvidence,
+        delta: newEvidence - prevEvidence,
+        reason: evidenceEvent
+          ? evidenceEvent.eventType
+          : 'METRIC_DELTA_UNATTRIBUTED',
+      })
+    }
+    prevEvidence = newEvidence
 
-      // Reputation changes
-      if (state.reputation < prevReputation) {
-        reputationPenalties.push({
-          tick: state.tick,
-          delta: state.reputation - prevReputation,
-          reason: event.eventType,
-        })
-      }
-      prevReputation = state.reputation
+    // Reputation changes — attribute to reputation-relevant events
+    const newReputation = state.reputation
+    if (newReputation < prevReputation) {
+      const repEvent = tickEvents.find((e) =>
+        e.eventType === 'AUDIT_COMPLETED' ||
+        e.eventType === 'ORDER_DELIVERED' ||
+        e.eventType === 'ORDER_DELIVERED_MANUAL' ||
+        e.eventType === 'VALIDATION_COMPLETED' ||
+        e.eventType === 'MANUAL_AUDIT_RUN'
+      )
+      reputationPenalties.push({
+        tick: state.tick,
+        delta: newReputation - prevReputation,
+        reason: repEvent
+          ? repEvent.eventType
+          : 'METRIC_DELTA_UNATTRIBUTED',
+      })
+    }
+    prevReputation = newReputation
 
-      // Negative events from ledger
+    // Negative events from ledger
+    for (const event of tickEvents) {
       const neg = classifyLedgerEvent(event)
       if (neg) negativeEvents.push(neg)
     }
