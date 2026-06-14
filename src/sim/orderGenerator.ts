@@ -53,7 +53,7 @@ export function generateOrdersIfNeeded(state: GameState): GameState {
 
     const deadlineTicks = 8 + complexity * 2 + randInt(rng, -2, 4)
     const reward = Math.round(
-      (300 + complexity * 200 + ambiguity * 100) * (0.9 + rng() * 0.2)
+      (1000 + complexity * 600 + ambiguity * 300) * (0.9 + rng() * 0.2)
     )
     const penalty = Math.round(reward * 0.25)
 

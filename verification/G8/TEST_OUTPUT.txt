@@ -1,0 +1,23 @@
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/sim/validation.test.ts (9 tests) 2ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 2ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 2ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 8ms
+ ✓ tests/sim/replay.test.ts (7 tests) 10ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 35ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 36ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 26ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 93ms
+ ✓ tests/sim/audit.test.ts (7 tests) 3ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 3ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 4ms
+ ✓ tests/sim/tick.test.ts (6 tests) 10ms
+ ✓ tests/sim/rng.test.ts (8 tests) 9ms
+
+ Test Files  14 passed (14)
+      Tests  85 passed (85)
+   Start at  17:36:33
+   Duration  508ms (transform 290ms, setup 0ms, collect 933ms, tests 245ms, environment 1ms, prepare 781ms)
+
