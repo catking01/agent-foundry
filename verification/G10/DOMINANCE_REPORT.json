@@ -1,0 +1,98 @@
+{
+  "30": {
+    "dominantStrategy": null,
+    "dominatedBy": {
+      "speed_first": [],
+      "quality_first": [],
+      "parallel_heavy": [],
+      "balanced": []
+    },
+    "dimensions": [
+      "ordersCompleted",
+      "cashEnd",
+      "netProfit",
+      "reputationEnd",
+      "evidenceIntegrityEnd",
+      "averageQuality",
+      "majorIncidents",
+      "overclaimFindings",
+      "validationFailures",
+      "auditFailures",
+      "missedDeadlines",
+      "gameOverRate"
+    ],
+    "verdict": "No strategy dominates all others at horizon 30. Each has unique trade-offs."
+  },
+  "60": {
+    "dominantStrategy": null,
+    "dominatedBy": {
+      "speed_first": [],
+      "quality_first": [],
+      "parallel_heavy": [],
+      "balanced": []
+    },
+    "dimensions": [
+      "ordersCompleted",
+      "cashEnd",
+      "netProfit",
+      "reputationEnd",
+      "evidenceIntegrityEnd",
+      "averageQuality",
+      "majorIncidents",
+      "overclaimFindings",
+      "validationFailures",
+      "auditFailures",
+      "missedDeadlines",
+      "gameOverRate"
+    ],
+    "verdict": "No strategy dominates all others at horizon 60. Each has unique trade-offs."
+  },
+  "100": {
+    "dominantStrategy": null,
+    "dominatedBy": {
+      "speed_first": [],
+      "quality_first": [],
+      "parallel_heavy": [],
+      "balanced": []
+    },
+    "dimensions": [
+      "ordersCompleted",
+      "cashEnd",
+      "netProfit",
+      "reputationEnd",
+      "evidenceIntegrityEnd",
+      "averageQuality",
+      "majorIncidents",
+      "overclaimFindings",
+      "validationFailures",
+      "auditFailures",
+      "missedDeadlines",
+      "gameOverRate"
+    ],
+    "verdict": "No strategy dominates all others at horizon 100. Each has unique trade-offs."
+  },
+  "200": {
+    "dominantStrategy": null,
+    "dominatedBy": {
+      "speed_first": [],
+      "quality_first": [],
+      "parallel_heavy": [],
+      "balanced": []
+    },
+    "dimensions": [
+      "ordersCompleted",
+      "cashEnd",
+      "netProfit",
+      "reputationEnd",
+      "evidenceIntegrityEnd",
+      "averageQuality",
+      "majorIncidents",
+      "overclaimFindings",
+      "validationFailures",
+      "auditFailures",
+      "missedDeadlines",
+      "gameOverRate"
+    ],
+    "verdict": "No strategy dominates all others at horizon 200. Each has unique trade-offs."
+  }
+}

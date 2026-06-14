@@ -57,7 +57,7 @@ describe('Economy Balance', () => {
 
   it('severe negative cash triggers bankruptcy', () => {
     const state = createInitialState(42)
-    state.cash = -5000
+    state.cash = -9000
     state.gameOver = false
 
     const result = advanceTicks(state, 1)

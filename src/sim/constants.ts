@@ -10,13 +10,13 @@ export const GAME_VERSION = '0.1.0'
 export const TICKS_PER_DAY = 1
 
 // Economy
-export const STARTING_CASH = 70000
+export const STARTING_CASH = 80000
 export const STARTING_REPUTATION = 70
 export const STARTING_EVIDENCE_INTEGRITY = 80
 export const BASE_WORKSHOP_MAINTENANCE = 50
 export const PARALLEL_ROUTE_COST_PER_ROUTE = 150
 export const REWORK_COST_MULTIPLIER = 1.5
-export const BANKRUPTCY_THRESHOLD = -5000
+export const BANKRUPTCY_THRESHOLD = -8000
 
 // Agent
 export const FATIGUE_INCREASE_PER_WORK = 0.5

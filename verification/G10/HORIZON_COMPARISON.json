@@ -1,0 +1,146 @@
+[
+  {
+    "strategyId": "speed_first",
+    "horizon": 30,
+    "ordersCompletedMean": 5.875,
+    "cashEndMean": 78696.875,
+    "reputationEndMean": 25.015000000000004,
+    "evidenceIntegrityEndMean": 31.75,
+    "gameOverRate": 38
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 60,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": 75442.75,
+    "reputationEndMean": 17.29,
+    "evidenceIntegrityEndMean": 27,
+    "gameOverRate": 63
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 100,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": 70597.75,
+    "reputationEndMean": 17.29,
+    "evidenceIntegrityEndMean": 27,
+    "gameOverRate": 63
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 200,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": 58485.25,
+    "reputationEndMean": 17.29,
+    "evidenceIntegrityEndMean": 27,
+    "gameOverRate": 63
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 30,
+    "ordersCompletedMean": 5.625,
+    "cashEndMean": 4009,
+    "reputationEndMean": 28.815000000000005,
+    "evidenceIntegrityEndMean": 30.5,
+    "gameOverRate": 25
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 60,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": 607.375,
+    "reputationEndMean": 21.85000000000001,
+    "evidenceIntegrityEndMean": 24.25,
+    "gameOverRate": 75
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 100,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": -60.5,
+    "reputationEndMean": 21.85000000000001,
+    "evidenceIntegrityEndMean": 24.25,
+    "gameOverRate": 100
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 200,
+    "ordersCompletedMean": 6.25,
+    "cashEndMean": -60.5,
+    "reputationEndMean": 21.85000000000001,
+    "evidenceIntegrityEndMean": 24.25,
+    "gameOverRate": 100
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 30,
+    "ordersCompletedMean": 2.875,
+    "cashEndMean": 71901.75,
+    "reputationEndMean": 40.18,
+    "evidenceIntegrityEndMean": 38.75,
+    "gameOverRate": 13
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 60,
+    "ordersCompletedMean": 2.875,
+    "cashEndMean": 63423,
+    "reputationEndMean": 40.18,
+    "evidenceIntegrityEndMean": 38.75,
+    "gameOverRate": 13
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 100,
+    "ordersCompletedMean": 2.875,
+    "cashEndMean": 52118,
+    "reputationEndMean": 40.18,
+    "evidenceIntegrityEndMean": 38.75,
+    "gameOverRate": 13
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 200,
+    "ordersCompletedMean": 2.875,
+    "cashEndMean": 23855.5,
+    "reputationEndMean": 40.18,
+    "evidenceIntegrityEndMean": 38.75,
+    "gameOverRate": 13
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 30,
+    "ordersCompletedMean": 5.125,
+    "cashEndMean": 3254.5,
+    "reputationEndMean": 40.290000000000006,
+    "evidenceIntegrityEndMean": 36,
+    "gameOverRate": 25
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 60,
+    "ordersCompletedMean": 6.125,
+    "cashEndMean": -2482.375,
+    "reputationEndMean": 34.54,
+    "evidenceIntegrityEndMean": 30.5,
+    "gameOverRate": 88
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 100,
+    "ordersCompletedMean": 6.125,
+    "cashEndMean": -2585.125,
+    "reputationEndMean": 34.54,
+    "evidenceIntegrityEndMean": 30.5,
+    "gameOverRate": 100
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 200,
+    "ordersCompletedMean": 6.125,
+    "cashEndMean": -2585.125,
+    "reputationEndMean": 34.54,
+    "evidenceIntegrityEndMean": 30.5,
+    "gameOverRate": 100
+  }
+]
