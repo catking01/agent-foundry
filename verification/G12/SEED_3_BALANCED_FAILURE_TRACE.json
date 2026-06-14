@@ -105,38 +105,50 @@
   ],
   "evidenceDrops": [
     {
-      "tick": 10,
+      "tick": 9,
       "fromLevel": 80,
-      "delta": -33,
-      "reason": "Evidence drop after ORDER_DELIVERED"
+      "delta": -23,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 10,
+      "fromLevel": 57,
+      "delta": -10,
+      "reason": "AUDIT_COMPLETED"
+    },
+    {
+      "tick": 18,
+      "fromLevel": 47,
+      "delta": -8,
+      "reason": "AUDIT_COMPLETED"
     },
     {
       "tick": 19,
-      "fromLevel": 47,
-      "delta": -33,
-      "reason": "Evidence drop after ORDER_DELIVERED"
+      "fromLevel": 39,
+      "delta": -25,
+      "reason": "AUDIT_COMPLETED"
     }
   ],
   "reputationPenalties": [
     {
       "tick": 9,
       "delta": -17,
-      "reason": "AGENT_ASSIGNED"
+      "reason": "VALIDATION_COMPLETED"
     },
     {
       "tick": 10,
       "delta": -8.480000000000004,
-      "reason": "AGENT_ASSIGNED"
+      "reason": "AUDIT_COMPLETED"
     },
     {
       "tick": 18,
       "delta": -5,
-      "reason": "AGENT_ASSIGNED"
+      "reason": "VALIDATION_COMPLETED"
     },
     {
       "tick": 19,
       "delta": -20.439999999999998,
-      "reason": "AGENT_ASSIGNED"
+      "reason": "AUDIT_COMPLETED"
     }
   ],
   "bottlenecks": [

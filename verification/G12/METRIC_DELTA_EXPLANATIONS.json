@@ -3,46 +3,61 @@
     "strategyId": "speed_first",
     "evidenceDeltas": [
       {
-        "tick": 20,
-        "delta": -46,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "tick": 9,
+        "delta": -13,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
+        "tick": 10,
+        "delta": -5,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
+        "tick": 19,
+        "delta": -28,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
+        "tick": 27,
+        "delta": -18,
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "reputationDeltas": [
       {
         "tick": 10,
         "delta": -4,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 17,
         "delta": -10.239999999999995,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 18,
         "delta": -10.64,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 19,
         "delta": -21,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 20,
         "delta": -10.840000000000003,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       },
       {
         "tick": 26,
         "delta": -10.68,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 27,
         "delta": -13,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "criticalArtifacts": [
@@ -97,86 +112,86 @@
     "strategyId": "quality_first",
     "evidenceDeltas": [
       {
-        "tick": 11,
+        "tick": 10,
         "delta": -5,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
-        "tick": 13,
+        "tick": 12,
         "delta": -8,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
-        "tick": 16,
+        "tick": 15,
         "delta": -8,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 17,
         "delta": -5,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
-        "tick": 25,
+        "tick": 24,
         "delta": -15,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
-        "tick": 32,
+        "tick": 31,
         "delta": -8,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "reputationDeltas": [
       {
         "tick": 10,
         "delta": -4,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 12,
         "delta": -5,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 13,
         "delta": -0.0799999999999983,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       },
       {
         "tick": 15,
         "delta": -5,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 16,
         "delta": -10.159999999999997,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 17,
         "delta": -3.8799999999999955,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 18,
         "delta": -10.840000000000003,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       },
       {
         "tick": 24,
         "delta": -12,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 25,
         "delta": -0.6400000000000006,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       },
       {
         "tick": 31,
         "delta": -5,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "criticalArtifacts": [
@@ -231,36 +246,46 @@
     "strategyId": "parallel_heavy",
     "evidenceDeltas": [
       {
+        "tick": 8,
+        "delta": -15,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
         "tick": 9,
-        "delta": -28,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "delta": -13,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
+        "tick": 15,
+        "delta": -10,
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 16,
-        "delta": -25,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "delta": -15,
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "reputationDeltas": [
       {
         "tick": 8,
         "delta": -12,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 15,
         "delta": -8,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 16,
         "delta": -22.36,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 17,
         "delta": -10.48,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       }
     ],
     "criticalArtifacts": [
@@ -315,36 +340,41 @@
     "strategyId": "balanced",
     "evidenceDeltas": [
       {
+        "tick": 9,
+        "delta": -13,
+        "reason": "AUDIT_COMPLETED"
+      },
+      {
         "tick": 10,
-        "delta": -18,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "delta": -5,
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 19,
         "delta": -28,
-        "reason": "Evidence drop after ORDER_DELIVERED"
+        "reason": "AUDIT_COMPLETED"
       }
     ],
     "reputationDeltas": [
       {
         "tick": 9,
         "delta": -9,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "VALIDATION_COMPLETED"
       },
       {
         "tick": 10,
         "delta": -4.079999999999998,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 19,
         "delta": -21.240000000000002,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "AUDIT_COMPLETED"
       },
       {
         "tick": 20,
         "delta": -11.479999999999997,
-        "reason": "AGENT_ASSIGNED"
+        "reason": "ORDER_DELIVERED"
       }
     ],
     "criticalArtifacts": [
