@@ -1,0 +1,16 @@
+Forbidden path scan of agent-foundry-source-G7.1-7a1a3c1.zip
+
+Command:
+  unzip -l /tmp/agent-foundry-source-G7.1-7a1a3c1.zip \
+    | grep -iE 'node_modules|dist/|__MACOSX|tsbuildinfo' \
+    && echo "FORBIDDEN FOUND" || echo "ALL CLEAN"
+
+Result:
+  PASS: no node_modules/
+  PASS: no dist/
+  PASS: no __MACOSX/
+  PASS: no *.tsbuildinfo
+
+Zip stats:
+  65 files
+  ~302KB uncompressed
