@@ -1,0 +1,398 @@
+[
+  {
+    "strategyId": "speed_first",
+    "evidenceDeltas": [
+      {
+        "tick": 20,
+        "delta": -46,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      }
+    ],
+    "reputationDeltas": [
+      {
+        "tick": 10,
+        "delta": -4,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 17,
+        "delta": -10.239999999999995,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 18,
+        "delta": -10.64,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 19,
+        "delta": -21,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 20,
+        "delta": -10.840000000000003,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 26,
+        "delta": -10.68,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 27,
+        "delta": -13,
+        "reason": "AGENT_ASSIGNED"
+      }
+    ],
+    "criticalArtifacts": [
+      {
+        "id": "artifact-25-14c24",
+        "quality": 3.2,
+        "evidenceStrength": 5.1,
+        "claimLevel": 10,
+        "overclaimGap": 4.9,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-7-0772c",
+        "quality": 4,
+        "evidenceStrength": 4,
+        "claimLevel": 8.5,
+        "overclaimGap": 4.5,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-17-16a60",
+        "quality": 2.9,
+        "evidenceStrength": 4.8,
+        "claimLevel": 9,
+        "overclaimGap": 4.2,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-8-15ea8",
+        "quality": 4.4,
+        "evidenceStrength": 4.8,
+        "claimLevel": 4.8,
+        "overclaimGap": 0,
+        "validationPassed": true,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-9-01544",
+        "quality": 3.4,
+        "evidenceStrength": 7.3,
+        "claimLevel": 7.3,
+        "overclaimGap": 0,
+        "validationPassed": null,
+        "auditPassed": null
+      }
+    ]
+  },
+  {
+    "strategyId": "quality_first",
+    "evidenceDeltas": [
+      {
+        "tick": 11,
+        "delta": -5,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 13,
+        "delta": -8,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 16,
+        "delta": -8,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 17,
+        "delta": -5,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 25,
+        "delta": -15,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 32,
+        "delta": -8,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      }
+    ],
+    "reputationDeltas": [
+      {
+        "tick": 10,
+        "delta": -4,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 12,
+        "delta": -5,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 13,
+        "delta": -0.0799999999999983,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 15,
+        "delta": -5,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 16,
+        "delta": -10.159999999999997,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 17,
+        "delta": -3.8799999999999955,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 18,
+        "delta": -10.840000000000003,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 24,
+        "delta": -12,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 25,
+        "delta": -0.6400000000000006,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 31,
+        "delta": -5,
+        "reason": "AGENT_ASSIGNED"
+      }
+    ],
+    "criticalArtifacts": [
+      {
+        "id": "artifact-18-181ef",
+        "quality": 3.4,
+        "evidenceStrength": 5.4,
+        "claimLevel": 10,
+        "overclaimGap": 4.6,
+        "validationPassed": false,
+        "auditPassed": true
+      },
+      {
+        "id": "artifact-7-0772c",
+        "quality": 3.6,
+        "evidenceStrength": 4,
+        "claimLevel": 8.5,
+        "overclaimGap": 4.5,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-10-10901",
+        "quality": 3.6,
+        "evidenceStrength": 5.8,
+        "claimLevel": 9.9,
+        "overclaimGap": 4.1000000000000005,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-22-0b299",
+        "quality": 2.5,
+        "evidenceStrength": 3.1,
+        "claimLevel": 6.6,
+        "overclaimGap": 3.4999999999999996,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-19-14559",
+        "quality": 5.8,
+        "evidenceStrength": 5.8,
+        "claimLevel": 8.9,
+        "overclaimGap": 3.1000000000000005,
+        "validationPassed": false,
+        "auditPassed": false
+      }
+    ]
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "evidenceDeltas": [
+      {
+        "tick": 9,
+        "delta": -28,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 16,
+        "delta": -25,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      }
+    ],
+    "reputationDeltas": [
+      {
+        "tick": 8,
+        "delta": -12,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 15,
+        "delta": -8,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 16,
+        "delta": -22.36,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 17,
+        "delta": -10.48,
+        "reason": "AGENT_ASSIGNED"
+      }
+    ],
+    "criticalArtifacts": [
+      {
+        "id": "artifact-7-0772c",
+        "quality": 3.7,
+        "evidenceStrength": 4,
+        "claimLevel": 8.5,
+        "overclaimGap": 4.5,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-6-04594",
+        "quality": 5.2,
+        "evidenceStrength": 3.4,
+        "claimLevel": 7.8,
+        "overclaimGap": 4.4,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-13-177b3",
+        "quality": 4.1,
+        "evidenceStrength": 4.1,
+        "claimLevel": 7.7,
+        "overclaimGap": 3.6000000000000005,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-14-17f7c",
+        "quality": 3.8,
+        "evidenceStrength": 4.9,
+        "claimLevel": 8.1,
+        "overclaimGap": 3.1999999999999993,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-23-10535",
+        "quality": 5.2,
+        "evidenceStrength": 7.6,
+        "claimLevel": 10,
+        "overclaimGap": 2.4000000000000004,
+        "validationPassed": true,
+        "auditPassed": false
+      }
+    ]
+  },
+  {
+    "strategyId": "balanced",
+    "evidenceDeltas": [
+      {
+        "tick": 10,
+        "delta": -18,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      },
+      {
+        "tick": 19,
+        "delta": -28,
+        "reason": "Evidence drop after ORDER_DELIVERED"
+      }
+    ],
+    "reputationDeltas": [
+      {
+        "tick": 9,
+        "delta": -9,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 10,
+        "delta": -4.079999999999998,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 19,
+        "delta": -21.240000000000002,
+        "reason": "AGENT_ASSIGNED"
+      },
+      {
+        "tick": 20,
+        "delta": -11.479999999999997,
+        "reason": "AGENT_ASSIGNED"
+      }
+    ],
+    "criticalArtifacts": [
+      {
+        "id": "artifact-7-0772c",
+        "quality": 4,
+        "evidenceStrength": 4,
+        "claimLevel": 8.5,
+        "overclaimGap": 4.5,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-17-16a60",
+        "quality": 2.9,
+        "evidenceStrength": 4.8,
+        "claimLevel": 9,
+        "overclaimGap": 4.2,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-31-03a94",
+        "quality": 2,
+        "evidenceStrength": 6.4,
+        "claimLevel": 10,
+        "overclaimGap": 3.5999999999999996,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-27-09f31",
+        "quality": 3.2,
+        "evidenceStrength": 5.5,
+        "claimLevel": 8.4,
+        "overclaimGap": 2.9000000000000004,
+        "validationPassed": false,
+        "auditPassed": false
+      },
+      {
+        "id": "artifact-6-04594",
+        "quality": 4.4,
+        "evidenceStrength": 4.5,
+        "claimLevel": 4.5,
+        "overclaimGap": 0,
+        "validationPassed": false,
+        "auditPassed": true
+      }
+    ]
+  }
+]

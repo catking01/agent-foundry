@@ -1,0 +1,62 @@
+[
+  {
+    "strategyId": "speed_first",
+    "totalNegativeEvents": 11,
+    "totalLedgerEvents": 77,
+    "eventTypeCounts": {
+      "AUDIT_FAILED": 5,
+      "LATE_DELIVERY": 1,
+      "VALIDATION_FAILED": 5
+    },
+    "severityBreakdown": {
+      "high": 4,
+      "medium": 7,
+      "low": 0
+    }
+  },
+  {
+    "strategyId": "quality_first",
+    "totalNegativeEvents": 15,
+    "totalLedgerEvents": 128,
+    "eventTypeCounts": {
+      "LATE_DELIVERY": 6,
+      "AUDIT_FAILED": 6,
+      "VALIDATION_FAILED": 3
+    },
+    "severityBreakdown": {
+      "high": 7,
+      "medium": 8,
+      "low": 0
+    }
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "totalNegativeEvents": 10,
+    "totalLedgerEvents": 84,
+    "eventTypeCounts": {
+      "AUDIT_FAILED": 4,
+      "LATE_DELIVERY": 2,
+      "VALIDATION_FAILED": 4
+    },
+    "severityBreakdown": {
+      "high": 5,
+      "medium": 5,
+      "low": 0
+    }
+  },
+  {
+    "strategyId": "balanced",
+    "totalNegativeEvents": 12,
+    "totalLedgerEvents": 96,
+    "eventTypeCounts": {
+      "AUDIT_FAILED": 4,
+      "LATE_DELIVERY": 4,
+      "VALIDATION_FAILED": 4
+    },
+    "severityBreakdown": {
+      "high": 6,
+      "medium": 6,
+      "low": 0
+    }
+  }
+]

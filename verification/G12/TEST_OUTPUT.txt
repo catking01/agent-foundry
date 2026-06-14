@@ -1,0 +1,41 @@
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 2ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 2ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 8ms
+ ✓ tests/sim/replay.test.ts (7 tests) 11ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 33ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 122ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 43ms
+ ✓ tests/sim/validation.test.ts (9 tests) 6ms
+ ✓ tests/sim/balanceTuningRegression.test.ts (8 tests) 322ms
+ ✓ tests/sim/audit.test.ts (7 tests) 6ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 62ms
+ ✓ tests/sim/explainRun.test.ts (7 tests) 112ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 5ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 15ms
+ ✓ tests/sim/failureAttribution.test.ts (7 tests) 503ms
+ ✓ tests/sim/ledgerAggregation.test.ts (5 tests) 421ms
+   ✓ Ledger Aggregation > different strategies produce different event profiles 313ms
+ ✓ tests/sim/tick.test.ts (6 tests) 17ms
+ ✓ tests/sim/rng.test.ts (8 tests) 17ms
+ ✓ tests/sim/longRunBalanceTuning.test.ts (7 tests) 3ms
+ ✓ tests/sim/rawRunEvidence.test.ts (4 tests) 1673ms
+   ✓ Raw Run Evidence > aggregates recomputed from raw runs match balance runner 932ms
+   ✓ Raw Run Evidence > game-over rate recomputed from raw runs matches aggregate 735ms
+ ✓ tests/sim/balanceExport.test.ts (5 tests) 2184ms
+   ✓ Balance Export > full balance export includes all sections 1169ms
+   ✓ Balance Export > full balance export is valid JSON when serialized 1010ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 3ms
+ ✓ tests/sim/hardDominanceGate.test.ts (8 tests) 4ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 3ms
+ ✓ tests/sim/tradeoffPreservation.test.ts (8 tests) 2ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 537ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 459ms
+
+ Test Files  26 passed (26)
+      Tests  162 passed (162)
+   Start at  22:04:12
+   Duration  5.84s (transform 359ms, setup 0ms, collect 29.80s, tests 6.12s, environment 3ms, prepare 1.81s)
+

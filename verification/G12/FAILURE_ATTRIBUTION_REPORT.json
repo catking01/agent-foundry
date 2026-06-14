@@ -1,0 +1,103 @@
+[
+  {
+    "strategyId": "speed_first",
+    "gameOver": true,
+    "gameOverReason": "Evidence integrity failure: unable to prove any claims.",
+    "evidenceIntegrityEnd": 16,
+    "reputationEnd": 10.600000000000001,
+    "highSeverityEvents": 4,
+    "mediumSeverityEvents": 7,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY",
+      "VALIDATION_FAILED"
+    ],
+    "topBottleneck": "planning",
+    "evidenceDropCount": 1,
+    "reputationPenaltyCount": 7,
+    "overclaimCount": 3,
+    "cashBurn": {
+      "salaries": 6561,
+      "maintenance": 1080,
+      "parallelRoutes": 0,
+      "upgrades": 0,
+      "revenue": 7829
+    }
+  },
+  {
+    "strategyId": "quality_first",
+    "gameOver": true,
+    "gameOverReason": "Bankruptcy: ran out of cash.",
+    "evidenceIntegrityEnd": 31,
+    "reputationEnd": 19.760000000000012,
+    "highSeverityEvents": 7,
+    "mediumSeverityEvents": 8,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "LATE_DELIVERY",
+      "AUDIT_FAILED"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 6,
+    "reputationPenaltyCount": 11,
+    "overclaimCount": 5,
+    "cashBurn": {
+      "salaries": 17982,
+      "maintenance": 6290,
+      "parallelRoutes": 0,
+      "upgrades": 110959,
+      "revenue": 9490
+    }
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "gameOver": false,
+    "gameOverReason": null,
+    "evidenceIntegrityEnd": 27,
+    "reputationEnd": 25.24,
+    "highSeverityEvents": 5,
+    "mediumSeverityEvents": 5,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 2,
+    "reputationPenaltyCount": 4,
+    "overclaimCount": 5,
+    "cashBurn": {
+      "salaries": 24300,
+      "maintenance": 4000,
+      "parallelRoutes": 3300,
+      "upgrades": 0,
+      "revenue": 4311
+    }
+  },
+  {
+    "strategyId": "balanced",
+    "gameOver": false,
+    "gameOverReason": null,
+    "evidenceIntegrityEnd": 34,
+    "reputationEnd": 40.96000000000001,
+    "highSeverityEvents": 6,
+    "mediumSeverityEvents": 6,
+    "lowSeverityEvents": 0,
+    "topEventTypes": [
+      "AUDIT_FAILED",
+      "LATE_DELIVERY"
+    ],
+    "topBottleneck": "engineering",
+    "evidenceDropCount": 2,
+    "reputationPenaltyCount": 4,
+    "overclaimCount": 4,
+    "cashBurn": {
+      "salaries": 24300,
+      "maintenance": 4000,
+      "parallelRoutes": 600,
+      "upgrades": 0,
+      "revenue": 5794
+    }
+  }
+]
