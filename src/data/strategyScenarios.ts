@@ -99,13 +99,13 @@ export const STRATEGIES: Record<string, StrategyProfile> = {
     description: 'Moderate acceptance, 2 routes for complex orders, validate and audit high-risk work.',
     maxComplexity: 9,
     maxRisk: 7,
-    minRewardRatio: 80,
+    minRewardRatio: 50,
     routeCount: (c: number) => (c >= 6 ? 2 : 1),
     manualValidate: true,
     manualAudit: true,
     minDeliveryQuality: 5,
     requireAuditForDelivery: true,
-    upgradeWorkshops: true,
+    upgradeWorkshops: false,
   },
 }
 

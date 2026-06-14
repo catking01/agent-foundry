@@ -1,0 +1,178 @@
+[
+  {
+    "strategyId": "speed_first",
+    "horizon": 30,
+    "seedCount": 8,
+    "rawOrdersMean": 5.9,
+    "aggOrdersMean": 5.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 38,
+    "aggGameOverRate": 38,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 60,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 63,
+    "aggGameOverRate": 63,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 100,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 63,
+    "aggGameOverRate": 63,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "speed_first",
+    "horizon": 200,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 63,
+    "aggGameOverRate": 63,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 30,
+    "seedCount": 8,
+    "rawOrdersMean": 5.6,
+    "aggOrdersMean": 5.6,
+    "ordersMatch": true,
+    "rawGameOverRate": 25,
+    "aggGameOverRate": 25,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 60,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 63,
+    "aggGameOverRate": 63,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 100,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 100,
+    "aggGameOverRate": 100,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "quality_first",
+    "horizon": 200,
+    "seedCount": 8,
+    "rawOrdersMean": 6.3,
+    "aggOrdersMean": 6.3,
+    "ordersMatch": true,
+    "rawGameOverRate": 100,
+    "aggGameOverRate": 100,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 30,
+    "seedCount": 8,
+    "rawOrdersMean": 2.9,
+    "aggOrdersMean": 2.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 60,
+    "seedCount": 8,
+    "rawOrdersMean": 2.9,
+    "aggOrdersMean": 2.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 100,
+    "seedCount": 8,
+    "rawOrdersMean": 2.9,
+    "aggOrdersMean": 2.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "parallel_heavy",
+    "horizon": 200,
+    "seedCount": 8,
+    "rawOrdersMean": 2.9,
+    "aggOrdersMean": 2.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 30,
+    "seedCount": 8,
+    "rawOrdersMean": 4.9,
+    "aggOrdersMean": 4.9,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 60,
+    "seedCount": 8,
+    "rawOrdersMean": 5,
+    "aggOrdersMean": 5,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 100,
+    "seedCount": 8,
+    "rawOrdersMean": 5,
+    "aggOrdersMean": 5,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  },
+  {
+    "strategyId": "balanced",
+    "horizon": 200,
+    "seedCount": 8,
+    "rawOrdersMean": 5,
+    "aggOrdersMean": 5,
+    "ordersMatch": true,
+    "rawGameOverRate": 13,
+    "aggGameOverRate": 13,
+    "gameOverRateMatch": true
+  }
+]

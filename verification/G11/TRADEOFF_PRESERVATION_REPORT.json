@@ -1,0 +1,34 @@
+{
+  "30": {
+    "horizon": 30,
+    "speedFirstRiskHigher": true,
+    "qualityFirstCleaner": true,
+    "parallelHeavyCostlier": true,
+    "balancedTrustBest": true,
+    "consistent": true
+  },
+  "60": {
+    "horizon": 60,
+    "speedFirstRiskHigher": true,
+    "qualityFirstCleaner": true,
+    "parallelHeavyCostlier": true,
+    "balancedTrustBest": true,
+    "consistent": true
+  },
+  "100": {
+    "horizon": 100,
+    "speedFirstRiskHigher": true,
+    "qualityFirstCleaner": true,
+    "parallelHeavyCostlier": true,
+    "balancedTrustBest": true,
+    "consistent": true
+  },
+  "200": {
+    "horizon": 200,
+    "speedFirstRiskHigher": true,
+    "qualityFirstCleaner": true,
+    "parallelHeavyCostlier": true,
+    "balancedTrustBest": true,
+    "consistent": true
+  }
+}

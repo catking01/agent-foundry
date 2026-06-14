@@ -1,0 +1,20 @@
+{
+  "horizon": 100,
+  "balanced": {
+    "alive": 7,
+    "total": 8,
+    "gameOverRate": 13
+  },
+  "quality_first": {
+    "alive": 0,
+    "total": 8
+  },
+  "speed_first": {
+    "alive": 3,
+    "total": 8
+  },
+  "parallel_heavy": {
+    "alive": 7,
+    "total": 8
+  }
+}
