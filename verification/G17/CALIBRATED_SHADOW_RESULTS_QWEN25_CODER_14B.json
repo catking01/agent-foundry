@@ -1,0 +1,276 @@
+[
+  {
+    "caseId": "C01",
+    "category": "clean_high_evidence",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "C02",
+    "category": "clean_high_evidence",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "C03",
+    "category": "clean_high_evidence",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "C04",
+    "category": "clean_high_evidence",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "O01",
+    "category": "obvious_overclaim",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "O02",
+    "category": "obvious_overclaim",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "O03",
+    "category": "obvious_overclaim",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "O04",
+    "category": "obvious_overclaim",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "E01",
+    "category": "evidence_gap",
+    "advisoryLevel": "info",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "E02",
+    "category": "evidence_gap",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "E03",
+    "category": "evidence_gap",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "E04",
+    "category": "evidence_gap",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "H01",
+    "category": "hidden_failure",
+    "advisoryLevel": "caution",
+    "primaryIssue": "hidden_failure",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "H02",
+    "category": "hidden_failure",
+    "advisoryLevel": "warning",
+    "primaryIssue": "hidden_failure",
+    "secondaryIssues": [
+      "evidence_gap"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "H03",
+    "category": "hidden_failure",
+    "advisoryLevel": "critical",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap",
+      "quality",
+      "hidden_failure"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "H04",
+    "category": "hidden_failure",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "L01",
+    "category": "low_quality",
+    "advisoryLevel": "warning",
+    "primaryIssue": "evidence_gap",
+    "secondaryIssues": [
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "L02",
+    "category": "low_quality",
+    "advisoryLevel": "warning",
+    "primaryIssue": "evidence_gap",
+    "secondaryIssues": [
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "L03",
+    "category": "low_quality",
+    "advisoryLevel": "warning",
+    "primaryIssue": "quality",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "B01",
+    "category": "borderline",
+    "advisoryLevel": "warning",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [
+      "evidence_gap"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "B02",
+    "category": "borderline",
+    "advisoryLevel": "warning",
+    "primaryIssue": "evidence_gap",
+    "secondaryIssues": [
+      "quality"
+    ],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": true,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "B03",
+    "category": "borderline",
+    "advisoryLevel": "info",
+    "primaryIssue": "overclaim",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "F01",
+    "category": "false_positive_trap",
+    "advisoryLevel": "info",
+    "primaryIssue": "clean",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  },
+  {
+    "caseId": "F02",
+    "category": "false_positive_trap",
+    "advisoryLevel": "caution",
+    "primaryIssue": "evidence_gap",
+    "secondaryIssues": [],
+    "shouldBlockDelivery": false,
+    "shouldRequestHumanReview": false,
+    "falsePositiveRisk": "low"
+  }
+]

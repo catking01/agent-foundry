@@ -1,0 +1,14 @@
+{
+  "distribution": {
+    "clean": 6,
+    "overclaim": 11,
+    "hidden_failure": 2,
+    "evidence_gap": 4,
+    "quality": 1
+  },
+  "taggedCount": 18,
+  "totalCount": 24,
+  "humanReviewCount": 14,
+  "highFpRiskCount": 0,
+  "blockDeliveryAlwaysFalse": true
+}
