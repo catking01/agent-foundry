@@ -13,11 +13,18 @@ import ArtifactPanel from './ui/ArtifactPanel'
 import LedgerPanel from './ui/LedgerPanel'
 import DebuggerPanel from './ui/DebuggerPanel'
 import AgentWorkStatusFloat from './ui/AgentWorkStatusFloat'
+import TutorialChecklist, {
+  isTutorialDismissed,
+  dismissTutorial,
+} from './ui/TutorialChecklist'
 
 type TabId = 'dashboard' | 'orders' | 'workshops' | 'agents' | 'tasks' | 'artifacts' | 'ledger' | 'debugger'
 
 export default function App() {
   const [state, setState] = useState<GameState>(() => createInitialState(42))
+  const [tutorialDismissed, setTutorialDismissed] = useState(() =>
+    isTutorialDismissed(),
+  )
   const [activeTab, setActiveTab] = useState<TabId>('dashboard')
   const [autoRun, setAutoRun] = useState(false)
   const [speed, setSpeed] = useState(1)
@@ -177,6 +184,16 @@ export default function App() {
 
       {/* Global floating HUD — always visible, read-only */}
       <AgentWorkStatusFloat state={state} />
+
+      {/* First-run tutorial checklist */}
+      <TutorialChecklist
+        state={state}
+        dismissed={tutorialDismissed}
+        onDismiss={() => {
+          dismissTutorial()
+          setTutorialDismissed(true)
+        }}
+      />
     </div>
   )
 }
