@@ -12,6 +12,7 @@ import TaskBoard from './ui/TaskBoard'
 import ArtifactPanel from './ui/ArtifactPanel'
 import LedgerPanel from './ui/LedgerPanel'
 import DebuggerPanel from './ui/DebuggerPanel'
+import AgentWorkStatusFloat from './ui/AgentWorkStatusFloat'
 
 type TabId = 'dashboard' | 'orders' | 'workshops' | 'agents' | 'tasks' | 'artifacts' | 'ledger' | 'debugger'
 
@@ -173,6 +174,9 @@ export default function App() {
       {activeTab === 'artifacts' && <ArtifactPanel state={state} />}
       {activeTab === 'ledger' && <LedgerPanel state={state} />}
       {activeTab === 'debugger' && <DebuggerPanel state={state} />}
+
+      {/* Global floating HUD — always visible, read-only */}
+      <AgentWorkStatusFloat state={state} />
     </div>
   )
 }
