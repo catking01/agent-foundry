@@ -6,6 +6,7 @@ import {
   type AgentWorkStatusSummary,
   type WorkshopQueueStatus,
 } from '../game/agentStatusSelectors'
+import { useLang } from '../i18n/LanguageContext'
 
 interface Props {
   state: GameState
@@ -19,6 +20,7 @@ const STATUS_COLORS: Record<string, string> = {
 }
 
 export default function AgentWorkStatusFloat({ state }: Props) {
+  const { t } = useLang()
   const [expanded, setExpanded] = useState(false)
   const summary = useMemo(() => getAgentWorkStatusSummary(state), [state])
 
@@ -50,17 +52,17 @@ export default function AgentWorkStatusFloat({ state }: Props) {
       >
         <div style={{ display: 'flex', gap: 10, alignItems: 'center', fontSize: 11 }}>
           <span style={{ fontWeight: 600, color: 'var(--text-bright)' }}>
-            AI Workers
+            {t('aiWorkers')}
           </span>
           <span style={{ color: 'var(--accent-bright)' }}>
-            {summary.workingAgents} working
+            {summary.workingAgents} {t('working')}
           </span>
           <span style={{ color: 'var(--green)' }}>
-            · {summary.idleAgents} idle
+            · {summary.idleAgents} {t('idle')}
           </span>
           {summary.blockedAgents > 0 && (
             <span style={{ color: 'var(--red)' }}>
-              · {summary.blockedAgents} blocked
+              · {summary.blockedAgents} {t('blocked')}
             </span>
           )}
         </div>
@@ -91,7 +93,7 @@ export default function AgentWorkStatusFloat({ state }: Props) {
           }}
         >
           {/* Overview */}
-          <Section title="Overview">
+          <Section title={t('overview')}>
             <div
               style={{
                 display: 'grid',
@@ -99,31 +101,31 @@ export default function AgentWorkStatusFloat({ state }: Props) {
                 gap: '2px 12px',
               }}
             >
-              <KV label="Tick" value={summary.tick} />
-              <KV label="Fatigue avg" value={summary.averageFatigue.toFixed(1)} />
-              <KV label="Active tasks" value={summary.activeTasks} />
-              <KV label="Queued tasks" value={summary.queuedTasks} />
-              <KV label="Bottleneck" value={summary.bottleneckStage ?? 'none'} />
-              <KV label="Total agents" value={summary.totalAgents} />
+              <KV label={t('tick')} value={summary.tick} />
+              <KV label={t('fatigueAvg')} value={summary.averageFatigue.toFixed(1)} />
+              <KV label={t('activeTasks')} value={summary.activeTasks} />
+              <KV label={t('queuedTasks')} value={summary.queuedTasks} />
+              <KV label={t('bottleneck')} value={summary.bottleneckStage ?? t('none')} />
+              <KV label={t('totalAgents')} value={summary.totalAgents} />
             </div>
           </Section>
 
           {/* Agents */}
-          <Section title={`Agents (${summary.totalAgents})`}>
+          <Section title={`${t('agents')} (${summary.totalAgents})`}>
             {summary.agents.map((agent) => (
               <AgentCard key={agent.agentId} agent={agent} />
             ))}
           </Section>
 
           {/* Workshop Queues */}
-          <Section title="Workshops">
+          <Section title={t('workshops')}>
             {summary.workshopQueues.map((wq) => (
               <WorkshopQueueRow key={wq.workshopId} wq={wq} />
             ))}
           </Section>
 
           {/* Recent Events */}
-          <Section title={`Recent Events (${summary.recentEvents.length})`}>
+          <Section title={`${t('recentEvents')} (${summary.recentEvents.length})`}>
             {summary.recentEvents.slice(0, 8).map((e, i) => (
               <div
                 key={`${e.tick}-${i}`}

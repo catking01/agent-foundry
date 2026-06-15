@@ -17,10 +17,12 @@ import TutorialChecklist, {
   isTutorialDismissed,
   dismissTutorial,
 } from './ui/TutorialChecklist'
+import { useLang } from './i18n/LanguageContext'
 
 type TabId = 'dashboard' | 'orders' | 'workshops' | 'agents' | 'tasks' | 'artifacts' | 'ledger' | 'debugger'
 
 export default function App() {
+  const { t, lang, toggleLang } = useLang()
   const [state, setState] = useState<GameState>(() => createInitialState(42))
   const [tutorialDismissed, setTutorialDismissed] = useState(() =>
     isTutorialDismissed(),
@@ -82,15 +84,15 @@ export default function App() {
     setState(createInitialState(Date.now() % 100000))
   }, [])
 
-  const tabs: { id: TabId; label: string }[] = [
-    { id: 'dashboard', label: 'Dashboard' },
-    { id: 'orders', label: 'Orders' },
-    { id: 'workshops', label: 'Workshops' },
-    { id: 'agents', label: 'AI Agents' },
-    { id: 'tasks', label: 'Tasks' },
-    { id: 'artifacts', label: 'Artifacts' },
-    { id: 'ledger', label: 'Ledger' },
-    { id: 'debugger', label: 'Debugger' },
+  const tabs: { id: TabId; label: string; key: string }[] = [
+    { id: 'dashboard', label: t('dashboard'), key: 'dashboard' },
+    { id: 'orders', label: t('orders'), key: 'orders' },
+    { id: 'workshops', label: t('workshops'), key: 'workshops' },
+    { id: 'agents', label: t('agents'), key: 'agents' },
+    { id: 'tasks', label: t('tasks'), key: 'tasks' },
+    { id: 'artifacts', label: t('artifacts'), key: 'artifacts' },
+    { id: 'ledger', label: t('ledger'), key: 'ledger' },
+    { id: 'debugger', label: t('debugger'), key: 'debugger' },
   ]
 
   return (
@@ -99,20 +101,23 @@ export default function App() {
       <header className="app-header">
         <div>
           <h1>
-            群智工坊：Agent Foundry
-            <span className="subtitle">AI Company Simulation</span>
+            {t('appTitle')}
+            <span className="subtitle">{t('appSubtitle')}</span>
           </h1>
         </div>
         <div className="header-actions">
           <button onClick={handleAdvanceTick} disabled={state.gameOver || autoRun}>
-            Tick {state.tick} →
+            {t('tick')} {state.tick} →
           </button>
           <button
             onClick={() => setAutoRun(!autoRun)}
             className={autoRun ? 'danger' : ''}
             disabled={state.gameOver}
           >
-            {autoRun ? '⏸ Stop' : '▶ Auto'}
+            {autoRun ? `⏸ ${t('stop')}` : `▶ ${t('auto')}`}
+          </button>
+          <button onClick={toggleLang} className="small" title={t('language')}>
+            {lang === 'zh' ? 'EN' : '中'}
           </button>
           <select
             value={speed}
@@ -132,10 +137,10 @@ export default function App() {
             <option value={8}>8×</option>
           </select>
           <button onClick={handleExport} className="small">
-            Export
+            {t('export')}
           </button>
           <button onClick={handleNewGame} className="small danger">
-            New Game
+            {t('newGame')}
           </button>
         </div>
       </header>
@@ -143,14 +148,14 @@ export default function App() {
       {/* Game Over */}
       {state.gameOver && (
         <div className="game-over-overlay">
-          <h2>Game Over</h2>
+          <h2>{t('gameOver')}</h2>
           <p>{state.gameOverReason}</p>
           <p>
-            Final Score: {state.metrics.totalRevenue - state.metrics.totalCost} |{' '}
-            Reputation: {state.reputation} | Orders: {state.metrics.totalOrdersCompleted}
+            {t('finalScore')}: {state.metrics.totalRevenue - state.metrics.totalCost} |{' '}
+            {t('reputation')}: {state.reputation} | {t('orders')}: {state.metrics.totalOrdersCompleted}
           </p>
           <button onClick={handleNewGame} className="primary">
-            Start New Game
+            {t('startNewGame')}
           </button>
         </div>
       )}

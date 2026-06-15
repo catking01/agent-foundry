@@ -8,9 +8,14 @@ import TutorialChecklist, {
   isTutorialDismissed,
   dismissTutorial,
 } from '../../src/ui/TutorialChecklist'
+import { LanguageProvider } from '../../src/i18n/LanguageContext'
 import { createInitialState } from '../../src/sim/createInitialState'
 import { applyPlayerAction } from '../../src/game/actions'
 import { advanceTicks } from '../../src/sim/tick'
+
+function wrap(ui: React.ReactElement) {
+  return render(<LanguageProvider>{ui}</LanguageProvider>)
+}
 
 describe('TutorialChecklist', () => {
   beforeEach(() => {
@@ -19,16 +24,16 @@ describe('TutorialChecklist', () => {
 
   it('renders when not dismissed', () => {
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={false} onDismiss={() => {}} />,
     )
-    expect(container.textContent).toContain('First Run')
-    expect(container.textContent).toContain('Accept your first order')
+    expect(container.textContent).toContain('新手引导')
+    expect(container.textContent).toContain('接取第一个订单')
   })
 
   it('renders nothing when dismissed', () => {
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={true} onDismiss={() => {}} />,
     )
     expect(container.textContent).toBe('')
@@ -36,17 +41,17 @@ describe('TutorialChecklist', () => {
 
   it('shows all 7 tutorial steps', () => {
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={false} onDismiss={() => {}} />,
     )
     // Should mention key concepts
-    expect(container.textContent).toContain('Accept')
-    expect(container.textContent).toContain('agent')
-    expect(container.textContent).toContain('artifact')
-    expect(container.textContent).toContain('Validation')
-    expect(container.textContent).toContain('Audit')
-    expect(container.textContent).toContain('Deliver')
-    expect(container.textContent).toContain('HUD')
+    expect(container.textContent).toContain('接取')
+    expect(container.textContent).toContain('员工')
+    expect(container.textContent).toContain('产出物')
+    expect(container.textContent).toContain('验证')
+    expect(container.textContent).toContain('审计')
+    expect(container.textContent).toContain('交付')
+    expect(container.textContent).toContain('浮窗')
   })
 
   it('steps update as player progresses', () => {
@@ -62,7 +67,7 @@ describe('TutorialChecklist', () => {
       tick: state.tick,
     })
 
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist
         state={afterAccept}
         dismissed={false}
@@ -79,7 +84,7 @@ describe('TutorialChecklist', () => {
   it('has dismiss button', () => {
     const state = createInitialState(42)
     let dismissed = false
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist
         state={state}
         dismissed={false}
@@ -92,7 +97,7 @@ describe('TutorialChecklist', () => {
     // Find and click the skip button
     const buttons = container.querySelectorAll('button')
     const skipBtn = Array.from(buttons).find((b) =>
-      b.textContent?.includes('Skip'),
+      b.textContent?.includes('跳过'),
     )
     expect(skipBtn).toBeTruthy()
     if (skipBtn) fireEvent.click(skipBtn)
@@ -112,7 +117,7 @@ describe('TutorialChecklist', () => {
     // TutorialChecklist only receives state: GameState and dismissed/onDismiss
     // It never receives onDispatch prop
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={false} onDismiss={() => {}} />,
     )
     // Just verify it renders without crashing
@@ -121,18 +126,18 @@ describe('TutorialChecklist', () => {
 
   it('mentions Agent HUD in the tutorial steps', () => {
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={false} onDismiss={() => {}} />,
     )
-    expect(container.textContent).toContain('HUD')
+    expect(container.textContent).toContain('浮窗')
   })
 
   it('mentions audit and evidence concepts', () => {
     const state = createInitialState(42)
-    const { container } = render(
+    const { container } = wrap(
       <TutorialChecklist state={state} dismissed={false} onDismiss={() => {}} />,
     )
-    expect(container.textContent).toContain('Audit')
+    expect(container.textContent).toContain('审计')
     expect(container.textContent).toContain('overclaim')
   })
 })

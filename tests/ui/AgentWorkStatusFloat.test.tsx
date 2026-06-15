@@ -5,53 +5,58 @@ import { describe, it, expect } from 'vitest'
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import AgentWorkStatusFloat from '../../src/ui/AgentWorkStatusFloat'
+import { LanguageProvider } from '../../src/i18n/LanguageContext'
 import { createInitialState } from '../../src/sim/createInitialState'
 import { applyPlayerAction } from '../../src/game/actions'
 import { advanceTicks } from '../../src/sim/tick'
 
+function wrap(ui: React.ReactElement) {
+  return render(<LanguageProvider>{ui}</LanguageProvider>)
+}
+
 describe('AgentWorkStatusFloat', () => {
   it('renders collapsed summary bar', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
-    expect(container.textContent).toContain('AI Workers')
-    expect(container.textContent).toContain('working')
-    expect(container.textContent).toContain('idle')
+    expect(container.textContent).toContain('AI 员工')
+    expect(container.textContent).toContain('工作中')
+    expect(container.textContent).toContain('空闲')
   })
 
   it('collapsed bar shows correct idle count at start', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
-    expect(container.textContent).toContain('0 working')
+    expect(container.textContent).toContain('0 工作中')
   })
 
   it('expands to show Overview section', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
     // Click the collapsed bar to expand
     const bar = container.querySelector('[style*="cursor: pointer"]')
     if (bar) fireEvent.click(bar)
 
     // Overview should now be visible
-    expect(container.textContent).toContain('Overview')
+    expect(container.textContent).toContain('总览')
     expect(container.textContent).toContain('Tick')
-    expect(container.textContent).toContain('Fatigue avg')
-    expect(container.textContent).toContain('Active tasks')
-    expect(container.textContent).toContain('Queued tasks')
-    expect(container.textContent).toContain('Bottleneck')
-    expect(container.textContent).toContain('Total agents')
+    expect(container.textContent).toContain('平均疲劳')
+    expect(container.textContent).toContain('活跃任务')
+    expect(container.textContent).toContain('排队任务')
+    expect(container.textContent).toContain('瓶颈')
+    expect(container.textContent).toContain('员工总数')
   })
 
   it('expands to show Agents section', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
     const bar = container.querySelector('[style*="cursor: pointer"]')
     if (bar) fireEvent.click(bar)
 
-    expect(container.textContent).toContain('Agents')
+    expect(container.textContent).toContain('AI 员工')
     // Should show agent names
     expect(container.textContent).toContain('FastCoder-7')
     expect(container.textContent).toContain('CarefulVerifier')
@@ -60,12 +65,12 @@ describe('AgentWorkStatusFloat', () => {
 
   it('expands to show Workshops section', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
     const bar = container.querySelector('[style*="cursor: pointer"]')
     if (bar) fireEvent.click(bar)
 
-    expect(container.textContent).toContain('Workshops')
+    expect(container.textContent).toContain('车间')
     expect(container.textContent).toContain('planning')
     expect(container.textContent).toContain('engineering')
     expect(container.textContent).toContain('validation')
@@ -85,19 +90,19 @@ describe('AgentWorkStatusFloat', () => {
     })
     next = advanceTicks(next, 5)
 
-    const { container } = render(<AgentWorkStatusFloat state={next} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={next} />)
 
     const bar = container.querySelector('[style*="cursor: pointer"]')
     if (bar) fireEvent.click(bar)
 
-    expect(container.textContent).toContain('Recent Events')
+    expect(container.textContent).toContain('最近事件')
     // Should have ledger events with tick numbers
     expect(container.textContent).toMatch(/T\d+/)
   })
 
   it('does not expose mutation buttons', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
     const buttons = container.querySelectorAll('button')
     expect(buttons.length).toBe(0)
@@ -105,7 +110,7 @@ describe('AgentWorkStatusFloat', () => {
 
   it('does not call Ollama or shadowAudit', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
 
     expect(container.textContent).not.toContain('shadowAudit')
     expect(container.textContent).not.toContain('Ollama')
@@ -113,7 +118,7 @@ describe('AgentWorkStatusFloat', () => {
 
   it('is read-only — no dispatch prop accepted', () => {
     const state = createInitialState(42)
-    const { container } = render(<AgentWorkStatusFloat state={state} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={state} />)
     expect(container).toBeTruthy()
   })
 
@@ -128,7 +133,7 @@ describe('AgentWorkStatusFloat', () => {
     })
     next = advanceTicks(next, 5)
 
-    const { container } = render(<AgentWorkStatusFloat state={next} />)
+    const { container } = wrap(<AgentWorkStatusFloat state={next} />)
 
     const bar = container.querySelector('[style*="cursor: pointer"]')
     if (bar) fireEvent.click(bar)
