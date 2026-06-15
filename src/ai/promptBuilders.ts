@@ -78,33 +78,15 @@ Rules:
  * Build the user prompt with the specific artifact context.
  */
 export function buildUserPrompt(ctx: ShadowAuditContext): string {
-  const schemaStr = JSON.stringify(SHADOW_AUDIT_JSON_SCHEMA, null, 2)
-
   return `Evaluate this artifact:
 
-ORDER:
-- Title: "${ctx.orderTitle}"
-- Domain: ${ctx.orderDomain}
-- Complexity: ${ctx.orderComplexity}/10
-- Acceptance Criteria: ${ctx.orderAcceptanceCriteria.join(', ')}
+ORDER: "${ctx.orderTitle}" (${ctx.orderDomain}, complexity ${ctx.orderComplexity}/10)
+Criteria: ${ctx.orderAcceptanceCriteria.join(', ')}
 
-ARTIFACT:
-- Kind: ${ctx.artifactKind}
-- Quality Score: ${ctx.artifactQuality}/10
-- Evidence Strength: ${ctx.artifactEvidenceStrength}/10
-- Defect Count: ${ctx.artifactDefectCount}
-- Claim Level: ${ctx.artifactClaimLevel}/10
+ARTIFACT: ${ctx.artifactKind}, quality ${ctx.artifactQuality}/10, evidence ${ctx.artifactEvidenceStrength}/10, claim ${ctx.artifactClaimLevel}/10, defects ${ctx.artifactDefectCount}
+Overclaim gap: ${(ctx.artifactClaimLevel - ctx.artifactEvidenceStrength).toFixed(1)}
 
-CONTEXT:
-- Script Validation: ${ctx.validationPassed === null ? 'not run' : ctx.validationPassed ? 'PASSED' : 'FAILED'}${ctx.validationScore !== null ? ` (score: ${ctx.validationScore})` : ''}
-- Deterministic Audit: ${ctx.auditPassed === null ? 'not run' : ctx.auditPassed ? 'PASSED' : 'FAILED'}
-- Hidden Failures in Parallel Routes: ${ctx.hasHiddenFailures ? 'YES — some parallel routes failed or produced low-quality artifacts' : 'No'}
-- Total Routes Attempted: ${ctx.routeCount}
-- Failed/Loser Routes: ${ctx.loserCount}
+CONTEXT: validation=${ctx.validationPassed === null ? 'none' : ctx.validationPassed ? 'PASS' : 'FAIL'}, audit=${ctx.auditPassed === null ? 'none' : ctx.auditPassed ? 'PASS' : 'FAIL'}, hiddenFailures=${ctx.hasHiddenFailures}, routes=${ctx.routeCount}, losers=${ctx.loserCount}
 
-Overclaim gap: claim level (${ctx.artifactClaimLevel}) minus evidence strength (${ctx.artifactEvidenceStrength}) = ${(ctx.artifactClaimLevel - ctx.artifactEvidenceStrength).toFixed(1)}
-
-Based on this information, evaluate the artifact and respond with JSON matching this schema:
-
-${schemaStr}`
+Respond with ONLY a JSON object with keys: semanticPass, overclaimDetected, evidenceGapDetected, hiddenFailureConcern, riskLevel (low/medium/high), reason (string), confidence (0-10).`
 }

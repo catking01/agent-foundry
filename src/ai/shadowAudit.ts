@@ -85,10 +85,9 @@ export async function shadowAudit(
       model: effectiveModel,
       prompt: fullPrompt,
       stream: false,
-      format: 'json',
       options: {
         temperature: 0.1,
-        num_predict: 512,
+        num_predict: 200,
       },
     },
     baseUrl,
@@ -103,9 +102,23 @@ export async function shadowAudit(
     }
   }
 
-  // Parse the JSON response
+  // Parse the JSON response — handle markdown code blocks and other wrapping
   try {
-    const parsed = JSON.parse(response.trim())
+    let jsonStr = response.trim()
+
+    // Strip markdown code blocks: ```json ... ``` or ``` ... ```
+    const codeBlockMatch = jsonStr.match(/```(?:json)?\s*\n?([\s\S]*?)```/)
+    if (codeBlockMatch) {
+      jsonStr = codeBlockMatch[1].trim()
+    }
+
+    // Try to find a JSON object in the response
+    const jsonMatch = jsonStr.match(/\{[\s\S]*\}/)
+    if (jsonMatch) {
+      jsonStr = jsonMatch[0]
+    }
+
+    const parsed = JSON.parse(jsonStr)
 
     return {
       semanticPass:

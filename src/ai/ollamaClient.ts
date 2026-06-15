@@ -57,13 +57,19 @@ export async function checkOllamaAvailable(
  * Send a generate request to Ollama and return the parsed response.
  * Returns null if Ollama is unreachable or returns an error.
  */
+/**
+ * Debug flag — when true, writes raw Ollama responses to stderr.
+ */
+let DEBUG_OLLAMA = false
+export function setOllamaDebug(enabled: boolean) { DEBUG_OLLAMA = enabled }
+
 export async function ollamaGenerate(
   request: OllamaGenerateRequest,
   baseUrl: string = DEFAULT_OLLAMA_URL,
 ): Promise<string | null> {
   try {
     const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 60000) // 60s timeout
+    const timeout = setTimeout(() => controller.abort(), 180000) // 180s timeout for large models
 
     const response = await fetch(`${baseUrl}/api/generate`, {
       method: 'POST',

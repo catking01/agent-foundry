@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "model": "qwen2.5-coder:14b",
+    "timestamp": "2026-06-15T04:38:59.835Z",
+    "host": "localhost:11434"
+  },
+  "artifacts": {
+    "highClaim": {
+      "claimLevel": 9,
+      "evidenceStrength": 2,
+      "quality": 7.5,
+      "defectCount": 3,
+      "overclaimGap": 7,
+      "validationPassed": true,
+      "auditPassed": null,
+      "hiddenFailures": true,
+      "routes": 3,
+      "losers": 2
+    },
+    "clean": {
+      "claimLevel": 9,
+      "evidenceStrength": 8.5,
+      "quality": 9,
+      "defectCount": 0,
+      "overclaimGap": 0.5,
+      "validationPassed": true,
+      "auditPassed": true,
+      "hiddenFailures": false,
+      "routes": 1,
+      "losers": 0
+    }
+  },
+  "results": {
+    "highClaim": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "riskLevel": "high",
+      "reason": "The artifact significantly overclaims its capabilities, has a low evidence strength compared to the claim level, and there are hidden or failed parallel routes producing this artifact.",
+      "confidence": 8,
+      "model": "qwen2.5-coder:14b",
+      "responseTimeMs": 28677,
+      "callSucceeded": true,
+      "errorMessage": null
+    },
+    "clean": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "riskLevel": "low",
+      "reason": "The artifact meets the criteria with a slight evidence gap compared to its claim.",
+      "confidence": 9,
+      "model": "qwen2.5-coder:14b",
+      "responseTimeMs": 20442,
+      "callSucceeded": true,
+      "errorMessage": null
+    }
+  }
+}

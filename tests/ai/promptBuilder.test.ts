@@ -80,17 +80,16 @@ describe('Prompt Builders (no Ollama required)', () => {
     expect(prompt).toContain('4/10')
     expect(prompt).toContain('8/10')
 
-    // Should contain context
-    expect(prompt).toContain('PASSED')
-    expect(prompt).toContain('not run') // audit is null
+    // Should contain context (short format)
+    expect(prompt).toContain('validation=PASS')
+    expect(prompt).toContain('audit=none') // audit is null
 
     // Should contain overclaim gap
     expect(prompt).toContain('4.0') // 8.0 - 4.0
 
-    // Should contain JSON schema
+    // Should contain response instructions
     expect(prompt).toContain('semanticPass')
     expect(prompt).toContain('riskLevel')
-    expect(prompt).toContain('"type": "object"')
   })
 
   it('buildUserPrompt handles null validation', () => {
@@ -98,7 +97,7 @@ describe('Prompt Builders (no Ollama required)', () => {
     const ctx = buildShadowAuditContext(mockOrder, artifact, false, 1, 0)
     const prompt = buildUserPrompt(ctx)
 
-    expect(prompt).toContain('not run')
+    expect(prompt).toContain('validation=none')
   })
 
   it('buildUserPrompt handles failed audit', () => {
@@ -106,6 +105,6 @@ describe('Prompt Builders (no Ollama required)', () => {
     const ctx = buildShadowAuditContext(mockOrder, artifact, false, 1, 0)
     const prompt = buildUserPrompt(ctx)
 
-    expect(prompt).toContain('FAILED')
+    expect(prompt).toContain('audit=FAIL')
   })
 })

@@ -1,0 +1,28 @@
+[
+  {
+    "artifact": "high-claim (gap=7)",
+    "deterministicAudit": null,
+    "shadowSemanticPass": false,
+    "shadowRiskLevel": "high",
+    "shadowOverclaimDetected": true,
+    "shadowEvidenceGapDetected": true,
+    "shadowHiddenFailureConcern": true,
+    "shadowConfidence": 8,
+    "model": "qwen2.5-coder:14b",
+    "responseTimeMs": 28677,
+    "callSucceeded": true
+  },
+  {
+    "artifact": "clean (gap=0.5)",
+    "deterministicAudit": true,
+    "shadowSemanticPass": true,
+    "shadowRiskLevel": "low",
+    "shadowOverclaimDetected": false,
+    "shadowEvidenceGapDetected": true,
+    "shadowHiddenFailureConcern": false,
+    "shadowConfidence": 9,
+    "model": "qwen2.5-coder:14b",
+    "responseTimeMs": 20442,
+    "callSucceeded": true
+  }
+]
