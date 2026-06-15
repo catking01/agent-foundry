@@ -1,0 +1,34 @@
+{
+  "seed": 42,
+  "orderId": "order-landing-page",
+  "orderTitle": "Build a simple landing page",
+  "trace": [
+    {
+      "step": "accept",
+      "tick": 0,
+      "orderStatus": "accepted"
+    },
+    {
+      "step": "validation",
+      "tick": 9,
+      "artifactCount": 2
+    },
+    {
+      "step": "audit",
+      "tick": 10,
+      "artifactCount": 2
+    },
+    {
+      "step": "delivered",
+      "tick": 11,
+      "cash": 78911,
+      "reputation": 77.76,
+      "evidenceIntegrity": 67
+    }
+  ],
+  "finalTick": 11,
+  "cash": 78911,
+  "reputation": 77.76,
+  "evidenceIntegrity": 67,
+  "ordersCompleted": 1
+}
