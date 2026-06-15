@@ -1,0 +1,890 @@
+[
+  {
+    "caseId": "C01",
+    "category": "clean_high_evidence",
+    "description": "Perfect artifact, everything matches",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 10,
+      "reason": "The artifact meets all criteria with no overclaims, evidence gaps, quality concerns, or hidden failures."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 15143,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "C02",
+    "category": "clean_high_evidence",
+    "description": "High quality web app, evidence-backed",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 10,
+      "reason": "The artifact meets the customer's requirements with a small gap between claim and evidence, but no significant issues detected."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 8614,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "C03",
+    "category": "clean_high_evidence",
+    "description": "Research paper summary, strong evidence",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 10,
+      "reason": "The artifact meets all criteria with high quality and evidence, no overclaims or hidden failures."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 8552,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "C04",
+    "category": "clean_high_evidence",
+    "description": "Data cleaning plan, clean execution",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 9,
+      "reason": "The artifact meets the criteria with a small gap between claim and evidence, no overclaims, and only one defect. The quality is high."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 9369,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "O01",
+    "category": "obvious_overclaim",
+    "description": "Huge overclaim: claim=10, evidence=1",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 8,
+      "reason": "The artifact has significant overclaims, evidence gaps, and quality concerns. The overclaim gap is 9.0, indicating a large discrepancy between the claims and the provided evidence. Additionally, the quality score is only 6/10 with 5 defects, raising quality concerns."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 12160,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "O02",
+    "category": "obvious_overclaim",
+    "description": "API spec with inflated claims",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has an overclaim gap of 7.0, quality concerns due to a low quality score and multiple defects, and an evidence gap."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 11965,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "O03",
+    "category": "obvious_overclaim",
+    "description": "Research comparison with fake evidence",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has an overclaim gap of 8.0, evidence gap of 9.0, and a quality score of 4/10 with 6 defects."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 14627,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "O04",
+    "category": "obvious_overclaim",
+    "description": "Dashboard spec claiming full coverage",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has an overclaim gap of 6.0, evidence gap of 6.0, and quality concerns due to a low quality score and multiple defects."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 15272,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "E01",
+    "category": "evidence_gap",
+    "description": "Claim exceeds evidence by large margin",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact's claim significantly exceeds the evidence provided, with an overclaim gap of 5.0."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 16953,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "E02",
+    "category": "evidence_gap",
+    "description": "Moderate overclaim, evidence is thin",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has an overclaim gap of 4.0, evidence gap of 4.0, and a quality score of 6/10 with 2 defects."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": false,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 19565,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "E03",
+    "category": "evidence_gap",
+    "description": "Data validation report with weak backing",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has an overclaim gap of 4.0, evidence gap of 4.0, and a quality score below 5 with 3 defects."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": false,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 20393,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "E04",
+    "category": "evidence_gap",
+    "description": "Runtime contract with insufficient evidence",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "high",
+      "confidence": 8,
+      "reason": "The artifact has a significant overclaim gap and an evidence gap, which raises concerns about the accuracy of its claims."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 17660,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "H01",
+    "category": "hidden_failure",
+    "description": "3 routes, 2 failed, best artifact selected",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium",
+      "confidence": 8,
+      "reason": "Hidden failures are present, raising concern about the selected artifact."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 15301,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "H02",
+    "category": "hidden_failure",
+    "description": "Multi-route competition with hidden losers",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium",
+      "confidence": 8,
+      "reason": "Hidden failures are present, raising concern about the selected artifact."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 15557,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "H03",
+    "category": "hidden_failure",
+    "description": "Overclaim + hidden failures combined",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has significant overclaims, evidence gaps, quality concerns, and hidden failure routes."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 16908,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "H04",
+    "category": "hidden_failure",
+    "description": "Single route — no hidden failures to flag",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 10,
+      "reason": "The artifact meets the criteria with no significant overclaims, evidence gaps, or quality concerns. The risk level is low as there are no hidden failures and only one route."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 19804,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "L01",
+    "category": "low_quality",
+    "description": "Low quality artifact despite matched evidence",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has a low quality score and many defects, raising quality concerns. The evidence strength is also significantly lower than the claim level."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": false,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 18515,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "L02",
+    "category": "low_quality",
+    "description": "Very low quality, many defects",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 9,
+      "reason": "The artifact has a very low quality score and many defects, raising significant concerns about its usability and reliability."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 18631,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "L03",
+    "category": "low_quality",
+    "description": "Low quality data work",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "high",
+      "confidence": 10,
+      "reason": "The artifact has a low quality score and many defects, raising quality concerns."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": false,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 17689,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "B01",
+    "category": "borderline",
+    "description": "Gap=1.5 — borderline overclaim",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium",
+      "confidence": 8,
+      "reason": "Overclaim gap is significant (1.5), and evidence strength is meaningfully lower than claim level."
+    },
+    "matches": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": false,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 19313,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "B02",
+    "category": "borderline",
+    "description": "Gap=2 — mild but noticeable",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": true,
+      "riskLevel": "medium",
+      "confidence": 8,
+      "reason": "The artifact has a quality score of 6/10 and defects greater than 3, which triggers the qualityConcernDetected flag. Additionally, there is an evidence gap between the claim level (6/10) and the evidence strength (4/10)."
+    },
+    "matches": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": false,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 25442,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "B03",
+    "category": "borderline",
+    "description": "Gap=3 — moderate risk, low complexity",
+    "expected": {
+      "semanticPass": false,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium"
+    },
+    "observed": {
+      "semanticPass": false,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "medium",
+      "confidence": 8,
+      "reason": "Overclaim detected due to a gap of 3.0 between claim and evidence."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 20962,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "F01",
+    "category": "false_positive_trap",
+    "description": "High complexity task, good evidence",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 9,
+      "reason": "The artifact meets the criteria with a small gap in evidence and one defect, but no significant issues."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": true,
+      "allFive": true
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 17189,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  },
+  {
+    "caseId": "F02",
+    "category": "false_positive_trap",
+    "description": "Runtime order — complex but well-executed",
+    "expected": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low"
+    },
+    "observed": {
+      "semanticPass": true,
+      "overclaimDetected": false,
+      "evidenceGapDetected": true,
+      "hiddenFailureConcern": false,
+      "qualityConcernDetected": false,
+      "riskLevel": "low",
+      "confidence": 9,
+      "reason": "The artifact meets the criteria with a small gap between claim and evidence, but no significant issues detected."
+    },
+    "matches": {
+      "semanticPass": true,
+      "overclaimDetected": true,
+      "evidenceGapDetected": false,
+      "hiddenFailureConcern": true,
+      "qualityConcernDetected": true,
+      "riskLevel": true,
+      "allFour": false,
+      "allFive": false
+    },
+    "callSucceeded": true,
+    "responseTimeMs": 17741,
+    "model": "qwen2.5-coder:14b",
+    "errorMessage": null
+  }
+]

@@ -17,6 +17,7 @@ export interface BenchmarkRunEntry {
     overclaimDetected: boolean
     evidenceGapDetected: boolean
     hiddenFailureConcern: boolean
+    qualityConcernDetected: boolean
     riskLevel: string
   }
 
@@ -25,6 +26,7 @@ export interface BenchmarkRunEntry {
     overclaimDetected: boolean
     evidenceGapDetected: boolean
     hiddenFailureConcern: boolean
+    qualityConcernDetected: boolean
     riskLevel: string
     confidence: number
     reason: string
@@ -35,8 +37,10 @@ export interface BenchmarkRunEntry {
     overclaimDetected: boolean
     evidenceGapDetected: boolean
     hiddenFailureConcern: boolean
+    qualityConcernDetected: boolean
     riskLevel: boolean
     allFour: boolean
+    allFive: boolean
   }
 
   callSucceeded: boolean
@@ -136,6 +140,7 @@ async function runBenchmarkCase(
     overclaimDetected: result.overclaimDetected,
     evidenceGapDetected: result.evidenceGapDetected,
     hiddenFailureConcern: result.hiddenFailureConcern,
+    qualityConcernDetected: result.qualityConcernDetected,
     riskLevel: result.riskLevel,
     confidence: result.confidence,
     reason: result.reason,
@@ -146,6 +151,7 @@ async function runBenchmarkCase(
     overclaimDetected: c.expectedOverclaimDetected,
     evidenceGapDetected: c.expectedEvidenceGapDetected,
     hiddenFailureConcern: c.expectedHiddenFailureConcern,
+    qualityConcernDetected: c.expectedQualityConcernDetected,
     riskLevel: c.expectedRiskLevel,
   }
 
@@ -154,14 +160,17 @@ async function runBenchmarkCase(
     overclaimDetected: observed.overclaimDetected === expected.overclaimDetected,
     evidenceGapDetected: observed.evidenceGapDetected === expected.evidenceGapDetected,
     hiddenFailureConcern: observed.hiddenFailureConcern === expected.hiddenFailureConcern,
+    qualityConcernDetected: observed.qualityConcernDetected === expected.qualityConcernDetected,
     riskLevel: observed.riskLevel === expected.riskLevel,
     allFour: false,
+    allFive: false,
   }
   matches.allFour =
     matches.semanticPass &&
     matches.overclaimDetected &&
     matches.evidenceGapDetected &&
     matches.hiddenFailureConcern
+  matches.allFive = matches.allFour && matches.qualityConcernDetected
 
   return {
     caseId: c.id,
@@ -224,7 +233,7 @@ export async function runShadowAuditBenchmark(
   for (const entry of entries) {
     if (!catMap[entry.category]) catMap[entry.category] = { total: 0, matched: 0 }
     catMap[entry.category].total++
-    if (entry.matches.allFour) catMap[entry.category].matched++
+    if (entry.matches.allFive) catMap[entry.category].matched++
   }
   const categoryBreakdown: Record<string, { total: number; matched: number; accuracy: number }> = {}
   for (const [cat, v] of Object.entries(catMap)) {

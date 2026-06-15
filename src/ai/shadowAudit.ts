@@ -137,6 +137,10 @@ export async function shadowAudit(
         typeof parsed.hiddenFailureConcern === 'boolean'
           ? parsed.hiddenFailureConcern
           : false,
+      qualityConcernDetected:
+        typeof parsed.qualityConcernDetected === 'boolean'
+          ? parsed.qualityConcernDetected
+          : false,
       riskLevel: ['low', 'medium', 'high'].includes(parsed.riskLevel)
         ? (parsed.riskLevel as 'low' | 'medium' | 'high')
         : 'low',

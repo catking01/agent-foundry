@@ -1,0 +1,3 @@
+   Start at  15:20:26
+   Duration  6.84s (transform 535ms, setup 0ms, collect 32.57s, tests 8.35s, environment 8ms, prepare 2.25s)
+

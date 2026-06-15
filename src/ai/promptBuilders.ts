@@ -66,12 +66,14 @@ Your role: evaluate whether an artifact (a deliverable produced by an AI employe
 
 Rules:
 1. Be concise and objective.
-2. If the artifact's claims significantly exceed its evidence, flag overclaim.
-3. If evidence strength is low compared to claim level, flag evidence gap.
-4. If there were hidden or failed parallel routes producing this artifact, flag hidden failure concern.
-5. Risk level should be 'high' if multiple issues are present, 'medium' if one significant issue, 'low' if all clear.
-6. Confidence should reflect how certain you are given the information provided.
-7. Respond ONLY with valid JSON matching the schema.`
+2. OverclaimDetected: true only when claims SIGNIFICANTLY exceed evidence (gap > 3). A small gap (≤3) is NOT overclaim — it may be evidenceGapDetected instead.
+3. EvidenceGapDetected: true when evidence strength is meaningfully lower than claim level (gap > 1), even if the artifact is otherwise acceptable.
+4. QualityConcernDetected: true when the artifact has low quality score (<5) OR many defects (>3), regardless of claim/evidence alignment. Quality issues are SEPARATE from overclaim — a low-quality artifact with honest claims has qualityConcernDetected=true but overclaimDetected=false.
+5. HiddenFailureConcern: true only if hidden/failed parallel routes are present AND their existence raises concern about the selected artifact.
+6. SemanticPass: false if ANY of overclaimDetected, qualityConcernDetected, or hiddenFailureConcern is true. EvidenceGapDetected alone does NOT necessarily fail semanticPass — it depends on severity.
+7. Risk level: 'high' if multiple issues OR severe quality issue (quality < 4), 'medium' if one significant issue, 'low' if all clear.
+8. Confidence: 0-10, how certain you are given the information provided.
+9. Respond ONLY with valid JSON.`
 }
 
 /**
@@ -88,5 +90,5 @@ Overclaim gap: ${(ctx.artifactClaimLevel - ctx.artifactEvidenceStrength).toFixed
 
 CONTEXT: validation=${ctx.validationPassed === null ? 'none' : ctx.validationPassed ? 'PASS' : 'FAIL'}, audit=${ctx.auditPassed === null ? 'none' : ctx.auditPassed ? 'PASS' : 'FAIL'}, hiddenFailures=${ctx.hasHiddenFailures}, routes=${ctx.routeCount}, losers=${ctx.loserCount}
 
-Respond with ONLY a JSON object with keys: semanticPass, overclaimDetected, evidenceGapDetected, hiddenFailureConcern, riskLevel (low/medium/high), reason (string), confidence (0-10).`
+Respond with ONLY a JSON object with keys: semanticPass, overclaimDetected, evidenceGapDetected, qualityConcernDetected, hiddenFailureConcern, riskLevel (low/medium/high), reason (string), confidence (0-10).`
 }

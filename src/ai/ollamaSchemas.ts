@@ -19,6 +19,10 @@ export interface ShadowAuditResult {
   /** Whether hidden or failed parallel routes are a concern */
   hiddenFailureConcern: boolean
 
+  /** Whether the artifact has quality defects (low quality, many defects)
+   *  independent of overclaim or evidence issues */
+  qualityConcernDetected: boolean
+
   /** Overall risk assessment */
   riskLevel: 'low' | 'medium' | 'high'
 
@@ -53,6 +57,7 @@ export function shadowAuditDefault(
     overclaimDetected: false,
     evidenceGapDetected: false,
     hiddenFailureConcern: false,
+    qualityConcernDetected: false,
     riskLevel: 'low',
     reason: errorMessage
       ? `Shadow audit unavailable: ${errorMessage}`
@@ -91,6 +96,11 @@ export const SHADOW_AUDIT_JSON_SCHEMA = {
       description:
         'Whether hidden or failed parallel routes raise concerns about this artifact',
     },
+    qualityConcernDetected: {
+      type: 'boolean',
+      description:
+        'Whether the artifact has quality defects (low quality score, many defects) independent of overclaim or evidence issues',
+    },
     riskLevel: {
       type: 'string',
       enum: ['low', 'medium', 'high'],
@@ -114,6 +124,7 @@ export const SHADOW_AUDIT_JSON_SCHEMA = {
     'overclaimDetected',
     'evidenceGapDetected',
     'hiddenFailureConcern',
+    'qualityConcernDetected',
     'riskLevel',
     'reason',
     'confidence',

@@ -1,0 +1,77 @@
+{
+  "allFour": {
+    "clean_high_evidence": {
+      "total": 4,
+      "matched": 4,
+      "accuracy": 1
+    },
+    "obvious_overclaim": {
+      "total": 4,
+      "matched": 4,
+      "accuracy": 1
+    },
+    "evidence_gap": {
+      "total": 4,
+      "matched": 2,
+      "accuracy": 0.5
+    },
+    "hidden_failure": {
+      "total": 4,
+      "matched": 3,
+      "accuracy": 0.75
+    },
+    "low_quality": {
+      "total": 3,
+      "matched": 1,
+      "accuracy": 0.3333333333333333
+    },
+    "borderline": {
+      "total": 3,
+      "matched": 0,
+      "accuracy": 0
+    },
+    "false_positive_trap": {
+      "total": 2,
+      "matched": 1,
+      "accuracy": 0.5
+    }
+  },
+  "allFive": {
+    "clean_high_evidence": {
+      "total": 4,
+      "matched": 4,
+      "accuracy": 1
+    },
+    "obvious_overclaim": {
+      "total": 4,
+      "matched": 0,
+      "accuracy": 0
+    },
+    "evidence_gap": {
+      "total": 4,
+      "matched": 1,
+      "accuracy": 0.25
+    },
+    "hidden_failure": {
+      "total": 4,
+      "matched": 2,
+      "accuracy": 0.5
+    },
+    "low_quality": {
+      "total": 3,
+      "matched": 1,
+      "accuracy": 0.3333333333333333
+    },
+    "borderline": {
+      "total": 3,
+      "matched": 0,
+      "accuracy": 0
+    },
+    "false_positive_trap": {
+      "total": 2,
+      "matched": 1,
+      "accuracy": 0.5
+    }
+  },
+  "note": "allFour matches semanticPass+overclaim+evidenceGap+hiddenFailure. allFive adds qualityConcernDetected. The model over-triggers qualityConcernDetected on artifacts with defects, even when root cause is overclaim/evidence."
+}

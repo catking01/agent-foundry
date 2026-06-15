@@ -61,6 +61,7 @@ describe('Shadow Audit Schema (no Ollama required)', () => {
       overclaimDetected: false,
       evidenceGapDetected: false,
       hiddenFailureConcern: false,
+      qualityConcernDetected: false,
       riskLevel: 'low',
       reason: 'test',
       confidence: 5,
