@@ -88,13 +88,18 @@ export default function TutorialChecklist({ state, dismissed, onDismiss }: Props
         {!collapsed && (
           <span style={{ fontSize: 10, color: 'var(--accent-bright)' }}>{completed}/{STEPS.length}</span>
         )}
-        <button
-          className="small"
-          style={{ marginLeft: 8, padding: '1px 6px', fontSize: 10 }}
+        <span
           onClick={(e) => { e.stopPropagation(); setCollapsed(!collapsed) }}
+          style={{
+            marginLeft: 8, cursor: 'pointer', fontSize: 16, lineHeight: 1,
+            color: 'var(--accent-bright)', userSelect: 'none',
+            background: 'var(--bg-card)', borderRadius: 4,
+            padding: '2px 8px', fontWeight: 700,
+          }}
+          title={collapsed ? '展开教程' : '收起教程'}
         >
-          {collapsed ? '▶' : '◀'}
-        </button>
+          {collapsed ? '＋' : '－'}
+        </span>
       </div>
 
       {collapsed ? (
