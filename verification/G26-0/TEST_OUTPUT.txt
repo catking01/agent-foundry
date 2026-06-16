@@ -1,0 +1,47 @@
+G26-0 Test Output — 2026-06-16
+===============================
+
+Full Suite:
+  Test Files: 44 passed (44)
+  Tests:      309 passed | 12 skipped (321)
+  Result:     ALL GREEN — ZERO FAILURES
+
+New Test Files (3):
+  ✓ tests/sim/metricSemantics.test.ts (9 tests)
+    - overclaimFindings is DETECTION, not ACTUAL
+    - evidenceIntegrityEnd is ACTUAL
+    - all detection metrics have warnings
+    - actual metrics have no warnings
+    - exposure metrics include auditCoverageRate, undetectedOverclaimExposure
+    - every metric has zh/en labels
+    - coordinationCost defined for G26+ hierarchy
+    - returns undefined for unknown metric
+
+  ✓ tests/sim/agentProfiles.test.ts (14 tests)
+    - worker profile has null leadership
+    - lead profile has non-null leadership
+    - default capability skills at 5
+    - default work style biases at 5
+    - default evidence discipline at 5
+    - default communication at 5
+    - default leadership span 4
+    - default agent state: fatigue=0, morale=7
+    - all presets registered (6)
+    - fast executor: high speed bias + overclaim tendency
+    - balanced cell lead has leadership
+    - worker presets have null leadership, lead presets don't
+    - capability skills in 0-10 range
+    - evidence discipline values in 0-10 range
+
+  ✓ tests/sim/orgRoles.test.ts (22 tests)
+    - worker → 执行员, cell_lead → 小组长, workshop_lead → 车间长
+    - department_lead → 部门主管, operations_lead → 运营主管
+    - worker level 0, operations_lead level 4
+    - hierarchy levels strictly ascending
+    - isLeadRole correctly identifies leads
+    - getRoleDisplayName zh/en
+    - subordinate/superior relationships correct
+    - span of control defaults
+    - all roles have zh/en descriptions
+
+All Existing Tests: PASS (no regressions)

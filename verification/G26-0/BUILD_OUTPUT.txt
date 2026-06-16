@@ -1,0 +1,30 @@
+G26-0 Build Output — 2026-06-16
+================================
+
+TypeScript Check:
+  npx tsc -b
+  Result: CLEAN (0 errors)
+
+Production Build:
+  npx vite build --base=/agent-foundry/
+  Result: ✓ built in ~800ms
+
+  dist/index.html                 0.62 kB
+  dist/assets/index-*.css         5.84 kB
+  dist/assets/index-*.js        608.07 kB
+
+New Source Files (4):
+  src/sim/metricSemantics.ts      (13 metric definitions, 5 categories)
+  src/sim/agentProfiles.ts        (7 interfaces, 8 factory functions)
+  src/sim/orgRoles.ts             (OrgRole type, 10 exports, 5 roles)
+  src/data/agentProfilePresets.ts (6 presets with metadata)
+
+New Test Files (3):
+  tests/sim/metricSemantics.test.ts   (9 tests)
+  tests/sim/agentProfiles.test.ts     (14 tests)
+  tests/sim/orgRoles.test.ts          (22 tests)
+
+No gameplay changes. No simulation changes. Pure schema/semantics addition.
+
+Deploy-ready: YES
+Public URL: https://catking01.github.io/agent-foundry/
