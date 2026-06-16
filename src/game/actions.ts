@@ -119,7 +119,7 @@ export function applyPlayerAction(
 
     case 'UPGRADE_WORKSHOP': {
       const ws = next.workshops[action.workshopId]
-      if (!ws || next.cash < ws.upgradeCost) return state
+      if (!ws || next.cash < ws.upgradeCost || ws.level >= 5) return state
 
       next.cash -= ws.upgradeCost
       next.workshops = {

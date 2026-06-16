@@ -1,5 +1,5 @@
 import React from 'react'
-import type { GameState } from '../sim/types'
+import type { GameState, PlayerAction } from '../sim/types'
 import { getWorkshopLoad, getTasksByStage } from '../game/selectors'
 import { useLang } from '../i18n/LanguageContext'
 import type { TranslationKey } from '../i18n/translations'
@@ -10,9 +10,14 @@ const WS_NAME_KEYS: Record<string, TranslationKey> = {
   'Delivery Workshop': 'deliveryW',
 }
 
-interface Props { state: GameState }
+const MAX_LEVEL = 5
 
-export default function WorkshopMap({ state }: Props) {
+interface Props {
+  state: GameState
+  onDispatch: (action: PlayerAction) => void
+}
+
+export default function WorkshopMap({ state, onDispatch }: Props) {
   const { t } = useLang()
   const workshops = Object.values(state.workshops)
 
@@ -25,11 +30,21 @@ export default function WorkshopMap({ state }: Props) {
           const loadPct = load.capacity > 0 ? load.current / load.capacity : 0
           const loadColor = loadPct >= 1 ? 'var(--red)' : loadPct >= 0.7 ? 'var(--yellow)' : 'var(--green)'
 
+          const isMaxLevel = ws.level >= MAX_LEVEL
+          const canAfford = state.cash >= ws.upgradeCost
+          const canUpgrade = !isMaxLevel && canAfford
+
+          let disabledReason = ''
+          if (isMaxLevel) disabledReason = t('maxLevelReached')
+          else if (!canAfford) disabledReason = `${t('needCash')}${ws.upgradeCost.toLocaleString()}`
+
           return (
             <div key={ws.id} className="panel">
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <h2 style={{ margin: 0, border: 'none', padding: 0 }}>{t(WS_NAME_KEYS[ws.name] || ws.name)}</h2>
-                <span className="badge" style={{ background: 'var(--accent)', color: '#fff' }}>Lv.{ws.level}</span>
+                <span className="badge" style={{ background: isMaxLevel ? 'var(--purple)' : 'var(--accent)', color: '#fff' }}>
+                  Lv.{ws.level}{isMaxLevel ? ' MAX' : ''}
+                </span>
               </div>
               <div style={{ margin: '8px 0' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 11, marginBottom: 2 }}>
@@ -55,9 +70,29 @@ export default function WorkshopMap({ state }: Props) {
                 ))}
               </div>
               <div style={{ marginTop: 10 }}>
-                <button className="small" disabled={state.cash < ws.upgradeCost}>
-                  {t('upgrade')} (${ws.upgradeCost})
-                </button>
+                {isMaxLevel ? (
+                  <span style={{ fontSize: 11, color: 'var(--purple)', fontWeight: 600 }}>{t('maxLevelReached')}</span>
+                ) : (
+                  <div>
+                    <button
+                      className="small"
+                      disabled={!canUpgrade}
+                      onClick={() => onDispatch({
+                        type: 'UPGRADE_WORKSHOP',
+                        workshopId: ws.id,
+                        upgradeId: 'level',
+                        tick: state.tick,
+                      })}
+                    >
+                      {t('upgradeTo')}{ws.level + 1} (${ws.upgradeCost.toLocaleString()})
+                    </button>
+                    {!canAfford && (
+                      <div style={{ fontSize: 10, color: 'var(--red)', marginTop: 3 }}>
+                        {disabledReason}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           )

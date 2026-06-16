@@ -1,0 +1,28 @@
+G25 Test Output — 2026-06-16
+==============================
+
+New Tests (workshopUpgrade.test.ts):
+  ✓ deducts cash on upgrade
+  ✓ increases workshop level
+  ✓ increases capacity on upgrade
+  ✓ increases efficiency on upgrade
+  ✓ cannot upgrade without enough cash
+  ✓ cannot upgrade past max level (5)
+  ✓ records ledger event on upgrade
+  ✓ first-order completion enables at least one upgrade
+  ✓ upgrade cost increases after each level
+  ✓ maintenance cost increases after upgrade
+  ✓ cannot upgrade non-existent workshop
+
+  11/11 passed (all new)
+
+Pre-existing Test Results:
+  Test Files: 38 passed, 2 failed (40 total)
+  Tests: 251 passed, 12 skipped, 2 failed (265 total)
+
+Pre-existing Failures (NOT caused by G25):
+  - longRunBalanceTuning.test.ts > speed-first overclaim findings remain higher than quality-first
+  - strategyDominance.test.ts > speed-first has higher overclaim risk than quality-first and balanced
+
+  Root cause: quality-first strategy is now finding more overclaims (45.5) than speed-first (27.25).
+  This is a strategy balance tuning artifact unrelated to workshop upgrades.

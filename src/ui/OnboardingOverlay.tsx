@@ -137,9 +137,10 @@ function Phase4({ onStart, t }: { onStart: () => void; t: (k: Parameters<typeof 
         <li>等待产出物（artifact）生成</li>
         <li>观察验证（validation）和审计（audit）</li>
         <li>完成第一单交付</li>
+        <li>赚钱后升级一个车间（建议先升工程车间）</li>
       </ul>
       <p style={{ color: 'var(--text-dim)', fontSize: 12, marginBottom: 20 }}>
-        不用担心——系统会自动分配员工、推进车间。你只需要接单和观察。
+        不用担心——系统会自动分配员工、推进车间。赚到钱后别忘记升级车间，效率会明显提升。
       </p>
       <Dots current={4} />
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: 20 }}>

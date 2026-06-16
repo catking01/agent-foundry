@@ -68,6 +68,12 @@ export const translations = {
   efficiency: { zh: '效率', en: 'Efficiency' },
   maintenance: { zh: '维护费', en: 'Maintenance' },
   upgrade: { zh: '升级', en: 'Upgrade' },
+  upgradeTo: { zh: '升级到 Lv.', en: 'Upgrade to Lv.' },
+  maxLevelReached: { zh: '已达最高等级', en: 'Max level reached' },
+  needCash: { zh: '需要 $', en: 'Need $' },
+  notEnoughCash: { zh: '资金不足', en: 'Not enough cash' },
+  coreTabs: { zh: '核心', en: 'Core' },
+  advancedTabs: { zh: '高级', en: 'Advanced' },
 
   // Tutorial
   firstRun: { zh: '新手引导', en: 'First Run' },
@@ -87,6 +93,8 @@ export const translations = {
   hudHint: { zh: '右下角浮窗显示员工状态、车间队列和最近事件。', en: 'The floating HUD shows agent status, workshop queues, and recent events at a glance.' },
   gotIt: { zh: '知道了！', en: 'Got it!' },
   skipTutorial: { zh: '跳过教程', en: 'Skip tutorial' },
+  upgradeWorkshopStep: { zh: '升级一个车间', en: 'Upgrade a workshop' },
+  upgradeHint: { zh: '前往 Workshops 标签，选择一个车间点击 Upgrade。建议先升级工程或规划车间。', en: 'Go to the Workshops tab, pick a workshop and click Upgrade. Engineering or Planning is a good first choice.' },
 
   // Agent HUD
   aiWorkers: { zh: 'AI 员工', en: 'AI Workers' },

@@ -58,6 +58,10 @@ export default function TutorialChecklist({ state, dismissed, onDismiss }: Props
       check: (s) => Object.values(s.orders).some((o) => o.status === 'delivered'),
     },
     {
+      id: 'upgrade', labelKey: 'upgradeWorkshopStep', hintKey: 'upgradeHint',
+      check: (s) => Object.values(s.workshops).some((w) => w.level >= 2),
+    },
+    {
       id: 'hud', labelKey: 'hudStep', hintKey: 'hudHint',
       check: () => hudConfirmed,
       needsConfirm: true,

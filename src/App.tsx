@@ -91,11 +91,14 @@ export default function App() {
     setState(createInitialState(Date.now() % 100000))
   }, [])
 
-  const tabs: { id: TabId; label: string; key: string }[] = [
+  const coreTabs: { id: TabId; label: string; key: string }[] = [
     { id: 'dashboard', label: t('dashboard'), key: 'dashboard' },
     { id: 'orders', label: t('orders'), key: 'orders' },
     { id: 'workshops', label: t('workshops'), key: 'workshops' },
     { id: 'agents', label: t('agents'), key: 'agents' },
+  ]
+
+  const advancedTabs: { id: TabId; label: string; key: string }[] = [
     { id: 'tasks', label: t('tasks'), key: 'tasks' },
     { id: 'artifacts', label: t('artifacts'), key: 'artifacts' },
     { id: 'ledger', label: t('ledger'), key: 'ledger' },
@@ -168,11 +171,23 @@ export default function App() {
       )}
 
       {/* Tabs */}
-      <div className="tabs">
-        {tabs.map((tab) => (
+      <div className="tabs" style={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
+        {coreTabs.map((tab) => (
           <button
             key={tab.id}
             className={`tab ${activeTab === tab.id ? 'active' : ''}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            {tab.label}
+          </button>
+        ))}
+        <span style={{ color: 'var(--border)', margin: '0 4px', fontSize: 11, userSelect: 'none' }}>│</span>
+        <span style={{ fontSize: 9, color: 'var(--text-dim)', textTransform: 'uppercase', letterSpacing: 1, userSelect: 'none' }}>{t('advancedTabs')}</span>
+        {advancedTabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={`tab ${activeTab === tab.id ? 'active' : ''}`}
+            style={{ fontSize: 11, opacity: 0.85 }}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
@@ -185,7 +200,7 @@ export default function App() {
       {activeTab === 'orders' && (
         <OrderBoard state={state} onDispatch={handleDispatch} />
       )}
-      {activeTab === 'workshops' && <WorkshopMap state={state} />}
+      {activeTab === 'workshops' && <WorkshopMap state={state} onDispatch={handleDispatch} />}
       {activeTab === 'agents' && <AgentPanel state={state} />}
       {activeTab === 'tasks' && (
         <TaskBoard state={state} onDispatch={handleDispatch} />
