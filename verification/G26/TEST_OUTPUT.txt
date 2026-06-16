@@ -1,0 +1,55 @@
+G26 Test Output — 2026-06-16
+============================
+
+Full Suite:
+  Test Files: 45 passed (45)
+  Tests:      343 passed | 12 skipped (355)
+  Result:     ALL GREEN — ZERO FAILURES
+
+New Test File (G26):
+  ✓ tests/sim/orgHierarchy.test.ts (34 tests)
+    Starter Organization (5):
+      ✓ has valid hierarchy: operations → cells → workers
+      ✓ every worker belongs to exactly one unit
+      ✓ every non-leaf unit has a lead agent
+      ✓ getLeadAgent returns correct lead for each unit
+      ✓ cell units have no child units (leaf nodes)
+
+    Work Package Lifecycle (6):
+      ✓ creates a work package with correct fields
+      ✓ generates worker artifact with profile-dependent quality
+      ✓ high overclaim tendency inflates claims above evidence
+      ✓ selectBestArtifact picks highest quality with low overclaim
+      ✓ mergeArtifacts produces combined artifact from workers
+
+    Handoff Events (3):
+      ✓ records handoff with clarity score and delay cost
+      ✓ low clarity produces higher delay cost
+      ✓ calculateCoordinationCost sums all delay costs
+
+    Fan-out Logic (8):
+      ✓ simple orders (≤3) get 1 worker
+      ✓ medium orders (4-6) get 2 workers
+      ✓ complex orders (7-10) get 3 workers (capped by span)
+      ✓ fanout is capped by lead span of control
+      ✓ fanout creates child packages with inherited complexity
+      ✓ assignWorkersToPackages adds workers from unit membership
+      ✓ computeArtifactDiversity > 0 for varied artifacts
+      ✓ parallel waste increases with more workers and poor coordination
+
+    Org Scenario Runner (11):
+      ✓ flat runner produces a final artifact
+      ✓ hierarchical runner produces a final artifact
+      ✓ hierarchical has handoff events
+      ✓ hierarchical has higher coordination cost than flat
+      ✓ hierarchical takes more ticks than flat
+      ✓ flat vs hierarchical produce different metrics
+      ✓ compareOrgScenarios returns valid deltas
+      ✓ deterministic: same seed produces identical results
+      ✓ complex order creates more fan-out than simple order
+      ✓ metrics include all required fields
+
+    No Ollama (1):
+      ✓ org scenario runner imports do not reference ollama
+
+All Pre-existing Tests: PASS (no regressions)
