@@ -73,7 +73,7 @@ export default function TutorialChecklist({ state, dismissed, onDismiss }: Props
 
   return (
     <div style={{
-      position: 'fixed', left: 16, top: 80, zIndex: 50, width: collapsed ? 180 : 280,
+      position: 'fixed', right: 16, top: 80, zIndex: 50, width: collapsed ? 180 : 280,
       background: 'var(--bg-panel)', border: '1px solid var(--border)',
       borderRadius: 8, padding: collapsed ? '8px 12px' : 14,
       fontSize: 12, boxShadow: '0 4px 16px rgba(0,0,0,0.4)',
