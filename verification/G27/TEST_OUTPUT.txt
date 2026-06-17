@@ -1,0 +1,22 @@
+G27 Test Output — 2026-06-17
+============================
+
+Full Suite:
+  Test Files: 46 passed (46)
+  Tests:      370 passed | 12 skipped (382)
+  Result:     ALL GREEN — ZERO FAILURES
+
+New Test File (G27):
+  ✓ tests/sim/orgMultiSeedStudy.test.ts (27 tests)
+    Study Matrix Structure (5):
+      ✓ 144 runs, all seeds/order classes/modes covered
+    Determinism (1): same seed produces identical results
+    Flat vs Hierarchy (4): coordination, handoff, ticks, metrics differ
+    Order Complexity Breakdown (3): complex > simple fanout, artifacts
+    Risk Semantics (2): detected ≠ risk, latent used for comparison
+    Aggregates (3): per-class aggregates valid, summary fields present
+    Findings Generation (3): 5+ findings, key metrics present
+    Helpers (4): qualityPerCoordinationCost, riskAdjustedQuality, filterRuns
+    Study Meta (2): correct totals, JSON-serializable
+
+All Pre-existing Tests: PASS (no regressions)
