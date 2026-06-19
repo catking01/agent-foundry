@@ -34,3 +34,31 @@ The study metadata explicitly separates:
 - Exposure metrics: latentRiskEstimate
 
 Findings generation in `orgMultiSeedStudy.ts` uses `latentRiskEstimate` for risk comparison, not `detectedOverclaimFindings`.
+
+## G27-S1 Derived Artifact Fields
+
+The machine-readable seal artifacts add two derived fields for auditability:
+
+```text
+auditCoverageRate
+undetectedOverclaimExposure
+```
+
+These are deterministic artifact-level proxies, not new core simulation behavior.
+
+`auditCoverageRate` is derived from the observed review structure:
+
+- flat: selected-final-artifact review over produced artifacts
+- hierarchical: cell merge reviews plus final operations review over produced artifacts
+
+`undetectedOverclaimExposure` is computed as:
+
+```text
+latentRiskEstimate * (1 - auditCoverageRate)
+```
+
+This preserves the G25-S1/G26-0 distinction:
+
+- `detectedOverclaimFindings` remains a DETECTION metric
+- `latentRiskEstimate` remains the risk/exposure comparison metric
+- higher detected findings may indicate stronger audit coverage, not worse latent behavior

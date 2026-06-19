@@ -15,6 +15,10 @@ import {
   qualityPerCoordinationCost,
   riskAdjustedQuality,
 } from '../../src/sim/orgMultiSeedStudy'
+import {
+  assertG27SealArtifactsComplete,
+  buildG27SealArtifacts,
+} from '../../src/sim/orgStudyArtifactSeal'
 import type { StudyMatrix } from '../../src/sim/orgMultiSeedStudy'
 
 // Run once and share across tests
@@ -312,5 +316,72 @@ describe('Study Meta', () => {
     expect(json).toBeTruthy()
     const parsed = JSON.parse(json)
     expect(parsed.runs.length).toBe(144)
+  })
+})
+
+describe('G27-S1 Machine-Readable Seal Artifacts', () => {
+  it('raw matrix artifact has the documented 144-run shape', () => {
+    const artifacts = buildG27SealArtifacts(matrix, '2026-06-19T00:00:00.000Z')
+
+    expect(artifacts.raw.meta.expectedRuns).toBe(144)
+    expect(artifacts.raw.runs.length).toBe(144)
+    expect(artifacts.raw.meta.extraDimension).toContain('orderClassInstanceIndex')
+    expect(artifacts.raw.meta.shape).toContain('3 order instances per class')
+  })
+
+  it('raw run records include required flattened seal fields', () => {
+    const artifacts = buildG27SealArtifacts(matrix, '2026-06-19T00:00:00.000Z')
+    const run = artifacts.raw.runs[0]
+
+    expect(run.seed).toBeDefined()
+    expect(run.mode).toBeDefined()
+    expect(run.orderClass).toBeDefined()
+    expect(run.orderClassInstanceIndex).toBeGreaterThanOrEqual(1)
+    expect(run.deliveryTicks).toBeGreaterThan(0)
+    expect(run.finalQuality).toBeDefined()
+    expect(run.finalEvidenceStrength).toBeDefined()
+    expect(run.finalClaimLevel).toBeDefined()
+    expect(run.claimEvidenceGap).toBeDefined()
+    expect(run.detectedOverclaimFindings).toBeGreaterThanOrEqual(0)
+    expect(run.latentRiskEstimate).toBeGreaterThanOrEqual(0)
+    expect(run.undetectedOverclaimExposure).toBeGreaterThanOrEqual(0)
+    expect(run.auditCoverageRate).toBeGreaterThanOrEqual(0)
+    expect(run.auditCoverageRate).toBeLessThanOrEqual(1)
+    expect(run.coordinationCost).toBeGreaterThanOrEqual(0)
+    expect(run.handoffCount).toBeGreaterThanOrEqual(0)
+    expect(run.fanoutCount).toBeGreaterThanOrEqual(0)
+    expect(run.subtaskCount).toBeGreaterThanOrEqual(0)
+    expect(run.mergeDelay).toBeGreaterThanOrEqual(0)
+    expect(run.leadUtilization).toBeGreaterThanOrEqual(0)
+    expect(run.workerUtilization).toBeGreaterThanOrEqual(0)
+    expect(run.parallelWaste).toBeGreaterThanOrEqual(0)
+    expect(run.qualityPerTick).toBeGreaterThanOrEqual(0)
+    expect(run.riskAdjustedQuality).toBeDefined()
+    expect(run.coordinationEfficiency).toBeDefined()
+  })
+
+  it('aggregate recompute check passes from the raw matrix', () => {
+    const artifacts = buildG27SealArtifacts(matrix, '2026-06-19T00:00:00.000Z')
+
+    expect(artifacts.recomputeCheck.verdict).toBe('PASS')
+    expect(artifacts.recomputeCheck.checks.every((check) => check.passed)).toBe(true)
+  })
+
+  it('complexity breakdown and coordination curve derive from raw matrix', () => {
+    const artifacts = buildG27SealArtifacts(matrix, '2026-06-19T00:00:00.000Z')
+
+    expect(artifacts.complexityBreakdown.classes.map((entry) => entry.orderClass).sort()).toEqual([
+      'complex',
+      'medium',
+      'simple',
+    ])
+    expect(artifacts.coordinationCostCurve.points.length).toBe(18)
+    expect(artifacts.coordinationCostCurve.points.every((point) => point.runCount === 8)).toBe(true)
+  })
+
+  it('seal artifact completeness assertion passes', () => {
+    const artifacts = buildG27SealArtifacts(matrix, '2026-06-19T00:00:00.000Z')
+
+    expect(() => assertG27SealArtifactsComplete(artifacts)).not.toThrow()
   })
 })

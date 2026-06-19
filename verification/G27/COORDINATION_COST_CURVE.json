@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "source": "verification/G27/ORG_MULTI_SEED_MATRIX.json",
+    "formula": "coordinationEfficiency = mergeQualityGain / max(1, coordinationCost); flat mergeQualityGain is 0."
+  },
+  "points": [
+    {
+      "orderClass": "simple",
+      "orderComplexity": 1,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 3.18,
+      "meanDeliveryTicks": 2
+    },
+    {
+      "orderClass": "simple",
+      "orderComplexity": 1,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 17,
+      "meanMergeQualityGain": 0.98,
+      "meanCoordinationEfficiency": 0.06,
+      "meanQualityPerTick": 0.73,
+      "meanDeliveryTicks": 10
+    },
+    {
+      "orderClass": "simple",
+      "orderComplexity": 2,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 3.18,
+      "meanDeliveryTicks": 2
+    },
+    {
+      "orderClass": "simple",
+      "orderComplexity": 2,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 17,
+      "meanMergeQualityGain": 0.98,
+      "meanCoordinationEfficiency": 0.06,
+      "meanQualityPerTick": 0.73,
+      "meanDeliveryTicks": 10
+    },
+    {
+      "orderClass": "simple",
+      "orderComplexity": 3,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 3.18,
+      "meanDeliveryTicks": 2
+    },
+    {
+      "orderClass": "simple",
+      "orderComplexity": 3,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 17,
+      "meanMergeQualityGain": 0.98,
+      "meanCoordinationEfficiency": 0.06,
+      "meanQualityPerTick": 0.73,
+      "meanDeliveryTicks": 10
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 4,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 2.36,
+      "meanDeliveryTicks": 3
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 4,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 5,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 2.36,
+      "meanDeliveryTicks": 3
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 5,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 6,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 2.36,
+      "meanDeliveryTicks": 3
+    },
+    {
+      "orderClass": "medium",
+      "orderComplexity": 6,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 7,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 1.77,
+      "meanDeliveryTicks": 4
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 7,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 8,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 1.77,
+      "meanDeliveryTicks": 4
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 8,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 9,
+      "mode": "flat",
+      "runCount": 8,
+      "meanCoordinationCost": 0,
+      "meanMergeQualityGain": 0,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 1.77,
+      "meanDeliveryTicks": 4
+    },
+    {
+      "orderClass": "complex",
+      "orderComplexity": 9,
+      "mode": "hierarchical",
+      "runCount": 8,
+      "meanCoordinationCost": 39,
+      "meanMergeQualityGain": 0.2,
+      "meanCoordinationEfficiency": 0,
+      "meanQualityPerTick": 0.43,
+      "meanDeliveryTicks": 17
+    }
+  ]
+}

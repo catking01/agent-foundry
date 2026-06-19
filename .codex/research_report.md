@@ -1,0 +1,20 @@
+# Research Report
+
+## Current Stable Findings
+
+- The repository root for implementation work is `agent-foundry/`.
+- The project is a private React 18, TypeScript, Vite application with Vitest tests.
+- Main commands are declared in `package.json`: `npm run dev`, `npm run build`, `npm run test`, `npm run test:watch`, `npm run test:ollama`, and `npm run test:shadow-benchmark`.
+- Contributor guidance has been added in `AGENTS.md` based on inspected project files and recent commit history.
+- `AGENTS.md` is 358 words and passed whitespace validation.
+- Scoped pre-close hygiene passed for `AGENTS.md`, `.codex/research_record.md`, and `.codex/research_report.md`.
+- G27-S1 machine-readable study artifacts have been generated for the deterministic flat-vs-hierarchy study.
+- G27's actual matrix shape is documented as `8 seeds x 2 modes x 3 order classes x 3 concrete order instances per class = 144 runs`.
+- `verification/G27/AGGREGATE_RECOMPUTE_CHECK.json` reports PASS for raw-matrix run count, coverage, missing combinations, and aggregate mean recomputation.
+- G27-S1 validation passed locally: `npm run test` (46 files, 375 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with a chunk-size warning only.
+
+## Open Risks
+
+- G27-S1 does not claim hierarchy is better than flat, does not generalize to real organizations, and does not use real LLM agents.
+- The Vite build still reports the existing chunk-size warning for the main bundle.
+- `AGENTS.md` and `.codex/` control/evidence files should be committed rather than hidden or deleted.

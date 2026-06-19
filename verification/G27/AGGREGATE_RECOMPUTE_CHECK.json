@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "sourceMatrix": "verification/G27/ORG_MULTI_SEED_MATRIX.json",
+    "sourceAggregates": "verification/G27/FLAT_VS_HIERARCHY_AGGREGATES.json",
+    "expectedRuns": 144,
+    "actualRuns": 144
+  },
+  "checks": [
+    {
+      "name": "run count matches documented expected count",
+      "passed": true,
+      "expected": 144,
+      "actual": 144
+    },
+    {
+      "name": "all seeds covered",
+      "passed": true,
+      "expected": [
+        1,
+        2,
+        3,
+        42,
+        99,
+        123,
+        2026,
+        9001
+      ],
+      "actual": [
+        1,
+        2,
+        3,
+        42,
+        99,
+        123,
+        2026,
+        9001
+      ]
+    },
+    {
+      "name": "all modes covered",
+      "passed": true,
+      "expected": [
+        "flat",
+        "hierarchical"
+      ],
+      "actual": [
+        "flat",
+        "hierarchical"
+      ]
+    },
+    {
+      "name": "all order classes covered",
+      "passed": true,
+      "expected": [
+        "complex",
+        "medium",
+        "simple"
+      ],
+      "actual": [
+        "complex",
+        "medium",
+        "simple"
+      ]
+    },
+    {
+      "name": "no missing seed/mode/order combinations",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "aggregate finalQuality mean recomputes by mode",
+      "passed": true,
+      "expected": "byMode finalQuality mean from raw matrix",
+      "actual": "matched"
+    },
+    {
+      "name": "aggregate coordinationCost mean recomputes by mode",
+      "passed": true,
+      "expected": "byMode coordinationCost mean from raw matrix",
+      "actual": "matched"
+    },
+    {
+      "name": "detected findings separated from latent risk",
+      "passed": true,
+      "expected": "detectedOverclaimFindings is not treated as latentRiskEstimate",
+      "actual": "distinct values observed"
+    }
+  ],
+  "verdict": "PASS"
+}
