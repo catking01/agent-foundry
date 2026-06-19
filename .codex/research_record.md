@@ -49,3 +49,21 @@
 - Hygiene result before staging: PASS with no warnings; note that untracked `verification/G28/` was skipped as a directory, so staged hygiene must be rerun before close.
 - Staged hygiene command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
 - Staged hygiene result: PASS with no warnings; scanned G28 source, tests, scripts, and `verification/G28` artifact files.
+
+## 2026-06-19 22:51:00 CST
+
+- Task: implement `G29_ORG_STUDY_UI_AND_RESEARCH_DASHBOARD`.
+- Scope inspected: `src/App.tsx`, existing UI components/styles, G27/G28 verification artifacts, existing UI tests, and current `.codex` records.
+- Work contract: read-only Research Dashboard only; no new organization simulation logic, no G27/G28 result changes, no main gameplay pipeline replacement, no Ollama, no external APIs, no Runtime Lab, and no real-world organization claim.
+- Design decision: use compact static TypeScript summaries in `src/data/orgStudySummaries.ts` instead of browser-side external fetches or raw matrix bundling.
+- Added UI: `src/ui/ResearchDashboard.tsx`.
+- Updated navigation: `src/App.tsx` now includes a `Research` tab that renders the read-only dashboard.
+- Added tests: `tests/data/orgStudySummaries.test.ts` and `tests/ui/ResearchDashboard.test.tsx`.
+- Generated artifacts: `G29_ORG_STUDY_UI.md`, `RESEARCH_DASHBOARD_SCREENFLOW.md`, `G27_G28_DATA_PROVENANCE.md`, `RISK_SEMANTICS_UI_RECHECK.md`, `READ_ONLY_BOUNDARY_RECHECK.md`, `NON_CLAIMS.md`, `TEST_OUTPUT.txt`, and `BUILD_OUTPUT.txt`.
+- Validation: focused G29 tests PASS with 2 test files and 8 tests; `npm run test` PASS with 49 test files passed, 397 tests passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
+- G29 source/data/test boundary scan: PASS; no `applyPlayerAction`, `onDispatch`, `setState`, `fetch(`, `ollama`, `AGENT_FOUNDRY_ENABLE_OLLAMA`, `PlayerAction`, or `GameState` references in the G29 source/data/test path.
+- Non-claims preserved: deterministic simulator summaries only; no real organization proof, no real AI agents, no Runtime Lab validation, no production governance claim, and no claim that hierarchy or a G28 intervention is generally better in real organizations.
+- Hygiene command before staging: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
+- Hygiene result before staging: PASS, but untracked `tests/data` and `verification/G29` directories were skipped as directories.
+- Staged hygiene command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
+- Staged hygiene result: PASS with no skipped paths; scanned G29 source, tests, evidence artifacts, and `.codex` records.

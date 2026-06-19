@@ -1,0 +1,70 @@
+
+> agent-foundry@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 <repo-root>
+
+ ✓ tests/ai/shadowAuditCalibration.test.ts (11 tests) 4ms
+ ✓ tests/ai/ollamaClient.optin.test.ts (5 tests | 4 skipped) 2ms
+ ✓ tests/sim/orgHierarchy.test.ts (34 tests) 13ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 4ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 5ms
+ ✓ tests/sim/orgInterventionStudy.test.ts (14 tests) 39ms
+ ✓ tests/sim/orgMultiSeedStudy.test.ts (32 tests) 79ms
+ ✓ tests/game/workshopUpgrade.test.ts (11 tests) 5ms
+ ✓ tests/sim/agentProfiles.test.ts (14 tests) 10ms
+ ✓ tests/sim/replay.test.ts (7 tests) 60ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 459ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 235ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 138ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 49ms
+ ✓ tests/sim/orgRoles.test.ts (22 tests) 24ms
+ ✓ tests/sim/validation.test.ts (9 tests) 8ms
+ ✓ tests/sim/balanceTuningRegression.test.ts (8 tests) 978ms
+   ✓ Balance Tuning Regression > speed-first has higher overclaim findings than balanced at horizon 100 342ms
+ ✓ tests/sim/audit.test.ts (7 tests) 5ms
+ ✓ tests/game/agentStatusSelectors.test.ts (8 tests) 35ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 181ms
+ ✓ tests/sim/explainRun.test.ts (7 tests) 253ms
+ ✓ tests/ai/promptBuilder.test.ts (5 tests) 5ms
+ ✓ tests/sim/firstRunCompletion.test.ts (3 tests) 113ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 5ms
+ ✓ tests/ai/shadowAuditBenchmark.optin.test.ts (9 tests | 8 skipped) 2ms
+ ✓ tests/sim/failureAttribution.test.ts (7 tests) 662ms
+ ✓ tests/ai/shadowAuditBenchmarkFixtures.test.ts (8 tests) 35ms
+ ✓ tests/sim/ledgerAggregation.test.ts (5 tests) 577ms
+   ✓ Ledger Aggregation > different strategies produce different event profiles 430ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 16ms
+ ✓ tests/ai/shadowAuditSchema.test.ts (6 tests) 6ms
+ ✓ tests/sim/attributionReason.test.ts (4 tests) 342ms
+   ✓ Attribution Reason Hygiene > no reputation penalty uses AGENT_ASSIGNED as reason 307ms
+ ✓ tests/sim/g12ReportConsistency.test.ts (5 tests) 906ms
+   ✓ G12 Report Consistency > two independent report generations produce identical results 553ms
+ ✓ tests/sim/tick.test.ts (6 tests) 13ms
+ ✓ tests/sim/metricSemantics.test.ts (9 tests) 7ms
+ ✓ tests/sim/explanationConsistency.test.ts (6 tests) 617ms
+ ✓ tests/sim/rng.test.ts (8 tests) 22ms
+ ✓ tests/data/orgStudySummaries.test.ts (3 tests) 3ms
+ ✓ tests/sim/rawRunEvidence.test.ts (4 tests) 2505ms
+   ✓ Raw Run Evidence > aggregates recomputed from raw runs match balance runner 1258ms
+   ✓ Raw Run Evidence > game-over rate recomputed from raw runs matches aggregate 1239ms
+ ✓ tests/sim/longRunBalanceTuning.test.ts (7 tests) 4ms
+ ✓ tests/ui/AgentWorkStatusFloat.test.tsx (10 tests) 345ms
+ ✓ tests/sim/balanceExport.test.ts (5 tests) 3660ms
+   ✓ Balance Export > full balance export includes all sections 1789ms
+   ✓ Balance Export > full balance export is valid JSON when serialized 1867ms
+ ✓ tests/ui/ShadowAdvisoryPanel.test.tsx (13 tests) 143ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 7ms
+ ✓ tests/ui/TutorialChecklist.test.tsx (10 tests) 174ms
+ ✓ tests/sim/hardDominanceGate.test.ts (8 tests) 6ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 4ms
+ ✓ tests/ui/ResearchDashboard.test.tsx (5 tests) 361ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 734ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 632ms
+ ✓ tests/sim/tradeoffPreservation.test.ts (8 tests) 3ms
+
+ Test Files  49 passed (49)
+      Tests  397 passed | 12 skipped (409)
+   Start at  22:48:39
+   Duration  11.01s (transform 1.27s, setup 0ms, collect 49.85s, tests 13.86s, environment 5.16s, prepare 5.43s)

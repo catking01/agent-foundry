@@ -12,6 +12,7 @@ import TaskBoard from './ui/TaskBoard'
 import ArtifactPanel from './ui/ArtifactPanel'
 import LedgerPanel from './ui/LedgerPanel'
 import DebuggerPanel from './ui/DebuggerPanel'
+import ResearchDashboard from './ui/ResearchDashboard'
 import AgentWorkStatusFloat from './ui/AgentWorkStatusFloat'
 import TutorialChecklist, {
   isTutorialDismissed,
@@ -20,7 +21,7 @@ import TutorialChecklist, {
 import OnboardingOverlay from './ui/OnboardingOverlay'
 import { useLang } from './i18n/LanguageContext'
 
-type TabId = 'dashboard' | 'orders' | 'workshops' | 'agents' | 'tasks' | 'artifacts' | 'ledger' | 'debugger'
+type TabId = 'dashboard' | 'orders' | 'workshops' | 'agents' | 'research' | 'tasks' | 'artifacts' | 'ledger' | 'debugger'
 
 const ONBOARDING_KEY = 'agent-foundry-onboarding-done'
 
@@ -96,6 +97,7 @@ export default function App() {
     { id: 'orders', label: t('orders'), key: 'orders' },
     { id: 'workshops', label: t('workshops'), key: 'workshops' },
     { id: 'agents', label: t('agents'), key: 'agents' },
+    { id: 'research', label: 'Research', key: 'research' },
   ]
 
   const advancedTabs: { id: TabId; label: string; key: string }[] = [
@@ -202,6 +204,7 @@ export default function App() {
       )}
       {activeTab === 'workshops' && <WorkshopMap state={state} onDispatch={handleDispatch} />}
       {activeTab === 'agents' && <AgentPanel state={state} />}
+      {activeTab === 'research' && <ResearchDashboard />}
       {activeTab === 'tasks' && (
         <TaskBoard state={state} onDispatch={handleDispatch} />
       )}
