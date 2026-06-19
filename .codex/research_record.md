@@ -30,3 +30,22 @@
 - Validation: `npm run test` PASS with 46 test files passed, 375 tests passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with chunk-size warning.
 - Hygiene command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
 - Hygiene result: PASS with no warnings; scope statement is active baseline warning state only, not full repository cleanliness.
+
+## 2026-06-19 21:02:08 CST
+
+- Task: implement `G28_ORGANIZATION_INTERVENTION_EXPERIMENTS`.
+- Scope inspected: G27-S1 memory event `G27-S1-771a58b`, `src/sim/orgScenarioRunner.ts`, `src/sim/orgStudyArtifactSeal.ts`, `src/data/orgStudyOrders.ts`, `src/data/starterOrg.ts`, and G27 verification artifacts.
+- Work contract: deterministic research-runner intervention study only; no UI, no Ollama, no Runtime Lab, no main gameplay pipeline change, and no real-world organization claim.
+- Design decision: G28 uses one representative order per complexity class and six interventions for a 144-run MVP: `8 seeds x 3 representative orders x 6 interventions`.
+- Design decision: G28 applies deterministic intervention transforms to the matching G27 hierarchical baseline study record instead of changing the G26/G27 core runner.
+- Added data definitions: `src/data/orgInterventions.ts`.
+- Added study implementation: `src/sim/orgInterventionStudy.ts`.
+- Added generator: `scripts/generateG28Artifacts.ts`.
+- Added tests: `tests/sim/orgInterventionStudy.test.ts`, including matrix shape, baseline linkage, delta recomputation, intervention effect, risk semantics, aggregate, ranking, and artifact checks.
+- Generated artifacts: `ORG_INTERVENTION_MATRIX.json`, `INTERVENTION_AGGREGATES.json`, `INTERVENTION_DELTA_REPORT.json`, `INTERVENTION_BY_ORDER_COMPLEXITY.json`, `INTERVENTION_RANKING.json`, `BASELINE_LINKAGE_TO_G27.md`, `INTERVENTION_RISK_SEMANTICS.md`, `INTERVENTION_FINDINGS.md`, `NON_CLAIMS.md`, `TEST_OUTPUT.txt`, and `BUILD_OUTPUT.txt`.
+- Validation: focused G28 test PASS with 14 tests; `npm run test` PASS with 47 test files passed, 389 tests passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with chunk-size warning.
+- G28 source-only Ollama/network scan: PASS; no `ollama`, `AGENT_FOUNDRY_ENABLE_OLLAMA`, or `fetch(` references in G28 source/test/generator files.
+- Hygiene command before staging: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
+- Hygiene result before staging: PASS with no warnings; note that untracked `verification/G28/` was skipped as a directory, so staged hygiene must be rerun before close.
+- Staged hygiene command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
+- Staged hygiene result: PASS with no warnings; scanned G28 source, tests, scripts, and `verification/G28` artifact files.

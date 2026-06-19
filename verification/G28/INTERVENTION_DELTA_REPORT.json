@@ -1,0 +1,30 @@
+{
+  "source": "verification/G28/ORG_INTERVENTION_MATRIX.json",
+  "checks": [
+    {
+      "name": "run count matches expected G28 MVP matrix",
+      "passed": true,
+      "expected": 144,
+      "actual": 144
+    },
+    {
+      "name": "all runs have matching baselines",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "delta metrics recompute from raw rows",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "name": "at least one intervention changes quality/risk/cost",
+      "passed": true,
+      "expected": "changed intervention runs > 0",
+      "actual": 120
+    }
+  ],
+  "verdict": "PASS"
+}

@@ -1,0 +1,185 @@
+{
+  "source": "verification/G28/ORG_INTERVENTION_MATRIX.json",
+  "classes": [
+    {
+      "orderClass": "simple",
+      "interventionId": "baseline_hierarchical",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": 0,
+      "meanDeltaCoordinationCost": 0,
+      "meanDeltaDeliveryTicks": 0,
+      "meanDeltaRiskAdjustedQuality": 0
+    },
+    {
+      "orderClass": "simple",
+      "interventionId": "merge_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.55,
+      "meanDeltaLatentRisk": -0.35,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 0.9
+    },
+    {
+      "orderClass": "simple",
+      "interventionId": "handoff_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -0.15,
+      "meanDeltaCoordinationCost": -1,
+      "meanDeltaDeliveryTicks": -1,
+      "meanDeltaRiskAdjustedQuality": 0.15
+    },
+    {
+      "orderClass": "simple",
+      "interventionId": "span_control_tight",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.1,
+      "meanDeltaLatentRisk": -0.35,
+      "meanDeltaCoordinationCost": 2,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 0.45
+    },
+    {
+      "orderClass": "simple",
+      "interventionId": "extra_worker",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.25,
+      "meanDeltaLatentRisk": 0.1,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 0,
+      "meanDeltaRiskAdjustedQuality": 0.15
+    },
+    {
+      "orderClass": "simple",
+      "interventionId": "audit_coverage_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -0.75,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 0.75
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "baseline_hierarchical",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": 0,
+      "meanDeltaCoordinationCost": 0,
+      "meanDeltaDeliveryTicks": 0,
+      "meanDeltaRiskAdjustedQuality": 0
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "merge_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.85,
+      "meanDeltaLatentRisk": -0.65,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 1.5
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "handoff_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -0.15,
+      "meanDeltaCoordinationCost": -2,
+      "meanDeltaDeliveryTicks": -1,
+      "meanDeltaRiskAdjustedQuality": 0.15
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "span_control_tight",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.1,
+      "meanDeltaLatentRisk": -0.35,
+      "meanDeltaCoordinationCost": 2,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 0.45
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "extra_worker",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.4,
+      "meanDeltaLatentRisk": 0.1,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": -1,
+      "meanDeltaRiskAdjustedQuality": 0.3
+    },
+    {
+      "orderClass": "medium",
+      "interventionId": "audit_coverage_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -1.71,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 1.71
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "baseline_hierarchical",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": 0,
+      "meanDeltaCoordinationCost": 0,
+      "meanDeltaDeliveryTicks": 0,
+      "meanDeltaRiskAdjustedQuality": 0
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "merge_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 1.15,
+      "meanDeltaLatentRisk": -0.95,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 2.1
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "handoff_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -0.15,
+      "meanDeltaCoordinationCost": -2,
+      "meanDeltaDeliveryTicks": -1,
+      "meanDeltaRiskAdjustedQuality": 0.15
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "span_control_tight",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.25,
+      "meanDeltaLatentRisk": -0.35,
+      "meanDeltaCoordinationCost": 2,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 0.6
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "extra_worker",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0.55,
+      "meanDeltaLatentRisk": 0.1,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": -1,
+      "meanDeltaRiskAdjustedQuality": 0.45
+    },
+    {
+      "orderClass": "complex",
+      "interventionId": "audit_coverage_plus",
+      "runCount": 8,
+      "meanDeltaFinalQuality": 0,
+      "meanDeltaLatentRisk": -1.71,
+      "meanDeltaCoordinationCost": 1,
+      "meanDeltaDeliveryTicks": 1,
+      "meanDeltaRiskAdjustedQuality": 1.71
+    }
+  ]
+}

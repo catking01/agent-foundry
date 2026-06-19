@@ -12,9 +12,14 @@
 - G27's actual matrix shape is documented as `8 seeds x 2 modes x 3 order classes x 3 concrete order instances per class = 144 runs`.
 - `verification/G27/AGGREGATE_RECOMPUTE_CHECK.json` reports PASS for raw-matrix run count, coverage, missing combinations, and aggregate mean recomputation.
 - G27-S1 validation passed locally: `npm run test` (46 files, 375 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with a chunk-size warning only.
+- G28 organization intervention experiments have been implemented as a deterministic study layer linked to the G27-S1 hierarchical baseline.
+- G28 matrix shape is `8 seeds x 3 representative orders x 6 interventions = 144 runs`.
+- G28 intervention artifacts include raw matrix, aggregates, delta report, complexity breakdown, ranking, baseline linkage, risk semantics, findings, non-claims, test output, and build output.
+- G28 validation passed locally: focused G28 tests (14 passed), `npm run test` (47 files, 389 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
 
 ## Open Risks
 
 - G27-S1 does not claim hierarchy is better than flat, does not generalize to real organizations, and does not use real LLM agents.
+- G28 intervention transforms are deterministic research-layer model adjustments, not new real agent capabilities.
+- G28 does not claim any intervention is better for real organizations.
 - The Vite build still reports the existing chunk-size warning for the main bundle.
-- `AGENTS.md` and `.codex/` control/evidence files should be committed rather than hidden or deleted.

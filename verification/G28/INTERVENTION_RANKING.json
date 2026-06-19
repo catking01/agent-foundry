@@ -1,0 +1,7 @@
+{
+  "bestQualityIntervention": "merge_plus",
+  "bestRiskReductionIntervention": "audit_coverage_plus",
+  "bestCoordinationEfficiencyIntervention": "merge_plus",
+  "fastestIntervention": "handoff_plus",
+  "bestRiskAdjustedQualityIntervention": "merge_plus"
+}
