@@ -36,7 +36,17 @@ describe('ResearchDashboard', () => {
     expect(screen.getAllByText(/detectedOverclaimFindings is a DETECTION metric/i).length).toBeGreaterThan(0)
     expect(screen.getByText(/Latent risk is the preferred risk-outcome metric/i)).toBeTruthy()
     expect(screen.getByText('Non-claims')).toBeTruthy()
-    expect(screen.getByText(/not real organization proof/i)).toBeTruthy()
+    expect(screen.getAllByText(/not real organization proof/i).length).toBeGreaterThan(0)
+  })
+
+  it('renders the G31 policy search dashboard section', () => {
+    render(<ResearchDashboard />)
+
+    expect(screen.getByText('Deterministic policy search results')).toBeTruthy()
+    expect(screen.getByText('G30 Organization Policy Search')).toBeTruthy()
+    expect(screen.getByText('Objective rankings')).toBeTruthy()
+    expect(screen.getByText('Pareto frontier')).toBeTruthy()
+    expect(screen.getByText('Scoring policy')).toBeTruthy()
   })
 
   it('does not render mutation controls', () => {
@@ -62,5 +72,6 @@ describe('App Research tab', () => {
 
     expect(screen.getByText('Deterministic study results')).toBeTruthy()
     expect(screen.getByText('G28 Intervention Ranking')).toBeTruthy()
+    expect(screen.getByText('Deterministic policy search results')).toBeTruthy()
   })
 })

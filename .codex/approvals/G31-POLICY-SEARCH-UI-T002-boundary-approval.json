@@ -1,0 +1,37 @@
+{
+  "allowed_paths": [
+    "src/data/policySearchSummaries.ts",
+    "src/ui/PolicySearchDashboard.tsx",
+    "src/ui/ResearchDashboard.tsx",
+    "tests/data/policySearchSummaries.test.ts",
+    "tests/ui/PolicySearchDashboard.test.tsx",
+    "tests/ui/ResearchDashboard.test.tsx",
+    "verification/G31/",
+    ".codex/research_record.md",
+    ".codex/research_report.md"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T07:35:38Z",
+  "approved_by": "codex",
+  "disallowed_paths": [
+    ".git/",
+    ".claude/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "verification/G30/",
+    "src/game/",
+    "src/sim/"
+  ],
+  "human_acceptance_required": true,
+  "required_tests": [
+    "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/"
+  ],
+  "task_id": "G31-POLICY-SEARCH-UI-T002"
+}

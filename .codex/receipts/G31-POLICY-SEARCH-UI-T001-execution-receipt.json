@@ -1,0 +1,110 @@
+{
+  "adapter_failure_kind": "ABORTED",
+  "agent_session_path": ".runtime/tasks/G31-POLICY-SEARCH-UI-T001/claude_agent_session.json",
+  "agent_view_command": "claude agents --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+  "agent_view_home_command": "claude agents --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+  "agent_view_home_path": ".runtime/tasks/G31-POLICY-SEARCH-UI-T001/agent_view_home.json",
+  "agent_view_home_status": "launch_failed",
+  "agent_view_is_observability_only": true,
+  "attach_command": "claude attach 39cfae33",
+  "boundary_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T07:30:42Z",
+    "approved_by": "codex",
+    "external_egress_approved": true
+  },
+  "changed_files": [],
+  "claude_background_session_id": "39cfae33",
+  "claude_background_session_name": "G31-POLICY-SEARCH-UI-T001 Implement G31_POLICY_SEARCH_RESEARCH_UI: add com",
+  "commands": [
+    {
+      "argv": [
+        "claude",
+        "--bg",
+        "--name",
+        "G31-POLICY-SEARCH-UI-T001 Implement G31_POLICY_SEARCH_RESEARCH_UI: add com",
+        "--tools",
+        "Read,Edit,Bash",
+        "--disallowedTools",
+        "Bash(git push *)",
+        "Bash(git remote *)",
+        "Bash(git config --global *)",
+        "Bash(rm -rf *)",
+        "Bash(rm -r *)",
+        "--model",
+        "deepseek-v4-pro",
+        "--setting-sources",
+        "project",
+        "--settings",
+        "/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry/.runtime/tasks/G31-POLICY-SEARCH-UI-T001/claude_settings.json",
+        "--permission-mode",
+        "dontAsk",
+        "# CCA Claude Code CLI Execution Contract: G31-POLICY-SEARCH-UI-T001\n\nYou are Claude Code CLI running as an external black-box executor under Codex Control.\nCodex is the controller, reviewer, and only source of PASS/FAIL truth.\nYou may use any local Claude Code internal planning, dynamic workflow, ultracode, or fan-out subagents available in this CLI, but the final output must obey the boundary below.\nDo not ask the user to interact with Claude directly.\nDo not claim PASS. Codex will review Git diff, tests, policy events, and this run's receipt.\nExternal LLM egress for this bounded task has been approved by the CCA request artifact; do not request a separate user approval inside Claude.\n\n## Objective\nImplement G31_POLICY_SEARCH_RESEARCH_UI: add compact local G30 policy-search summaries and a read-only Policy Search Dashboard under the existing Research tab. Show deterministic policy search results, 12 x 8 x 3 = 288 matrix shape, objective rankings, Pareto frontier, policy config details, complexity breakdown, scoring policy, risk semantics warning, and non-claims. Do not add simulation logic, do not alter G30 results, do not mutate GameState or dispatch PlayerAction, do not call Ollama, fetch, or external APIs, and do not claim real-world organization conclusions.\n\n## Codex plan\n- Implement the objective within the approved boundary.\n\n## Allowed write paths\n- src/data/policySearchSummaries.ts\n- src/ui/PolicySearchDashboard.tsx\n- src/ui/ResearchDashboard.tsx\n- tests/data/policySearchSummaries.test.ts\n- tests/ui/PolicySearchDashboard.test.tsx\n- tests/ui/ResearchDashboard.test.tsx\n- verification/G31/\n- .codex/research_record.md\n- .codex/research_report.md\n\n## Disallowed paths\n- .git/\n- .claude/\n- .runtime/sealed/\n- .runtime/private_archives/\n- .codex/memories/\n- .env\n- **/*secret*\n- **/*token*\n- verification/G30/\n- src/game/\n- src/sim/\n\n## Required tests to run or leave for Codex verification\n- npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx\n- npm run test\n- npx tsc -b\n- npx vite build --base=/agent-factory/\n\n## Required Runtime Kernel artifacts\nWrite `.runtime/tasks/G31-POLICY-SEARCH-UI-T001/worker_heartbeat.json` after you understand the task.\nWrite `.runtime/tasks/G31-POLICY-SEARCH-UI-T001/worker_result.json` before stopping.\nThe worker_result.json object must include task_id, slot_id, dispatch_id, status, changed_files, tests_run_by_worker, and known_risks.\n"
+      ],
+      "exit_code": 0,
+      "role": "claude_code_cli",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:09726341524c9e0361aab75beabc2a4f4e77964db27858be490035ba38883f98"
+    },
+    {
+      "argv": [
+        "claude",
+        "agents",
+        "--json",
+        "--all",
+        "--cwd",
+        "/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry"
+      ],
+      "command": "claude agents --json --all --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+      "exit_code": 0,
+      "role": "codex_agent_view_monitor"
+    }
+  ],
+  "duration_ms": 182244,
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T07:30:42Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer."
+  },
+  "external_egress_approved": true,
+  "human_acceptance_required": true,
+  "launch_mode": "bg-agent-view",
+  "logs_command": "claude logs 39cfae33",
+  "model": "deepseek-v4-pro",
+  "monitor_ui": "agent-view",
+  "monitoring_path": ".runtime/tasks/G31-POLICY-SEARCH-UI-T001/monitoring.json",
+  "notes": [
+    "Claude Code CLI was launched as a visible Agent View background session.",
+    "Agent View is observability only; Codex diff/tests/P0/P1 review remains source of truth.",
+    "Claude background session id: 39cfae33",
+    "Background session state: stopped"
+  ],
+  "policy_events": [],
+  "provider": "DeepSeek",
+  "receipt_hash": "5802b1a2251bd3269bf68846f2f572d73799a21d095af091fe5a90a0130fbc91",
+  "required_tests": [
+    {
+      "command": "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+      "status": "not_run"
+    },
+    {
+      "command": "npm run test",
+      "status": "not_run"
+    },
+    {
+      "command": "npx tsc -b",
+      "status": "not_run"
+    },
+    {
+      "command": "npx vite build --base=/agent-factory/",
+      "status": "not_run"
+    }
+  ],
+  "status": "aborted",
+  "stop_command": "claude stop 39cfae33",
+  "task_id": "G31-POLICY-SEARCH-UI-T001"
+}

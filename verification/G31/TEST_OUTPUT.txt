@@ -1,0 +1,19 @@
+Command: npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx
+Result: PASS
+Summary: 3 files passed, 23 tests passed.
+
+Command: npm run test
+Result: PASS
+Summary: 53 files passed, 428 tests passed, 12 skipped.
+
+Command: npx tsc -b
+Result: PASS
+Summary: TypeScript completed with exit code 0 and no diagnostic output.
+
+Command: LC_ALL=C rg -n '[^ -~]' src/data/policySearchSummaries.ts src/ui/PolicySearchDashboard.tsx tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx
+Result: PASS
+Summary: no matches.
+
+Command: rg -n "fetch\(|ollama|AGENT_FOUNDRY_ENABLE_OLLAMA|PlayerAction|GameState|applyPlayerAction|onDispatch|setState" src/data/policySearchSummaries.ts src/ui/PolicySearchDashboard.tsx tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx
+Result: PASS
+Summary: no matches.

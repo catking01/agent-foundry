@@ -23,6 +23,10 @@
 - G30 matrix shape is `12 policies x 8 seeds x 3 representative orders = 288 runs`.
 - G30 artifacts include raw policy matrix, policy aggregates, objective rankings, order complexity breakdown, Pareto frontier, aggregate recompute check, search-space documentation, scoring-policy documentation, baseline linkage, sensitivity report, non-claims, test output, and build output.
 - G30 validation passed locally: focused G30 tests (2 files, 13 passed), `npm run test` (51 files, 410 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
+- G31 policy search research UI has been implemented as a read-only Research dashboard section over compact local G30 summary data.
+- G31 shows the G30 matrix shape, objective rankings, Pareto frontier, dominated policies, policy config details, order complexity breakdown, scoring policy, risk semantics, and non-claims.
+- G31 validation passed locally: focused G31 tests (3 files, 23 passed), `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
+- G31 CCA visible-mode executor attempts were made, but no accepted CCA worker result/completion receipt was produced; final implementation evidence is Codex local validation plus repository artifacts.
 
 ## Open Risks
 
@@ -33,5 +37,6 @@
 - G29 does not claim real-world organization validity, real AI-agent capability, Runtime Lab validation, or production governance readiness.
 - G30 searches a curated deterministic policy set, not an exhaustive organization-design space.
 - G30 reports objective-specific rankings and Pareto frontier; it does not claim a single best real-world organization policy.
-- G30 does not update the G29 Research UI; a future G31 can add policy search visualization.
+- G31 is a static summary UI; it does not expose the raw G30 288-run matrix in the browser bundle and does not generate new policy-search runs.
+- G31 does not claim a real-world optimal organization policy, real AI-agent execution, Runtime Lab validation, Ollama participation, or production governance readiness.
 - The Vite build still reports the existing chunk-size warning for the main bundle.

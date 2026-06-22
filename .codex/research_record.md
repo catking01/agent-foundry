@@ -89,3 +89,19 @@
 - Hygiene result before staging: PASS, but untracked `verification/G30` was skipped as a directory.
 - Staged hygiene command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`.
 - Staged hygiene result: PASS with no skipped paths; scanned G30 source, tests, generator, evidence artifacts, and `.codex` records.
+
+## 2026-06-22 15:49:46 CST
+
+- Task: implement `G31_POLICY_SEARCH_RESEARCH_UI`.
+- Scope inspected: G30 verification artifacts, `src/data/orgPolicyConfigs.ts`, `src/ui/ResearchDashboard.tsx`, G29/G30 research records, and current UI/data tests.
+- Work contract: read-only Research UI only; no new organization simulation logic, no G30 result changes, no main gameplay pipeline change, no Ollama, no external APIs, no Runtime Lab integration, and no real-world organization claim.
+- CCA attempt: visible-mode Claude Code CLI / DeepSeek execution was attempted via CCA task IDs `G31-POLICY-SEARCH-UI-T001` and `G31-POLICY-SEARCH-UI-T002`.
+- CCA result: T001 aborted and T002 failed to produce an accepted `worker_result.json`/completion receipt, so CCA was not counted as a successful external executor result.
+- Fallback decision: Codex main session completed a local repair using the G30 artifacts as source of truth, after rejecting invented/normalized CCA-generated summary values.
+- Added compact data summary: `src/data/policySearchSummaries.ts`, sourced from `verification/G30/POLICY_RANKING_BY_OBJECTIVE.json`, `PARETO_FRONTIER.json`, `POLICY_BY_ORDER_COMPLEXITY.json`, `SCORING_POLICY.md`, and `src/data/orgPolicyConfigs.ts`.
+- Added UI: `src/ui/PolicySearchDashboard.tsx`, embedded under `src/ui/ResearchDashboard.tsx`.
+- Added tests: `tests/data/policySearchSummaries.test.ts` and `tests/ui/PolicySearchDashboard.test.tsx`; updated `tests/ui/ResearchDashboard.test.tsx`.
+- Generated artifacts: `verification/G31/G31_POLICY_SEARCH_RESEARCH_UI.md`, `POLICY_SEARCH_SCREENFLOW.md`, `G30_DATA_PROVENANCE.md`, `PARETO_FRONTIER_UI_RECHECK.md`, `SCORING_POLICY_UI_RECHECK.md`, `RISK_SEMANTICS_UI_RECHECK.md`, `READ_ONLY_BOUNDARY_RECHECK.md`, `NON_CLAIMS.md`, `TEST_OUTPUT.txt`, and `BUILD_OUTPUT.txt`.
+- Validation: focused G31 tests PASS with 3 files and 23 tests; `npm run test` PASS with 53 files passed, 428 passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
+- G31 boundary scan: PASS; no `fetch(`, `ollama`, `AGENT_FOUNDRY_ENABLE_OLLAMA`, `PlayerAction`, `GameState`, `applyPlayerAction`, `onDispatch`, or `setState` references in the G31 data/UI/test path.
+- Non-claims preserved: deterministic simulator summary UI only; no real organization optimum, no real AI agents, no Runtime Lab validation, no Ollama participation, and no claim that a G30 policy is generally best for real organizations.

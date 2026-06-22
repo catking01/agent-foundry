@@ -1,0 +1,43 @@
+{
+  "allowed_paths": [
+    "src/data/policySearchSummaries.ts",
+    "src/ui/PolicySearchDashboard.tsx",
+    "src/ui/ResearchDashboard.tsx",
+    "tests/data/policySearchSummaries.test.ts",
+    "tests/ui/PolicySearchDashboard.test.tsx",
+    "tests/ui/ResearchDashboard.test.tsx",
+    "verification/G31/",
+    ".codex/research_record.md",
+    ".codex/research_report.md"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T07:30:42Z",
+  "approved_by": "codex",
+  "context_policy": "bounded-task-context-only",
+  "disallowed_paths": [
+    ".git/",
+    ".claude/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "verification/G30/",
+    "src/game/",
+    "src/sim/"
+  ],
+  "non_claims": [
+    "This approval authorizes CCA-bounded external LLM egress for this task only.",
+    "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+  ],
+  "provider": "Claude Code CLI / DeepSeek",
+  "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+  "required_tests": [
+    "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/"
+  ],
+  "task_id": "G31-POLICY-SEARCH-UI-T001"
+}

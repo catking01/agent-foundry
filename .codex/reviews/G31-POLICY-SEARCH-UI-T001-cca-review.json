@@ -1,0 +1,40 @@
+{
+  "audit_verdict": {
+    "findings": [
+      {
+        "message": "executor aborted with status: aborted",
+        "severity": "P0"
+      }
+    ],
+    "reason": "aborted",
+    "status": "abort",
+    "verdict": "ABORT"
+  },
+  "codex_source_of_truth": true,
+  "human_acceptance_required": true,
+  "p0_findings": [
+    {
+      "message": "executor aborted with status: aborted",
+      "severity": "P0"
+    },
+    {
+      "message": "missing Claude launch manifest path",
+      "severity": "P0"
+    }
+  ],
+  "p1_findings": [
+    {
+      "message": "final human accept/revert gate remains pending",
+      "severity": "P1"
+    }
+  ],
+  "review_inputs": [
+    "execution_receipt",
+    "git_diff",
+    "required_tests",
+    "policy_events",
+    "boundary_approval"
+  ],
+  "status": "fail",
+  "task_id": "G31-POLICY-SEARCH-UI-T001"
+}

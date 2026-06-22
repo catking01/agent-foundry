@@ -1,0 +1,96 @@
+{
+  "allowed_paths": [
+    "src/data/policySearchSummaries.ts",
+    "src/ui/PolicySearchDashboard.tsx",
+    "src/ui/ResearchDashboard.tsx",
+    "tests/data/policySearchSummaries.test.ts",
+    "tests/ui/PolicySearchDashboard.test.tsx",
+    "tests/ui/ResearchDashboard.test.tsx",
+    "verification/G31/",
+    ".codex/research_record.md",
+    ".codex/research_report.md"
+  ],
+  "claude_as_black_box": true,
+  "claude_profile": {
+    "agent_session_name": "G31-POLICY-SEARCH-UI-T001 Implement G31_POLICY_SEARCH_RESEARCH_UI: add com",
+    "agent_view_open_strategy": "auto",
+    "allow_internal_dynamic_workflow": true,
+    "allow_internal_fanout": true,
+    "allow_ultracode_if_available": true,
+    "codex_review_is_source_of_truth": true,
+    "ensure_agent_view_home": true,
+    "include_hook_events": true,
+    "launch_mode": "bg-agent-view",
+    "mode": "black_box_executor",
+    "monitor_poll_interval_sec": 5.0,
+    "monitor_ui": "agent-view",
+    "wait_for_background_completion": true
+  },
+  "controller": "codex",
+  "disallowed_paths": [
+    ".git/",
+    ".claude/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "verification/G30/",
+    "src/game/",
+    "src/sim/"
+  ],
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "allowed_paths": [
+      "src/data/policySearchSummaries.ts",
+      "src/ui/PolicySearchDashboard.tsx",
+      "src/ui/ResearchDashboard.tsx",
+      "tests/data/policySearchSummaries.test.ts",
+      "tests/ui/PolicySearchDashboard.test.tsx",
+      "tests/ui/ResearchDashboard.test.tsx",
+      "verification/G31/",
+      ".codex/research_record.md",
+      ".codex/research_report.md"
+    ],
+    "approved": true,
+    "approved_at": "2026-06-22T07:30:42Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "disallowed_paths": [
+      ".git/",
+      ".claude/",
+      ".runtime/sealed/",
+      ".runtime/private_archives/",
+      ".codex/memories/",
+      ".env",
+      "**/*secret*",
+      "**/*token*",
+      "verification/G30/",
+      "src/game/",
+      "src/sim/"
+    ],
+    "non_claims": [
+      "This approval authorizes CCA-bounded external LLM egress for this task only.",
+      "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+    ],
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+    "required_tests": [
+      "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+      "npm run test",
+      "npx tsc -b",
+      "npx vite build --base=/agent-factory/"
+    ],
+    "task_id": "G31-POLICY-SEARCH-UI-T001"
+  },
+  "external_egress_approved": true,
+  "human_acceptance_required": true,
+  "required_tests": [
+    "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/"
+  ],
+  "source_of_truth": "codex_review"
+}

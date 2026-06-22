@@ -1,0 +1,65 @@
+{
+  "allowed_paths": [
+    "src/data/policySearchSummaries.ts",
+    "src/ui/PolicySearchDashboard.tsx",
+    "src/ui/ResearchDashboard.tsx",
+    "tests/data/policySearchSummaries.test.ts",
+    "tests/ui/PolicySearchDashboard.test.tsx",
+    "tests/ui/ResearchDashboard.test.tsx",
+    "verification/G31/",
+    ".codex/research_record.md",
+    ".codex/research_report.md"
+  ],
+  "boundary_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T07:30:42Z",
+    "approved_by": "codex",
+    "external_egress_approved": true
+  },
+  "budget_usd": 1.5,
+  "claude_profile": {
+    "agent_session_name": "G31-POLICY-SEARCH-UI-T001 Implement G31_POLICY_SEARCH_RESEARCH_UI: add com",
+    "agent_view_open_strategy": "auto",
+    "allow_internal_dynamic_workflow": true,
+    "allow_internal_fanout": true,
+    "allow_ultracode_if_available": true,
+    "ensure_agent_view_home": true,
+    "include_hook_events": true,
+    "launch_mode": "bg-agent-view",
+    "monitor_poll_interval_sec": 5.0,
+    "monitor_ui": "agent-view",
+    "wait_for_background_completion": true
+  },
+  "disallowed_paths": [
+    ".git/",
+    ".claude/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "verification/G30/",
+    "src/game/",
+    "src/sim/"
+  ],
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T07:30:42Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer."
+  },
+  "failure_mode": "success",
+  "max_turns": 8,
+  "objective": "Implement G31_POLICY_SEARCH_RESEARCH_UI: add compact local G30 policy-search summaries and a read-only Policy Search Dashboard under the existing Research tab. Show deterministic policy search results, 12 x 8 x 3 = 288 matrix shape, objective rankings, Pareto frontier, policy config details, complexity breakdown, scoring policy, risk semantics warning, and non-claims. Do not add simulation logic, do not alter G30 results, do not mutate GameState or dispatch PlayerAction, do not call Ollama, fetch, or external APIs, and do not claim real-world organization conclusions.",
+  "required_tests": [
+    "npm run test -- tests/data/policySearchSummaries.test.ts tests/ui/PolicySearchDashboard.test.tsx tests/ui/ResearchDashboard.test.tsx",
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/"
+  ],
+  "task_id": "G31-POLICY-SEARCH-UI-T001"
+}

@@ -6,6 +6,7 @@ import {
   ORG_STUDY_RISK_SEMANTICS,
   type InterventionDeltaSummary,
 } from '../data/orgStudySummaries'
+import PolicySearchDashboard from './PolicySearchDashboard'
 
 export default function ResearchDashboard() {
   const rankingRows = [
@@ -148,7 +149,7 @@ export default function ResearchDashboard() {
       </div>
 
       <div className="panel">
-        <h2>Non-claims</h2>
+        <h2>Non-claims (G27/G28)</h2>
         <div className="grid-3col">
           {ORG_STUDY_NON_CLAIMS.map((claim) => (
             <div className="card" key={claim}>
@@ -158,6 +159,10 @@ export default function ResearchDashboard() {
           ))}
         </div>
       </div>
+
+      <hr style={{ borderColor: 'var(--border)', margin: '24px 0' }} />
+
+      <PolicySearchDashboard />
     </div>
   )
 }
