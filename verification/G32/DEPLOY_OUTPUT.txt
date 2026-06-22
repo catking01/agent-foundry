@@ -1,0 +1,94 @@
+G32 gh-pages deployment
+Started: 2026-06-22 20:08:40 CST
+
+
+[prepare]
+Cloning into '/tmp/agent-foundry-gh-pages'...
+clone_status=0
+
+[sync dist]
+Transfer starting: 5 files
+deleting assets/index-1QN32ld2.js
+deleting .gitignore
+./
+index.html
+assets/
+assets/index-9pmxPkJx.css
+assets/index-YafLzsvl.js
+
+sent 648005 bytes  received 98 bytes  53562231 bytes/sec
+total size is 647522  speedup is 1.00
+sync_status=0
+
+[gh-pages status before commit]
+ D .gitignore
+ D assets/index-1QN32ld2.js
+ M index.html
+?? assets/index-YafLzsvl.js
+
+[gh-pages diff stat]
+ .gitignore               |  1 -
+ assets/index-1QN32ld2.js | 99 ------------------------------------------------
+ index.html               |  4 +-
+ 3 files changed, 2 insertions(+), 102 deletions(-)
+
+[commit]
+[gh-pages 2372a54] Deploy G32 research demo
+ 4 files changed, 101 insertions(+), 102 deletions(-)
+ delete mode 100644 .gitignore
+ delete mode 100644 assets/index-1QN32ld2.js
+ create mode 100644 assets/index-YafLzsvl.js
+commit_status=0
+
+[push]
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:catking01/agent-foundry.git
+To github.com:catking01/agent-factory.git
+   b0f3f00..2372a54  gh-pages -> gh-pages
+push_status=0
+
+[remote refs]
+2372a547ec79fb42692f9f2cf64f8fa9307401bd	refs/heads/gh-pages
+
+Finished: 2026-06-22 20:08:55 CST
+G32 gh-pages deployment correction for current repo path
+Started: 2026-06-22 20:11:11 CST
+
+
+[prepare]
+Cloning into '/tmp/agent-foundry-gh-pages'...
+clone_status=0
+
+[sync dist]
+Transfer starting: 5 files
+./
+index.html
+assets/
+assets/index-9pmxPkJx.css
+assets/index-YafLzsvl.js
+
+sent 648005 bytes  received 98 bytes  80012716 bytes/sec
+total size is 647522  speedup is 1.00
+sync_status=0
+
+[gh-pages status before commit]
+ M index.html
+
+[gh-pages diff stat]
+ index.html | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+[commit]
+[gh-pages 0b257ca] Deploy G32 research demo at current pages path
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+commit_status=0
+
+[push]
+To github.com:catking01/agent-foundry.git
+   2372a54..0b257ca  gh-pages -> gh-pages
+push_status=0
+
+[remote refs]
+0b257cae23bb40b78812791fc3cd102805e3f82d	refs/heads/gh-pages
+
+Finished: 2026-06-22 20:11:27 CST

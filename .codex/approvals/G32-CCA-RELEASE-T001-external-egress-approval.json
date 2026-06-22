@@ -1,0 +1,47 @@
+{
+  "allowed_paths": [
+    "verification/G32/",
+    ".codex/tasks/G32-CCA-RELEASE-T001-cca-request.json",
+    ".codex/plans/G32-CCA-RELEASE-T001-codex-plan.md",
+    ".codex/plans/G32-CCA-RELEASE-T001-execution-details.json",
+    ".codex/approvals/G32-CCA-RELEASE-T001-boundary-approval.json",
+    ".codex/approvals/G32-CCA-RELEASE-T001-external-egress-approval.json",
+    ".codex/receipts/G32-CCA-RELEASE-T001-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T001-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T001-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T001-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T001/"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T11:51:56Z",
+  "approved_by": "codex",
+  "context_policy": "bounded-task-context-only",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "tests/",
+    "scripts/",
+    "verification/G30/",
+    "verification/G31/"
+  ],
+  "non_claims": [
+    "This approval authorizes CCA-bounded external LLM egress for this task only.",
+    "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+  ],
+  "provider": "Claude Code CLI / DeepSeek",
+  "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/",
+    "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast"
+  ],
+  "task_id": "G32-CCA-RELEASE-T001"
+}

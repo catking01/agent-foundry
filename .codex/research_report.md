@@ -30,6 +30,14 @@
 - G31 remote seal has been completed for implementation commit `c5916f412ce73c5e7c25e9b259d234411d4e4321`: `origin/main` was verified at that SHA after push.
 - G31 remote-seal CCA audit task `G31-REMOTE-SEAL-T001` verified the local/remote SHA match and required G31 files; its late `worker_result.json` reported `status: done`, while the original Runtime receipt retained a `worker_result_missing` timing caveat.
 - G31 remote-seal fresh validation passed after push: `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
+- G32 public research demo release deployed the G31 Research UI to GitHub Pages for the current repository path.
+- The old documented public URL `https://catking01.github.io/agent-factory/` is obsolete after the repository move; public smoke found GitHub Pages `Site not found` there.
+- The active public research demo URL is `https://catking01.github.io/agent-foundry/`.
+- G32 corrected the deployment build base from requested `/agent-factory/` to actual `/agent-foundry/` after verifying `origin` is `git@github.com:catking01/agent-foundry.git`.
+- G32 `origin/gh-pages` was verified at `0b257cae23bb40b78812791fc3cd102805e3f82d` after the corrected deployment.
+- G32 main-session validation passed: `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, `npx vite build --base=/agent-factory/`, and corrected deployment build `npx vite build --base=/agent-foundry/`; Vite retained the existing chunk-size warning.
+- G32 public smoke passed on `https://catking01.github.io/agent-foundry/?g32=0b257ca`: app load, first-run tutorial handling, Agent HUD, Orders tab, Research tab, Policy Search Dashboard, objective rankings, Pareto frontier, risk semantics, non-claims, and Debugger tab were observed.
+- G32 CCA visible task `G32-CCA-RELEASE-T002` completed as auxiliary executor evidence with no P0 findings; Codex/main session retained final release authority.
 
 ## Open Risks
 
@@ -44,3 +52,6 @@
 - G31 does not claim a real-world optimal organization policy, real AI-agent execution, Runtime Lab validation, Ollama participation, or production governance readiness.
 - G31 remote seal does not start G32, deploy GitHub Pages, tag a release, or change public demo deployment state.
 - The Vite build still reports the existing chunk-size warning for the main bundle.
+- G32's public URL changed from the earlier `agent-factory` path to `agent-foundry` because the GitHub repository moved; old links to `/agent-factory/` are not verified as live.
+- G32 does not change research logic, gameplay logic, G30/G31 results, or app source code; it is a release/deployment evidence milestone.
+- G32 public smoke observed a non-blocking missing `favicon.ico`; no app asset or runtime-blocking console error remained after the corrected base-path deployment.

@@ -1,0 +1,10 @@
+Command: find dist -maxdepth 2 -type f -print | sort | xargs -n1 shasum -a 256
+Build base: /agent-foundry/
+Started: 2026-06-22 20:10:55 CST
+
+
+e764e529ea1ad4bc5d5d60ff431f870a72fa2fbd9f14db3a28e91ba24d36dfc7  dist/assets/index-9pmxPkJx.css
+e550b9eb837b7174b8d0addc1852cd980f20dbbf41fba836e5ca677242bf3676  dist/assets/index-YafLzsvl.js
+d48ef4ebeee537315f4c506346d2fa06bd08a32286fde1c47ffdd0df2f046c82  dist/index.html
+
+Finished: 2026-06-22 20:10:55 CST

@@ -1,0 +1,83 @@
+Command: npm run test
+Started: 2026-06-22 20:05:56 CST
+
+
+> agent-foundry@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/ai/shadowAuditCalibration.test.ts (11 tests) 10ms
+ ✓ tests/ai/ollamaClient.optin.test.ts (5 tests | 4 skipped) 5ms
+ ✓ tests/sim/orgHierarchy.test.ts (34 tests) 29ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 7ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 6ms
+ ✓ tests/sim/orgInterventionStudy.test.ts (14 tests) 137ms
+ ✓ tests/sim/orgMultiSeedStudy.test.ts (32 tests) 216ms
+ ✓ tests/game/workshopUpgrade.test.ts (11 tests) 6ms
+ ✓ tests/sim/replay.test.ts (7 tests) 53ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 532ms
+ ✓ tests/data/policySearchSummaries.test.ts (7 tests) 9ms
+ ✓ tests/sim/orgPolicySearch.test.ts (11 tests) 155ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 118ms
+ ✓ tests/sim/agentProfiles.test.ts (14 tests) 50ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 81ms
+ ✓ tests/sim/orgRoles.test.ts (22 tests) 15ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 70ms
+ ✓ tests/sim/validation.test.ts (9 tests) 8ms
+ ✓ tests/sim/balanceTuningRegression.test.ts (8 tests) 853ms
+   ✓ Balance Tuning Regression > speed-first has higher overclaim findings than balanced at horizon 100 349ms
+ ✓ tests/game/agentStatusSelectors.test.ts (8 tests) 42ms
+ ✓ tests/sim/audit.test.ts (7 tests) 6ms
+ ✓ tests/sim/explainRun.test.ts (7 tests) 143ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 179ms
+ ✓ tests/ai/promptBuilder.test.ts (5 tests) 6ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 4ms
+ ✓ tests/sim/firstRunCompletion.test.ts (3 tests) 112ms
+ ✓ tests/ai/shadowAuditBenchmark.optin.test.ts (9 tests | 8 skipped) 2ms
+ ✓ tests/ai/shadowAuditBenchmarkFixtures.test.ts (8 tests) 20ms
+ ✓ tests/sim/failureAttribution.test.ts (7 tests) 738ms
+ ✓ tests/sim/ledgerAggregation.test.ts (5 tests) 609ms
+   ✓ Ledger Aggregation > different strategies produce different event profiles 467ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 29ms
+ ✓ tests/ai/shadowAuditSchema.test.ts (6 tests) 5ms
+ ✓ tests/sim/attributionReason.test.ts (4 tests) 378ms
+   ✓ Attribution Reason Hygiene > no reputation penalty uses AGENT_ASSIGNED as reason 331ms
+ ✓ tests/sim/g12ReportConsistency.test.ts (5 tests) 968ms
+   ✓ G12 Report Consistency > two independent report generations produce identical results 624ms
+ ✓ tests/sim/tick.test.ts (6 tests) 13ms
+ ✓ tests/sim/metricSemantics.test.ts (9 tests) 6ms
+ ✓ tests/sim/explanationConsistency.test.ts (6 tests) 827ms
+   ✓ Explanation Consistency > all 4 strategy explanations at seed=42 have valid attribution 341ms
+ ✓ tests/sim/rng.test.ts (8 tests) 16ms
+ ✓ tests/sim/paretoFrontier.test.ts (2 tests) 3ms
+ ✓ tests/data/orgStudySummaries.test.ts (3 tests) 5ms
+ ✓ tests/sim/rawRunEvidence.test.ts (4 tests) 2981ms
+   ✓ Raw Run Evidence > aggregates recomputed from raw runs match balance runner 1577ms
+   ✓ Raw Run Evidence > game-over rate recomputed from raw runs matches aggregate 1396ms
+ ✓ tests/sim/longRunBalanceTuning.test.ts (7 tests) 10ms
+ ✓ tests/ui/AgentWorkStatusFloat.test.tsx (10 tests) 372ms
+ ✓ tests/sim/balanceExport.test.ts (5 tests) 3858ms
+   ✓ Balance Export > full balance export includes all sections 2008ms
+   ✓ Balance Export > full balance export is valid JSON when serialized 1845ms
+ ✓ tests/ui/TutorialChecklist.test.tsx (10 tests) 222ms
+ ✓ tests/ui/ShadowAdvisoryPanel.test.tsx (13 tests) 179ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 9ms
+ ✓ tests/ui/PolicySearchDashboard.test.tsx (10 tests) 1136ms
+ ✓ tests/sim/hardDominanceGate.test.ts (8 tests) 5ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 5ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 1099ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 933ms
+ ✓ tests/ui/ResearchDashboard.test.tsx (6 tests) 1010ms
+   ✓ App Research tab > includes a Research tab that renders the dashboard 327ms
+ ✓ tests/sim/tradeoffPreservation.test.ts (8 tests) 4ms
+
+ Test Files  53 passed (53)
+      Tests  428 passed | 12 skipped (440)
+   Start at  20:05:57
+   Duration  13.23s (transform 1.70s, setup 0ms, collect 59.40s, tests 17.36s, environment 6.34s, prepare 6.46s)
+
+
+Exit status: 0
+Finished: 2026-06-22 20:06:10 CST

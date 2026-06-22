@@ -120,3 +120,19 @@
 - CCA timing caveat: Runtime's original execution receipt captured `status: worker_result_missing` before the late worker result was observed, so Codex records the CCA run as useful audit evidence with a receipt timing caveat, not as the sole source of PASS.
 - Fresh post-seal validation: `npm run test` PASS with 53 files passed, 428 passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
 - Seal verdict: G31 implementation commit `c5916f412ce73c5e7c25e9b259d234411d4e4321` is pushed and remotely verified; G31 remote seal is PASS. Seal evidence is recorded in this note and `verification/G31/REMOTE_SEAL.md`.
+
+## 2026-06-22 20:20:00 CST
+
+- Task: implement `G32_PUBLIC_RESEARCH_DEMO_RELEASE`.
+- Starting state: local `main` and `origin/main` were at G31 remote seal commit `6c9c448aa7920f57af58931b4710280f95ae81ea`.
+- Work contract: release and deployment evidence only; no app source changes, no tests/scripts changes, no G30/G31 research-result changes, no gameplay pipeline changes, no Ollama, no backend, no Runtime Lab integration into app code, no real-world organization conclusions, and no G33 work.
+- CCA execution: attempted per user request using Runtime Lab CCA skill from `/Users/catking/Desktop/codex-runtime-lab`; headless task `G32-CCA-RELEASE-T001` was interrupted after the user requested visible Claude Code CLI; visible task `G32-CCA-RELEASE-T002` launched Agent View session `51412770`, wrote `worker_result.json` with `status: done`, and Runtime/Codex review reported no P0 findings.
+- CCA boundary: auxiliary executor evidence only; CCA did not deploy, push, tag, or decide final PASS. Main session retained release authority.
+- Local validation: `npm run test` PASS with 53 files passed, 428 tests passed, 12 skipped; `npx tsc -b` PASS; requested build `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
+- Deployment correction: public smoke showed `https://catking01.github.io/agent-factory/` returned GitHub Pages `Site not found`; `git remote -v` confirmed `origin` is `git@github.com:catking01/agent-foundry.git`; the first `/agent-foundry/` deployment still referenced `/agent-factory/assets/...`, causing asset 404s.
+- Corrected deployment: rebuilt with `npx vite build --base=/agent-foundry/`, redeployed to `gh-pages`, and verified `origin/gh-pages` at `0b257cae23bb40b78812791fc3cd102805e3f82d`.
+- Public smoke: Playwright verified `https://catking01.github.io/agent-foundry/?g32=0b257ca` loads, first-run tutorial is visible/dismissible, Agent HUD is visible, Orders opens, Research opens, Policy Search Dashboard is visible, objective rankings are visible, Pareto frontier and dominated policies are visible, risk semantics and non-claims are visible, and Debugger opens.
+- Console caveat: after corrected deployment, the only observed console error was a non-blocking `favicon.ico` 404; no app asset 404 or runtime-blocking browser console error remained.
+- Hygiene: fast pre-close hygiene PASS with warnings for absolute local machine paths in generated CCA receipt/audit and captured test/hygiene output; no suspicious tmp/scratch/backup/dead paths in git status after `.runtime/` and `.playwright-cli/` were added to `.gitignore`.
+- Artifacts: `verification/G32/` includes release notes, deployment checklist, local validator outputs, build manifests, gh-pages ref check, deployed URL, known limitations, public boundary recheck, post-deploy smoke evidence, and copied Playwright snapshots.
+- Non-claims preserved: G32 does not prove a real-world optimal organization policy, validate Runtime Lab, implement real AI supervisors/workers, require Ollama, require a backend, or start G33.

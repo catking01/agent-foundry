@@ -1,0 +1,323 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - heading "群智工坊：Agent FoundryAI 公司模拟经营" [level=1] [ref=e6]
+      - generic [ref=e7]:
+        - button "Tick 0 →" [ref=e8] [cursor=pointer]
+        - button "▶ 自动" [ref=e9] [cursor=pointer]
+        - button "EN" [ref=e10] [cursor=pointer]
+        - combobox [ref=e11]:
+          - option "1×" [selected]
+          - option "2×"
+          - option "4×"
+          - option "8×"
+        - button "导出" [ref=e12] [cursor=pointer]
+        - button "新游戏" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]:
+      - button "仪表盘" [ref=e15] [cursor=pointer]
+      - button "订单" [ref=e16] [cursor=pointer]
+      - button "车间" [ref=e17] [cursor=pointer]
+      - button "AI 员工" [ref=e18] [cursor=pointer]
+      - button "Research" [ref=e19] [cursor=pointer]
+      - generic [ref=e20]: │
+      - generic [ref=e21]: 高级
+      - button "任务" [ref=e22] [cursor=pointer]
+      - button "产出物" [ref=e23] [cursor=pointer]
+      - button "事件日志" [ref=e24] [cursor=pointer]
+      - button "调试器" [active] [ref=e25] [cursor=pointer]
+    - generic [ref=e1004]:
+      - generic [ref=e1005]:
+        - heading "场景调试器" [level=2] [ref=e1006]
+        - generic [ref=e1007]:
+          - generic [ref=e1008]:
+            - generic [ref=e1009]: 种子
+            - spinbutton [ref=e1010]: "42"
+          - generic [ref=e1011]:
+            - generic [ref=e1012]: 时间范围
+            - spinbutton [ref=e1013]: "60"
+          - generic [ref=e1014]:
+            - generic [ref=e1015]: 策略
+            - combobox [ref=e1016]:
+              - option "Speed First"
+              - option "Quality First"
+              - option "Parallel Heavy"
+              - option "Balanced" [selected]
+      - generic [ref=e1017]:
+        - generic [ref=e1018]:
+          - generic [ref=e1019]: 结果
+          - generic [ref=e1020]: 运行中
+        - generic [ref=e1021]:
+          - generic [ref=e1022]: 现金
+          - generic [ref=e1023]: $68,214
+        - generic [ref=e1024]:
+          - generic [ref=e1025]: 声誉
+          - generic [ref=e1026]: "41.0"
+        - generic [ref=e1027]:
+          - generic [ref=e1028]: 证据完整性
+          - generic [ref=e1029]: "34"
+        - generic [ref=e1030]:
+          - generic [ref=e1031]: 订单
+          - generic [ref=e1032]: "5"
+      - generic [ref=e1033]:
+        - generic [ref=e1034]:
+          - heading "现金流明细" [level=2] [ref=e1035]
+          - table [ref=e1036]:
+            - rowgroup [ref=e1037]:
+              - row "类别 金额" [ref=e1038]:
+                - columnheader "类别" [ref=e1039]
+                - columnheader "金额" [ref=e1040]
+            - rowgroup [ref=e1041]:
+              - row "工资 $14,580" [ref=e1042]:
+                - cell "工资" [ref=e1043]
+                - cell "$14,580" [ref=e1044]
+              - row "维护费 $2,400" [ref=e1045]:
+                - cell "维护费" [ref=e1046]
+                - cell "$2,400" [ref=e1047]
+              - row "并行路线 $600" [ref=e1048]:
+                - cell "并行路线" [ref=e1049]
+                - cell "$600" [ref=e1050]
+              - row "升级 $0" [ref=e1051]:
+                - cell "升级" [ref=e1052]
+                - cell "$0" [ref=e1053]
+              - row "总支出 $17,580" [ref=e1054]:
+                - cell "总支出" [ref=e1055]
+                - cell "$17,580" [ref=e1056]
+              - row "收入 $5,794" [ref=e1057]:
+                - cell "收入" [ref=e1058]
+                - cell "$5,794" [ref=e1059]
+              - row "净头寸 $-11,786" [ref=e1060]:
+                - cell "净头寸" [ref=e1061]
+                - cell "$-11,786" [ref=e1062]
+        - generic [ref=e1063]:
+          - heading "瓶颈分析" [level=2] [ref=e1064]
+          - generic [ref=e1065]:
+            - generic [ref=e1067]:
+              - generic [ref=e1068]: 工程车间
+              - generic [ref=e1069]: "最大排队: 4 | 总计: 144"
+            - generic [ref=e1073]:
+              - generic [ref=e1074]: 规划车间
+              - generic [ref=e1075]: "最大排队: 2 | 总计: 10"
+            - generic [ref=e1079]:
+              - generic [ref=e1080]: 验证车间
+              - generic [ref=e1081]: "最大排队: 2 | 总计: 5"
+            - generic [ref=e1085]:
+              - generic [ref=e1086]: 审计车间
+              - generic [ref=e1087]: "最大排队: 2 | 总计: 5"
+            - generic [ref=e1091]:
+              - generic [ref=e1092]: 交付车间
+              - generic [ref=e1093]: "最大排队: 2 | 总计: 5"
+      - generic [ref=e1096]:
+        - generic [ref=e1097]:
+          - heading "负面事件 (12)" [level=2] [ref=e1098]
+          - generic [ref=e1099]:
+            - generic [ref=e1100]:
+              - generic [ref=e1101]:
+                - generic [ref=e1102]: AUDIT_FAILED
+                - generic [ref=e1103]: high
+              - generic [ref=e1104]: "Tick 9 · Evidence gap detected (strength: 4.0). Hidden failure routes detected."
+            - generic [ref=e1105]:
+              - generic [ref=e1106]:
+                - generic [ref=e1107]: LATE_DELIVERY
+                - generic [ref=e1108]: high
+              - generic [ref=e1109]: Tick 10 · Late delivery of order-bug-fix
+            - generic [ref=e1110]:
+              - generic [ref=e1111]:
+                - generic [ref=e1112]: AUDIT_FAILED
+                - generic [ref=e1113]: high
+              - generic [ref=e1114]: "Tick 19 · Overclaim detected (gap: 4.2). Hidden failure routes detected."
+            - generic [ref=e1115]:
+              - generic [ref=e1116]:
+                - generic [ref=e1117]: LATE_DELIVERY
+                - generic [ref=e1118]: high
+              - generic [ref=e1119]: Tick 19 · Late delivery of order-csv-cleaning
+            - generic [ref=e1120]:
+              - generic [ref=e1121]:
+                - generic [ref=e1122]: LATE_DELIVERY
+                - generic [ref=e1123]: high
+              - generic [ref=e1124]: Tick 20 · Late delivery of order-paper-summary
+            - generic [ref=e1125]:
+              - generic [ref=e1126]:
+                - generic [ref=e1127]: LATE_DELIVERY
+                - generic [ref=e1128]: high
+              - generic [ref=e1129]: Tick 20 · Late delivery of order-api-mock
+            - generic [ref=e1130]:
+              - generic [ref=e1131]:
+                - generic [ref=e1132]: VALIDATION_FAILED
+                - generic [ref=e1133]: medium
+              - generic [ref=e1134]: Tick 8 · [Script] All script checks passed. [Agent] Overclaim detected. Evidence gap detected.
+            - generic [ref=e1135]:
+              - generic [ref=e1136]:
+                - generic [ref=e1137]: AUDIT_FAILED
+                - generic [ref=e1138]: medium
+              - generic [ref=e1139]: "Tick 10 · Evidence gap detected (strength: 4.8)."
+            - generic [ref=e1140]:
+              - generic [ref=e1141]:
+                - generic [ref=e1142]: VALIDATION_FAILED
+                - generic [ref=e1143]: medium
+              - generic [ref=e1144]: Tick 17 · [Script] All script checks passed. [Agent] Quality issues found.
+            - generic [ref=e1145]:
+              - generic [ref=e1146]:
+                - generic [ref=e1147]: VALIDATION_FAILED
+                - generic [ref=e1148]: medium
+              - generic [ref=e1149]: Tick 18 · [Script] Quality below minimum threshold. [Agent] Overclaim detected. Quality issues found.
+            - generic [ref=e1150]:
+              - generic [ref=e1151]:
+                - generic [ref=e1152]: VALIDATION_FAILED
+                - generic [ref=e1153]: medium
+              - generic [ref=e1154]: Tick 18 · [Script] Quality below minimum threshold. [Agent] Overclaim detected. Quality issues found.
+            - generic [ref=e1155]:
+              - generic [ref=e1156]:
+                - generic [ref=e1157]: AUDIT_FAILED
+                - generic [ref=e1158]: medium
+              - generic [ref=e1159]: "Tick 19 · Overclaim detected (gap: 4.2)."
+        - generic [ref=e1160]:
+          - heading "关键产出物 (9)" [level=2] [ref=e1161]
+          - generic [ref=e1162]:
+            - generic [ref=e1163]:
+              - generic [ref=e1164]: artifact-7-0772c
+              - generic [ref=e1165]:
+                - generic [ref=e1166]: "质量: 4.0"
+                - generic [ref=e1167]: "证据: 4.0"
+                - generic [ref=e1168]: "声明: 8.5"
+                - generic [ref=e1169]: "吹牛差距: 4.5"
+              - generic [ref=e1170]:
+                - generic [ref=e1171]: "验证: 失败"
+                - generic [ref=e1172]: "审计: 失败"
+                - generic [ref=e1173]: high
+            - generic [ref=e1174]:
+              - generic [ref=e1175]: artifact-17-16a60
+              - generic [ref=e1176]:
+                - generic [ref=e1177]: "质量: 2.9"
+                - generic [ref=e1178]: "证据: 4.8"
+                - generic [ref=e1179]: "声明: 9.0"
+                - generic [ref=e1180]: "吹牛差距: 4.2"
+              - generic [ref=e1181]:
+                - generic [ref=e1182]: "验证: 失败"
+                - generic [ref=e1183]: "审计: 失败"
+                - generic [ref=e1184]: high
+            - generic [ref=e1185]:
+              - generic [ref=e1186]: artifact-31-03a94
+              - generic [ref=e1187]:
+                - generic [ref=e1188]: "质量: 2.0"
+                - generic [ref=e1189]: "证据: 6.4"
+                - generic [ref=e1190]: "声明: 10.0"
+                - generic [ref=e1191]: "吹牛差距: 3.6"
+              - generic [ref=e1192]:
+                - generic [ref=e1193]: "验证: 失败"
+                - generic [ref=e1194]: "审计: 失败"
+                - generic [ref=e1195]: medium
+            - generic [ref=e1196]:
+              - generic [ref=e1197]: artifact-27-09f31
+              - generic [ref=e1198]:
+                - generic [ref=e1199]: "质量: 3.2"
+                - generic [ref=e1200]: "证据: 5.5"
+                - generic [ref=e1201]: "声明: 8.4"
+                - generic [ref=e1202]: "吹牛差距: 2.9"
+              - generic [ref=e1203]:
+                - generic [ref=e1204]: "验证: 失败"
+                - generic [ref=e1205]: "审计: 失败"
+                - generic [ref=e1206]: medium
+            - generic [ref=e1207]:
+              - generic [ref=e1208]: artifact-6-04594
+              - generic [ref=e1209]:
+                - generic [ref=e1210]: "质量: 4.4"
+                - generic [ref=e1211]: "证据: 4.5"
+                - generic [ref=e1212]: "声明: 4.5"
+                - generic [ref=e1213]: "吹牛差距: 0.0"
+              - generic [ref=e1214]:
+                - generic [ref=e1215]: "验证: 失败"
+                - generic [ref=e1216]: "审计: 通过"
+                - generic [ref=e1217]: low
+            - generic [ref=e1218]:
+              - generic [ref=e1219]: artifact-8-15ea8
+              - generic [ref=e1220]:
+                - generic [ref=e1221]: "质量: 4.4"
+                - generic [ref=e1222]: "证据: 4.8"
+                - generic [ref=e1223]: "声明: 4.8"
+                - generic [ref=e1224]: "吹牛差距: 0.0"
+              - generic [ref=e1225]:
+                - generic [ref=e1226]: "验证: 通过"
+                - generic [ref=e1227]: "审计: 失败"
+                - generic [ref=e1228]: medium
+            - generic [ref=e1229]:
+              - generic [ref=e1230]: artifact-9-01544
+              - generic [ref=e1231]:
+                - generic [ref=e1232]: "质量: 3.4"
+                - generic [ref=e1233]: "证据: 7.3"
+                - generic [ref=e1234]: "声明: 7.3"
+                - generic [ref=e1235]: "吹牛差距: 0.0"
+              - generic [ref=e1236]:
+                - generic [ref=e1237]: "验证: 失败"
+                - generic [ref=e1238]: "审计: 通过"
+                - generic [ref=e1239]: low
+            - generic [ref=e1240]:
+              - generic [ref=e1241]: artifact-16-15b49
+              - generic [ref=e1242]:
+                - generic [ref=e1243]: "质量: 3.5"
+                - generic [ref=e1244]: "证据: 5.8"
+                - generic [ref=e1245]: "声明: 5.8"
+                - generic [ref=e1246]: "吹牛差距: 0.0"
+              - generic [ref=e1247]:
+                - generic [ref=e1248]: "验证: 失败"
+                - generic [ref=e1249]: "审计: 通过"
+                - generic [ref=e1250]: low
+            - generic [ref=e1251]:
+              - generic [ref=e1252]: artifact-22-0b299
+              - generic [ref=e1253]:
+                - generic [ref=e1254]: "质量: 3.0"
+                - generic [ref=e1255]: "证据: 5.6"
+                - generic [ref=e1256]: "声明: 5.6"
+                - generic [ref=e1257]: "吹牛差距: 0.0"
+              - generic [ref=e1258]:
+                - generic [ref=e1259]: "验证: 失败"
+                - generic [ref=e1260]: "审计: 通过"
+                - generic [ref=e1261]: low
+      - generic [ref=e1262]:
+        - heading "信任时间线" [level=2] [ref=e1263]
+        - generic [ref=e1265]:
+          - list [ref=e1267]:
+            - listitem [ref=e1268]:
+              - img "声誉 legend icon" [ref=e1269]
+              - text: 声誉
+            - listitem [ref=e1271]:
+              - img "证据完整性 legend icon" [ref=e1272]
+              - text: 证据完整性
+          - application [ref=e1274]:
+            - generic [ref=e1293]:
+              - generic [ref=e1294]:
+                - generic [ref=e1296]: "0"
+                - generic [ref=e1298]: "9"
+                - generic [ref=e1300]: "9"
+                - generic [ref=e1302]: "10"
+                - generic [ref=e1304]: "10"
+                - generic [ref=e1306]: "11"
+                - generic [ref=e1308]: "19"
+                - generic [ref=e1310]: "19"
+                - generic [ref=e1312]: "20"
+                - generic [ref=e1314]: "60"
+              - generic [ref=e1315]:
+                - generic [ref=e1317]: "0"
+                - generic [ref=e1319]: "25"
+                - generic [ref=e1321]: "50"
+                - generic [ref=e1323]: "75"
+                - generic [ref=e1325]: "100"
+      - generic [ref=e1326]:
+        - heading "事件摘要" [level=2] [ref=e1327]
+        - generic [ref=e1328]:
+          - generic [ref=e1329]:
+            - generic [ref=e1330]: 证据下降
+            - generic [ref=e1331]: "3"
+          - generic [ref=e1332]:
+            - generic [ref=e1333]: 声誉惩罚
+            - generic [ref=e1334]: "4"
+          - generic [ref=e1335]:
+            - generic [ref=e1336]: 总事件数
+            - generic [ref=e1337]: "96"
+      - button "显示影子审计示例" [ref=e1340] [cursor=pointer]
+    - generic [ref=e102] [cursor=pointer]:
+      - generic [ref=e103]:
+        - generic [ref=e104]: AI 员工
+        - generic [ref=e105]: 0 工作中
+        - generic [ref=e106]: · 8 空闲
+      - generic [ref=e107]: ▲
+  - generic [ref=e1341]: "25"

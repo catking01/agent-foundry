@@ -1,0 +1,3 @@
+# Snapshot was empty because the first `/agent-foundry/` deployment served an
+# index that referenced `/agent-factory/assets/...`; the app shell did not
+# hydrate. See `agent-foundry-old-base-asset-404-console.log` for the asset 404s.

@@ -1,0 +1,13 @@
+Primary deployed URL:
+https://catking01.github.io/agent-foundry/
+
+Smoke URL used:
+https://catking01.github.io/agent-foundry/?g32=0b257ca
+
+Status: PUBLIC SMOKE PASS
+
+Corrected boundary:
+The originally supplied URL `https://catking01.github.io/agent-factory/`
+returned GitHub Pages `Site not found` on 2026-06-22. The repository remote is
+`git@github.com:catking01/agent-foundry.git`, so the working public Pages path
+is `/agent-foundry/`.

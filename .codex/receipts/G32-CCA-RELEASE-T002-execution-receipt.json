@@ -1,0 +1,188 @@
+{
+  "adapter_failure_kind": null,
+  "agent_session_path": ".runtime/tasks/G32-CCA-RELEASE-T002/claude_agent_session.json",
+  "agent_view_command": "claude agents --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+  "agent_view_home_command": "claude agents --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+  "agent_view_home_path": ".runtime/tasks/G32-CCA-RELEASE-T002/agent_view_home.json",
+  "agent_view_home_status": "launched",
+  "agent_view_is_observability_only": true,
+  "attach_command": "claude attach 51412770",
+  "boundary_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T11:54:38Z",
+    "approved_by": "codex",
+    "external_egress_approved": true
+  },
+  "changed_files": [
+    "verification/G32/G32_RELEASE.md",
+    "verification/G32/TEST_OUTPUT.txt",
+    "verification/G32/BUILD_OUTPUT.txt",
+    "verification/G32/HYGIENE_OUTPUT.txt",
+    "verification/G32/NON_CLAIMS.md",
+    "verification/G32/G31_SEAL_REFERENCE.md",
+    ".codex/plans/G32-CCA-RELEASE-T002-execution-details.json",
+    ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/worker_heartbeat.json",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/worker_result.json"
+  ],
+  "claude_background_session_id": "51412770",
+  "claude_background_session_name": "G32-research-demo-release",
+  "claude_black_box_execution": true,
+  "claude_result_path": ".runtime/tasks/G32-CCA-RELEASE-T002/claude_result.json",
+  "codex_tests_are_source_of_truth": true,
+  "commands": [
+    {
+      "argv": [
+        "claude",
+        "--bg",
+        "--name",
+        "G32-research-demo-release",
+        "--tools",
+        "Read,Edit,Write,Bash",
+        "--disallowedTools",
+        "Bash(git push *)",
+        "Bash(git remote *)",
+        "Bash(git config --global *)",
+        "Bash(rm -rf *)",
+        "Bash(rm -r *)",
+        "--model",
+        "deepseek-v4-pro",
+        "--setting-sources",
+        "project",
+        "--settings",
+        "/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry/.runtime/tasks/G32-CCA-RELEASE-T002/claude_settings.json",
+        "--permission-mode",
+        "auto",
+        "# CCA Claude Code CLI Execution Contract: G32-CCA-RELEASE-T002\n\nYou are Claude Code CLI running as an external black-box executor under Codex Control.\nCodex is the controller, reviewer, and only source of PASS/FAIL truth.\nYou may use any local Claude Code internal planning, dynamic workflow, ultracode, or fan-out subagents available in this CLI, but the final output must obey the boundary below.\nDo not ask the user to interact with Claude directly.\nDo not claim PASS. Codex will review Git diff, tests, policy events, and this run's receipt.\nExternal LLM egress for this bounded task has been approved by the CCA request artifact; do not request a separate user approval inside Claude.\n\n## Objective\nG32 public research demo release evidence: create verification/G32 release artifacts and run local validators for the sealed G31 Research UI without modifying app source, research results, gameplay, or deployment refs\n\n## Codex plan\n- Implement the objective within the approved boundary.\n\n## Allowed write paths\n- verification/G32/\n- .codex/tasks/G32-CCA-RELEASE-T002-cca-request.json\n- .codex/plans/G32-CCA-RELEASE-T002-codex-plan.md\n- .codex/plans/G32-CCA-RELEASE-T002-execution-details.json\n- .codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json\n- .codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json\n- .codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json\n- .codex/audits/G32-CCA-RELEASE-T002-codex-audit.md\n- .codex/reviews/G32-CCA-RELEASE-T002-cca-review.json\n- .codex/reviews/G32-CCA-RELEASE-T002-cca-review.md\n- .runtime/tasks/G32-CCA-RELEASE-T002/\n\n## Disallowed paths\n- .git/\n- .runtime/sealed/\n- .runtime/private_archives/\n- .claude/\n- .codex/memories/\n- .env\n- **/*secret*\n- **/*token*\n- src/\n- tests/\n- scripts/\n- verification/G30/\n- verification/G31/\n\n## Required tests to run or leave for Codex verification\n- npm run test\n- npx tsc -b\n- npx vite build --base=/agent-factory/\n- ~/.codex/bin/codex_preclose_hygiene.sh . --mode fast\n\n## Required Runtime Kernel artifacts\nThe task-scoped Runtime artifact directory `.runtime/tasks/G32-CCA-RELEASE-T002/` is allowed for heartbeat/result evidence even if it is not listed above as a product write path.\nCreate parent directories if needed, then write `.runtime/tasks/G32-CCA-RELEASE-T002/worker_heartbeat.json` after you understand the task.\nBefore you stop, always write `.runtime/tasks/G32-CCA-RELEASE-T002/worker_result.json`, even if you are blocked or failed.\nworker_result.json must be valid JSON and must include exactly these contract fields:\n- task_id: this task id\n- slot_id: CCA-CLI unless Runtime provided a different slot id\n- dispatch_id: the dispatch id from `.runtime/tasks/<task>/task.json` extra.dispatch_id when available\n- status: one of `done`, `blocked`, or `failed`; use `done` for completed work, never `completed`\n- changed_files: repo-relative paths you changed\n- tests_run_by_worker: commands you personally ran, or [] if Codex should run them\n- known_risks: concrete residual risks, or []\nDo not invent PASS. Codex will validate worker_result.json, git diff, tests, and policy events.\n"
+      ],
+      "exit_code": 0,
+      "role": "claude_code_cli",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:49fe93113909129bc21fe3d2a110f95b5101035a470fd542ac14b94c2bdea065"
+    },
+    {
+      "argv": [
+        "claude",
+        "agents",
+        "--json",
+        "--all",
+        "--cwd",
+        "/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry"
+      ],
+      "command": "claude agents --json --all --cwd '/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry'",
+      "exit_code": 0,
+      "role": "codex_agent_view_monitor"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test"
+      ],
+      "command": "npm run test",
+      "duration_ms": 19169,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:95e8e3025f4430cab522343f07b1df75ea8742b22836b5bbf14eb758076781bf"
+    },
+    {
+      "argv": [
+        "npx",
+        "tsc",
+        "-b"
+      ],
+      "command": "npx tsc -b",
+      "duration_ms": 5774,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "npx",
+        "vite",
+        "build",
+        "--base=/agent-factory/"
+      ],
+      "command": "npx vite build --base=/agent-factory/",
+      "duration_ms": 3898,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c",
+      "stdout_digest": "sha256:1014825a4d413f090b3c8a17eec898ceb9f86aeaa3aac7745b9c9951bdc0c69b"
+    },
+    {
+      "argv": [
+        "~/.codex/bin/codex_preclose_hygiene.sh",
+        ".",
+        "--mode",
+        "fast"
+      ],
+      "command": "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast",
+      "duration_ms": 1783,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:2cdb134545505b7f37c1ee8aa7d5db9fffdb30f5514e883dae5a8c5519cee6fb"
+    }
+  ],
+  "diff_path": ".runtime/tasks/G32-CCA-RELEASE-T002/diff.patch",
+  "diff_stat": "",
+  "duration_ms": 457855,
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T11:54:38Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer."
+  },
+  "external_egress_approved": true,
+  "human_acceptance_required": true,
+  "launch_manifest_path": ".runtime/tasks/G32-CCA-RELEASE-T002/launch_manifest.json",
+  "launch_mode": "bg-agent-view",
+  "logs_command": "claude logs 51412770",
+  "model": "deepseek-v4-pro",
+  "monitor_ui": "agent-view",
+  "monitoring_path": ".runtime/tasks/G32-CCA-RELEASE-T002/monitoring.json",
+  "notes": [
+    "Claude Code CLI was launched as a visible Agent View background session.",
+    "Agent View is observability only; Codex diff/tests/P0/P1 review remains source of truth.",
+    "Claude background session id: 51412770"
+  ],
+  "policy_events": [],
+  "policy_events_path": ".runtime/tasks/G32-CCA-RELEASE-T002/policy_events.jsonl",
+  "provider": "DeepSeek",
+  "receipt_hash": "60bd40ee007f3cda9a38afececd4893ec324182174b1641460d7cc701120af5a",
+  "required_tests": [
+    {
+      "command": "npm run test",
+      "status": "passed"
+    },
+    {
+      "command": "npx tsc -b",
+      "status": "passed"
+    },
+    {
+      "command": "npx vite build --base=/agent-factory/",
+      "status": "passed"
+    },
+    {
+      "command": "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast",
+      "status": "passed"
+    }
+  ],
+  "status": "completed",
+  "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_digest": "sha256:49fe93113909129bc21fe3d2a110f95b5101035a470fd542ac14b94c2bdea065",
+  "stop_command": "claude stop 51412770",
+  "task_id": "G32-CCA-RELEASE-T002",
+  "test_summary_path": ".runtime/tasks/G32-CCA-RELEASE-T002/test_summary.json",
+  "worker_result_path": ".runtime/tasks/G32-CCA-RELEASE-T002/worker_result.json"
+}

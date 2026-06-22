@@ -1,0 +1,41 @@
+{
+  "allowed_paths": [
+    "verification/G32/",
+    ".codex/tasks/G32-CCA-RELEASE-T002-cca-request.json",
+    ".codex/plans/G32-CCA-RELEASE-T002-codex-plan.md",
+    ".codex/plans/G32-CCA-RELEASE-T002-execution-details.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json",
+    ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T11:54:38Z",
+  "approved_by": "codex",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "tests/",
+    "scripts/",
+    "verification/G30/",
+    "verification/G31/"
+  ],
+  "human_acceptance_required": true,
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/",
+    "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast"
+  ],
+  "task_id": "G32-CCA-RELEASE-T002"
+}

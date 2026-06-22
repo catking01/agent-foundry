@@ -1,0 +1,31 @@
+{
+  "task_id": "G32-CCA-RELEASE-T002",
+  "slot_id": "CCA-CLI",
+  "dispatch_id": "G32-CCA-RELEASE-T002-cca",
+  "status": "done",
+  "changed_files": [
+    "verification/G32/G32_RELEASE.md",
+    "verification/G32/TEST_OUTPUT.txt",
+    "verification/G32/BUILD_OUTPUT.txt",
+    "verification/G32/HYGIENE_OUTPUT.txt",
+    "verification/G32/NON_CLAIMS.md",
+    "verification/G32/G31_SEAL_REFERENCE.md",
+    ".codex/plans/G32-CCA-RELEASE-T002-execution-details.json",
+    ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/worker_heartbeat.json",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/worker_result.json"
+  ],
+  "tests_run_by_worker": [
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/",
+    "npx vitest run",
+    "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast"
+  ],
+  "known_risks": [
+    "Pre-existing Vite production warning: some chunks larger than 500 kB after minification. Present since before G31; unrelated to G32 release verification and does not block functionality.",
+    "G32 release verification is evidence-only: records that the sealed G31 Research UI passes all local validators. It does not include deployment, hosting, or GitHub Pages publication."
+  ]
+}

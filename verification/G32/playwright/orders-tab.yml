@@ -1,0 +1,110 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - heading "群智工坊：Agent FoundryAI 公司模拟经营" [level=1] [ref=e6]
+    - generic [ref=e7]:
+      - button "Tick 0 →" [ref=e8] [cursor=pointer]
+      - button "▶ 自动" [ref=e9] [cursor=pointer]
+      - button "EN" [ref=e10] [cursor=pointer]
+      - combobox [ref=e11]:
+        - option "1×" [selected]
+        - option "2×"
+        - option "4×"
+        - option "8×"
+      - button "导出" [ref=e12] [cursor=pointer]
+      - button "新游戏" [ref=e13] [cursor=pointer]
+  - generic [ref=e14]:
+    - button "仪表盘" [ref=e15] [cursor=pointer]
+    - button "订单" [active] [ref=e16] [cursor=pointer]
+    - button "车间" [ref=e17] [cursor=pointer]
+    - button "AI 员工" [ref=e18] [cursor=pointer]
+    - button "Research" [ref=e19] [cursor=pointer]
+    - generic [ref=e20]: │
+    - generic [ref=e21]: 高级
+    - button "任务" [ref=e22] [cursor=pointer]
+    - button "产出物" [ref=e23] [cursor=pointer]
+    - button "事件日志" [ref=e24] [cursor=pointer]
+    - button "调试器" [ref=e25] [cursor=pointer]
+  - generic [ref=e923]:
+    - generic [ref=e924]:
+      - generic [ref=e925]:
+        - heading "可接订单 (5)" [level=2] [ref=e926]
+        - generic [ref=e927]:
+          - generic [ref=e928]:
+            - generic [ref=e929]:
+              - generic [ref=e930]:
+                - generic [ref=e931]: web
+                - text: Build a simple landing page
+              - generic [ref=e932]: 可接
+            - generic [ref=e933]:
+              - generic [ref=e934]:
+                - generic [ref=e935]: $2100
+                - generic [ref=e936]: 复杂度:3 模糊度:2 风险:2
+                - generic [ref=e937]: 12t 剩余
+              - generic [ref=e938]: "条件: Page renders without errors, Responsive layout..."
+            - button "接单" [ref=e940] [cursor=pointer]
+          - generic [ref=e941]:
+            - generic [ref=e942]:
+              - generic [ref=e943]:
+                - generic [ref=e944]: web
+                - text: Fix login form validation bug
+              - generic [ref=e945]: 可接
+            - generic [ref=e946]:
+              - generic [ref=e947]:
+                - generic [ref=e948]: $1400
+                - generic [ref=e949]: 复杂度:2 模糊度:1 风险:1
+                - generic [ref=e950]: 8t 剩余
+              - generic [ref=e951]: "条件: Email validation works, Password requirements enforced..."
+            - button "接单" [ref=e953] [cursor=pointer]
+          - generic [ref=e954]:
+            - generic [ref=e955]:
+              - generic [ref=e956]:
+                - generic [ref=e957]: research
+                - text: Summarize research paper on transformer architectures
+              - generic [ref=e958]: 可接
+            - generic [ref=e959]:
+              - generic [ref=e960]:
+                - generic [ref=e961]: $3200
+                - generic [ref=e962]: 复杂度:5 模糊度:4 风险:3
+                - generic [ref=e963]: 15t 剩余
+              - generic [ref=e964]: "条件: Key contributions identified, Methodology explained..."
+            - button "接单" [ref=e966] [cursor=pointer]
+          - generic [ref=e967]:
+            - generic [ref=e968]:
+              - generic [ref=e969]:
+                - generic [ref=e970]: data
+                - text: Design CSV cleaning plan for customer dataset
+              - generic [ref=e971]: 可接
+            - generic [ref=e972]:
+              - generic [ref=e973]:
+                - generic [ref=e974]: $2200
+                - generic [ref=e975]: 复杂度:3 模糊度:3 风险:2
+                - generic [ref=e976]: 10t 剩余
+              - generic [ref=e977]: "条件: Schema documented, Cleaning rules specified..."
+            - button "接单" [ref=e979] [cursor=pointer]
+          - generic [ref=e980]:
+            - generic [ref=e981]:
+              - generic [ref=e982]:
+                - generic [ref=e983]: web
+                - text: Create API mock specification for payment service
+              - generic [ref=e984]: 可接
+            - generic [ref=e985]:
+              - generic [ref=e986]:
+                - generic [ref=e987]: $2700
+                - generic [ref=e988]: 复杂度:4 模糊度:3 风险:3
+                - generic [ref=e989]: 14t 剩余
+              - generic [ref=e990]: "条件: Endpoints documented, Request/response schemas defined..."
+            - button "接单" [ref=e992] [cursor=pointer]
+      - generic [ref=e993]:
+        - heading "进行中订单 (0)" [level=2] [ref=e994]
+        - generic [ref=e996]: 暂无进行中订单，接一个订单开始吧。
+    - generic [ref=e997]:
+      - heading "已完成订单 (0)" [level=2] [ref=e998]
+      - generic [ref=e999]:
+        - heading "已交付 (0)" [level=3] [ref=e1001]
+        - heading "失败 (0)" [level=3] [ref=e1003]
+  - generic [ref=e102] [cursor=pointer]:
+    - generic [ref=e103]:
+      - generic [ref=e104]: AI 员工
+      - generic [ref=e105]: 0 工作中
+      - generic [ref=e106]: · 8 空闲
+    - generic [ref=e107]: ▲

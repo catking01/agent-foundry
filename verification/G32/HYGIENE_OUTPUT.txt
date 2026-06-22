@@ -1,0 +1,140 @@
+Command: ~/.codex/bin/codex_preclose_hygiene.sh . --mode fast
+Started: 2026-06-22 20:20:21 CST
+
+[codex_hygiene_gate]
+root: /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+path_base: /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+mode: fast
+
+[git_status_porcelain]
+A  .codex/approvals/G32-CCA-RELEASE-T001-boundary-approval.json
+A  .codex/approvals/G32-CCA-RELEASE-T001-external-egress-approval.json
+A  .codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json
+A  .codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json
+A  .codex/audits/G32-CCA-RELEASE-T002-codex-audit.md
+A  .codex/plans/G32-CCA-RELEASE-T001-codex-plan.md
+A  .codex/plans/G32-CCA-RELEASE-T001-execution-details.json
+A  .codex/plans/G32-CCA-RELEASE-T002-codex-plan.md
+A  .codex/plans/G32-CCA-RELEASE-T002-execution-details.json
+A  .codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json
+A  .codex/receipts/G32-CCA-RELEASE-T002-worker-result.json
+M  .codex/research_record.md
+M  .codex/research_report.md
+A  .codex/reviews/G32-CCA-RELEASE-T002-cca-review.json
+A  .codex/reviews/G32-CCA-RELEASE-T002-cca-review.md
+A  .codex/tasks/G32-CCA-RELEASE-T001-cca-request.json
+A  .codex/tasks/G32-CCA-RELEASE-T002-cca-request.json
+M  .gitignore
+A  verification/G32/BUILD_OUTPUT.txt
+A  verification/G32/BUILD_OUTPUT_AGENT_FACTORY_BASE.txt
+A  verification/G32/DEPLOYED_URL.txt
+A  verification/G32/DEPLOYMENT_CHECKLIST.md
+A  verification/G32/DEPLOY_OUTPUT.txt
+A  verification/G32/G31_SEAL_REFERENCE.md
+A  verification/G32/G32_PUBLIC_RESEARCH_DEMO_RELEASE.md
+A  verification/G32/G32_RELEASE.md
+A  verification/G32/GH_PAGES_REF_CHECK.txt
+A  verification/G32/HYGIENE_OUTPUT.txt
+A  verification/G32/KNOWN_LIMITATIONS_RESEARCH_DEMO.md
+A  verification/G32/NON_CLAIMS.md
+A  verification/G32/POLICY_SEARCH_UI_SMOKE_TEST.md
+A  verification/G32/POST_DEPLOY_SMOKE_TEST.md
+A  verification/G32/PUBLIC_DEMO_BOUNDARY_RECHECK.md
+A  verification/G32/REF_CHECK_BEFORE_DEPLOY.txt
+A  verification/G32/RESEARCH_DEMO_RELEASE_NOTES.md
+A  verification/G32/RESEARCH_TAB_SMOKE_TEST.md
+A  verification/G32/STATIC_BUILD_MANIFEST.txt
+A  verification/G32/TEST_OUTPUT.txt
+A  verification/G32/TSC_OUTPUT.txt
+A  verification/G32/playwright/agent-foundry-old-base-asset-404-console.log
+A  verification/G32/playwright/agent-foundry-old-base-asset-404.yml
+A  verification/G32/playwright/corrected-public-console.log
+A  verification/G32/playwright/debugger-tab.yml
+A  verification/G32/playwright/old-agent-factory-404-console.log
+A  verification/G32/playwright/old-agent-factory-404.yml
+A  verification/G32/playwright/orders-tab.yml
+A  verification/G32/playwright/public-app-load.yml
+A  verification/G32/playwright/research-policy-search.yml
+A  verification/G32/playwright/tutorial-dismissed.yml
+PASS: git diff --check
+PASS: no suspicious tmp/scratch/backup/draft/dead paths in git status
+
+[scanned_paths]
+.codex/approvals/G32-CCA-RELEASE-T001-boundary-approval.json
+.codex/approvals/G32-CCA-RELEASE-T001-external-egress-approval.json
+.codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json
+.codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json
+.codex/audits/G32-CCA-RELEASE-T002-codex-audit.md
+.codex/plans/G32-CCA-RELEASE-T001-codex-plan.md
+.codex/plans/G32-CCA-RELEASE-T001-execution-details.json
+.codex/plans/G32-CCA-RELEASE-T002-codex-plan.md
+.codex/plans/G32-CCA-RELEASE-T002-execution-details.json
+.codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json
+.codex/receipts/G32-CCA-RELEASE-T002-worker-result.json
+.codex/research_record.md
+.codex/research_report.md
+.codex/reviews/G32-CCA-RELEASE-T002-cca-review.json
+.codex/reviews/G32-CCA-RELEASE-T002-cca-review.md
+.codex/tasks/G32-CCA-RELEASE-T001-cca-request.json
+.codex/tasks/G32-CCA-RELEASE-T002-cca-request.json
+.gitignore
+verification/G32/BUILD_OUTPUT.txt
+verification/G32/BUILD_OUTPUT_AGENT_FACTORY_BASE.txt
+verification/G32/DEPLOYED_URL.txt
+verification/G32/DEPLOYMENT_CHECKLIST.md
+verification/G32/DEPLOY_OUTPUT.txt
+verification/G32/G31_SEAL_REFERENCE.md
+verification/G32/G32_PUBLIC_RESEARCH_DEMO_RELEASE.md
+verification/G32/G32_RELEASE.md
+verification/G32/GH_PAGES_REF_CHECK.txt
+verification/G32/HYGIENE_OUTPUT.txt
+verification/G32/KNOWN_LIMITATIONS_RESEARCH_DEMO.md
+verification/G32/NON_CLAIMS.md
+verification/G32/POLICY_SEARCH_UI_SMOKE_TEST.md
+verification/G32/POST_DEPLOY_SMOKE_TEST.md
+verification/G32/PUBLIC_DEMO_BOUNDARY_RECHECK.md
+verification/G32/REF_CHECK_BEFORE_DEPLOY.txt
+verification/G32/RESEARCH_DEMO_RELEASE_NOTES.md
+verification/G32/RESEARCH_TAB_SMOKE_TEST.md
+verification/G32/STATIC_BUILD_MANIFEST.txt
+verification/G32/TEST_OUTPUT.txt
+verification/G32/TSC_OUTPUT.txt
+verification/G32/playwright/agent-foundry-old-base-asset-404-console.log
+verification/G32/playwright/agent-foundry-old-base-asset-404.yml
+verification/G32/playwright/corrected-public-console.log
+verification/G32/playwright/debugger-tab.yml
+verification/G32/playwright/old-agent-factory-404-console.log
+verification/G32/playwright/old-agent-factory-404.yml
+verification/G32/playwright/orders-tab.yml
+verification/G32/playwright/public-app-load.yml
+verification/G32/playwright/research-policy-search.yml
+verification/G32/playwright/tutorial-dismissed.yml
+
+[skipped_paths]
+NONE
+PASS: no high-confidence secret patterns found in scanned text files
+WARN: absolute local machine paths detected in scanned text files
+.codex/audits/G32-CCA-RELEASE-T002-codex-audit.md
+.codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json
+.codex/research_record.md
+verification/G32/HYGIENE_OUTPUT.txt
+verification/G32/TEST_OUTPUT.txt
+
+[result]
+PASS
+WARNINGS_PRESENT
+
+[preclose_hygiene_summary]
+label: NONE
+mode: fast
+repo_arg: .
+target_root: /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+git_root: /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+command: bash /Users/catking/.codex/bin/codex_hygiene_gate.sh /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry --mode fast
+result: PASS
+warnings_present: true
+scope_statement: active baseline warning state only; not full repository cleanliness
+exit_code: 0
+
+Exit status: 0
+Finished: 2026-06-22 20:20:24 CST

@@ -1,0 +1,73 @@
+{
+  "allowed_paths": [
+    "verification/G32/",
+    ".codex/tasks/G32-CCA-RELEASE-T002-cca-request.json",
+    ".codex/plans/G32-CCA-RELEASE-T002-codex-plan.md",
+    ".codex/plans/G32-CCA-RELEASE-T002-execution-details.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json",
+    ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/"
+  ],
+  "boundary_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T11:54:38Z",
+    "approved_by": "codex",
+    "external_egress_approved": true
+  },
+  "budget_usd": 1.5,
+  "claude_profile": {
+    "agent_session_name": "G32-research-demo-release",
+    "agent_view_open_strategy": "auto",
+    "allow_internal_dynamic_workflow": true,
+    "allow_internal_fanout": true,
+    "allow_ultracode_if_available": true,
+    "collect_partial_evidence_on_failure": true,
+    "ensure_agent_view_home": true,
+    "include_hook_events": true,
+    "launch_mode": "bg-agent-view",
+    "monitor_poll_interval_sec": 5.0,
+    "monitor_ui": "agent-view",
+    "permission_mode": "auto",
+    "permission_profile": "cca_real_project_default",
+    "tools": "Read,Edit,Write,Bash",
+    "wait_for_background_completion": true
+  },
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "tests/",
+    "scripts/",
+    "verification/G30/",
+    "verification/G31/"
+  ],
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T11:54:38Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer."
+  },
+  "failure_mode": "success",
+  "max_turns": 8,
+  "objective": "G32 public research demo release evidence: create verification/G32 release artifacts and run local validators for the sealed G31 Research UI without modifying app source, research results, gameplay, or deployment refs",
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/",
+    "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast"
+  ],
+  "task_id": "G32-CCA-RELEASE-T002"
+}

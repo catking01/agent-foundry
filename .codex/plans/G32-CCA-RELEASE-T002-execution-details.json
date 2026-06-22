@@ -1,0 +1,120 @@
+{
+  "task_id": "G32-CCA-RELEASE-T002",
+  "dispatch_id": "G32-CCA-RELEASE-T002-cca",
+  "executor": "claude-code-cli",
+  "model": "deepseek-v4-pro",
+  "timestamp": "2026-06-22T12:00:00Z",
+  "claude_as_black_box": true,
+  "controller": "codex",
+  "source_of_truth": "codex_review",
+  "human_acceptance_required": true,
+  "external_egress_approved": true,
+  "allowed_paths": [
+    "verification/G32/",
+    ".codex/tasks/G32-CCA-RELEASE-T002-cca-request.json",
+    ".codex/plans/G32-CCA-RELEASE-T002-codex-plan.md",
+    ".codex/plans/G32-CCA-RELEASE-T002-execution-details.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-boundary-approval.json",
+    ".codex/approvals/G32-CCA-RELEASE-T002-external-egress-approval.json",
+    ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+    ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+    ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md",
+    ".runtime/tasks/G32-CCA-RELEASE-T002/"
+  ],
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "tests/",
+    "scripts/",
+    "verification/G30/",
+    "verification/G31/"
+  ],
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-factory/",
+    "~/.codex/bin/codex_preclose_hygiene.sh . --mode fast"
+  ],
+  "claude_profile": {
+    "agent_session_name": "G32-research-demo-release",
+    "agent_view_open_strategy": "auto",
+    "allow_internal_dynamic_workflow": true,
+    "allow_internal_fanout": true,
+    "allow_ultracode_if_available": true,
+    "codex_review_is_source_of_truth": true,
+    "collect_partial_evidence_on_failure": true,
+    "ensure_agent_view_home": true,
+    "include_hook_events": true,
+    "launch_mode": "bg-agent-view",
+    "mode": "black_box_executor",
+    "monitor_poll_interval_sec": 5.0,
+    "monitor_ui": "agent-view",
+    "permission_mode": "auto",
+    "permission_profile": "cca_real_project_default",
+    "tools": "Read,Edit,Write,Bash",
+    "wait_for_background_completion": true
+  },
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T11:54:38Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+    "non_claims": [
+      "This approval authorizes CCA-bounded external LLM egress for this task only.",
+      "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+    ]
+  },
+  "sealed_baseline": {
+    "g31_impl_commit": "c5916f412ce73c5e7c25e9b259d234411d4e4321",
+    "g31_seal_commit": "6c9c448aa7920f57af58931b4710280f95ae81ea",
+    "head_at_execution": "6c9c448aa7920f57af58931b4710280f95ae81ea"
+  },
+  "execution_results": {
+    "boundary_verified": true,
+    "heartbeat_written": true,
+    "tests_completed": {
+      "npx_tsc_b": {"exit_code": 0, "status": "PASS"},
+      "npx_vite_build": {"exit_code": 0, "status": "PASS", "warning": "chunk size >500 kB (pre-existing)"},
+      "npx_vitest_run": {"exit_code": 0, "status": "PASS", "files": 53, "passed": 428, "skipped": 12},
+      "codex_preclose_hygiene": {"exit_code": 0, "status": "PASS"}
+    },
+    "artifacts_created": {
+      "verification": [
+        "verification/G32/G32_RELEASE.md",
+        "verification/G32/TEST_OUTPUT.txt",
+        "verification/G32/BUILD_OUTPUT.txt",
+        "verification/G32/HYGIENE_OUTPUT.txt",
+        "verification/G32/NON_CLAIMS.md",
+        "verification/G32/G31_SEAL_REFERENCE.md"
+      ],
+      "codex": [
+        ".codex/receipts/G32-CCA-RELEASE-T002-execution-receipt.json",
+        ".codex/audits/G32-CCA-RELEASE-T002-codex-audit.md",
+        ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.json",
+        ".codex/reviews/G32-CCA-RELEASE-T002-cca-review.md"
+      ],
+      "runtime": [
+        ".runtime/tasks/G32-CCA-RELEASE-T002/worker_heartbeat.json",
+        ".runtime/tasks/G32-CCA-RELEASE-T002/worker_result.json"
+      ]
+    },
+    "boundary_audit": {
+      "src_modified": false,
+      "tests_modified": false,
+      "scripts_modified": false,
+      "verification_G30_modified": false,
+      "verification_G31_modified": false,
+      "only_allowed_paths_written": true
+    }
+  }
+}
