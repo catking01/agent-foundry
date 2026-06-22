@@ -1,5 +1,11 @@
 # G23-S1 Tag Verification
 
+Historical path before repository/path migration. Current canonical demo:
+https://catking01.github.io/agent-foundry/
+
+The `agent-factory` build base below is retained as G23-S1 historical release
+evidence, not as current deployment guidance.
+
 ## Tag
 
 | Field | Value |

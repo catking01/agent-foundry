@@ -1,1 +1,4 @@
 https://catking01.github.io/agent-factory/
+
+Historical path before repository/path migration.
+Current canonical demo: https://catking01.github.io/agent-foundry/

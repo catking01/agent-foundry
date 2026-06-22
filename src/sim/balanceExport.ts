@@ -255,7 +255,7 @@ export function generateBalanceExport(
 
   return {
     generatedAt: new Date().toISOString(),
-    repo: 'catking01/agent-factory',
+    repo: 'catking01/agent-foundry',
     seeds,
     horizons,
     strategies: strategies.map((s) => s.id),

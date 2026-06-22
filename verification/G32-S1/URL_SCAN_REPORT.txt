@@ -1,0 +1,70 @@
+================================================================================
+G32-S1 CANONICAL URL SCAN REPORT
+Task: G32-S1-CANONICAL-URL-T001
+Date: 2026-06-22
+Canonical URL: https://catking01.github.io/agent-foundry/
+Canonical base: /agent-foundry/
+================================================================================
+
+SUMMARY
+-------
+Post-fix scan command:
+  rg -n "agent-factory|github.io/agent-factory|--base=/agent-factory" README.md verification src tests package.json vite.config.ts
+
+Post-fix result:
+  Matching files: 36
+  Matching lines: 73
+  Current-facing active README/src/tests/package/vite old references: 0
+  Current G32 deployment docs still using agent-factory as current base: 0
+
+The remaining matches are historical records, migration diagnostics, raw
+validator output, or G32-S1 before/after explanations.
+
+FIXED (current-facing docs & metadata):
+  1. README.md                              — public demo URL
+  2. src/sim/balanceExport.ts               — repo metadata string
+  3. tests/sim/balanceExport.test.ts         — test expectation
+  4. verification/G32/G32_RELEASE.md         — current build base now /agent-foundry/
+  5. verification/G32/DEPLOYMENT_CHECKLIST.md — current deployment base now /agent-foundry/
+
+RETAINED AS HISTORICAL (verification evidence):
+These files are historical verification records from G7-G32 milestones.
+They document build commands, repo names, URLs, raw outputs, or migration
+diagnostics. Narrative G23/G24 files now include migration notes when the
+old path remains.
+
+  - verification/G7.1/, G8, G9, G10, G11, G12, G13, G14, G19:
+    historical remote repo references.
+  - verification/G23/ and verification/G23-S1/:
+    historical build-base commands with newly added migration notes.
+  - verification/G24/ and verification/G24-S1/:
+    historical public-demo deployment/smoke URL and build base with newly
+    added migration notes.
+  - verification/G25-S1/PUBLIC_DEMO_URL_RECHECK.md:
+    existing repository rename note.
+  - verification/G27/, G28/, G29/, G31/:
+    historical validator output or milestone evidence from before G32-S1.
+  - verification/G32/BUILD_OUTPUT_AGENT_FACTORY_BASE.txt:
+    raw pre-correction build-output artifact.
+  - verification/G32/DEPLOY_OUTPUT.txt:
+    raw deployment-output artifact, not deployment guidance.
+  - verification/G32/playwright/*agent-factory*:
+    raw obsolete-path/asset-404 smoke diagnostics.
+  - verification/G32/G32_PUBLIC_RESEARCH_DEMO_RELEASE.md,
+    RESEARCH_DEMO_RELEASE_NOTES.md, RESEARCH_TAB_SMOKE_TEST.md,
+    DEPLOYED_URL.txt:
+    migration narrative and obsolete-path evidence.
+  - verification/G32-S1/*:
+    this seal's before/after explanations and final scan report.
+
+VERDICT
+-------
+All current-facing docs and repo metadata now use the canonical name
+agent-foundry. Remaining agent-factory references are historical,
+diagnostic, raw-output, or explanatory before-values. The repo was originally
+named agent-factory and renamed to agent-foundry; G25-S1, G32, and G32-S1
+now record this rename.
+
+The canonical public URL https://catking01.github.io/agent-foundry/
+is now consistently referenced in all user-facing documentation and
+source code metadata.

@@ -136,3 +136,19 @@
 - Hygiene: fast pre-close hygiene PASS with warnings for absolute local machine paths in generated CCA receipt/audit and captured test/hygiene output; no suspicious tmp/scratch/backup/dead paths in git status after `.runtime/` and `.playwright-cli/` were added to `.gitignore`.
 - Artifacts: `verification/G32/` includes release notes, deployment checklist, local validator outputs, build manifests, gh-pages ref check, deployed URL, known limitations, public boundary recheck, post-deploy smoke evidence, and copied Playwright snapshots.
 - Non-claims preserved: G32 does not prove a real-world optimal organization policy, validate Runtime Lab, implement real AI supervisors/workers, require Ollama, require a backend, or start G33.
+
+## 2026-06-22 23:18:46 CST
+
+- Task: implement `G32-S1_CANONICAL_URL_CONSISTENCY_SEAL`.
+- Work contract: canonical URL consistency only; no simulation behavior changes, no research-result changes, no new UI features, no Ollama requirement, no Runtime Lab app integration, no G33 work, and no real-world organization claims.
+- CCA execution: ran Runtime Lab CCA task `G32-S1-CANONICAL-URL-T001` through Claude Code CLI / DeepSeek with `cca_real_project_default`; Runtime generated execution receipt, review, audit, diff, and required-test summary with no P0 findings.
+- CCA review caveat: the worker initially updated README and balance export metadata plus generated G32-S1 artifacts, but Codex main-session review found current G32 release/checklist docs still needed canonical-base cleanup; Codex applied a main-thread repair after CCA finished.
+- Updated current-facing references: `README.md` online demo URL now uses `https://catking01.github.io/agent-foundry/`; `src/sim/balanceExport.ts` repo metadata now reports `catking01/agent-foundry`; `tests/sim/balanceExport.test.ts` expects the canonical repo metadata.
+- Updated current G32 release docs: `verification/G32/G32_RELEASE.md` and `verification/G32/DEPLOYMENT_CHECKLIST.md` now use `npx vite build --base=/agent-foundry/` for the current public demo path; old `/agent-factory/` base is documented as historical migration evidence only.
+- Historical traceability: G23/G24 deployment/tag/smoke docs retain old `agent-factory` commands/URLs but now include migration notes pointing to the current canonical demo `https://catking01.github.io/agent-foundry/`.
+- Generated artifacts: `verification/G32-S1/CANONICAL_URL_CONSISTENCY.md`, `URL_SCAN_REPORT.txt`, `README_URL_FIX.md`, `DEPLOYMENT_PATH_RECHECK.md`, `TEST_OUTPUT.txt`, and `BUILD_OUTPUT.txt`.
+- Validation: fresh `npm run test` PASS with 53 files passed, 428 tests passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-foundry/` PASS with the existing chunk-size warning.
+- URL scan evidence: `README.md`, `src/`, `tests/`, `package.json`, and `vite.config.ts` have no remaining `agent-factory` / `/agent-factory/` matches; G32 current release/checklist docs have no remaining current `github.io/agent-factory` or `--base=/agent-factory` references.
+- Hygiene: staged `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast` PASS with warnings for absolute local machine paths in CCA audit/receipt, research record, and test output; no skipped paths, no high-confidence secrets, and no suspicious tmp/scratch/backup/draft/dead paths. Scope is active baseline warning state only, not full repository cleanliness.
+- CCA human gate: accepted using the user's initial task instruction to commit/push after validation as the task-scoped accept condition.
+- Non-claims preserved: G32-S1 does not change deterministic simulation behavior, G30/G31/G32 research results, public gameplay capability, Ollama behavior, Runtime Lab validation status, or real-world organization conclusions.

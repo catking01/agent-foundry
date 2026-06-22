@@ -1,5 +1,11 @@
 # G23 Deployment Checklist
 
+Historical path before repository/path migration. Current canonical demo:
+https://catking01.github.io/agent-foundry/
+
+The `agent-factory` build base below is retained as G23 historical evidence,
+not as current deployment guidance.
+
 ## Pre-deploy
 
 - [x] `npm ci` passes

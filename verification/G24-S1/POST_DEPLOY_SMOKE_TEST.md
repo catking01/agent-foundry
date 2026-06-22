@@ -1,5 +1,11 @@
 # G24-S1 Post-Deploy Smoke Test
 
+Historical path before repository/path migration. Current canonical demo:
+https://catking01.github.io/agent-foundry/
+
+The `agent-factory` URL and build base below are retained as G24-S1 historical
+smoke evidence, not as current deployment guidance.
+
 ## URL
 
 https://catking01.github.io/agent-factory/

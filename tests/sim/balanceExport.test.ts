@@ -72,7 +72,7 @@ describe('Balance Export', () => {
     expect(exp.horizons).toEqual(smallHorizons)
     expect(exp.strategies.length).toBe(BALANCE_STRATEGIES.length)
     expect(exp.generatedAt).toBeTruthy()
-    expect(exp.repo).toBe('catking01/agent-factory')
+    expect(exp.repo).toBe('catking01/agent-foundry')
   })
 
   it('full balance export is valid JSON when serialized', () => {

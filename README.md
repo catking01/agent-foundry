@@ -39,7 +39,7 @@ npm run build        # 生产构建 → dist/
 在线试玩：
 
 ```
-https://catking01.github.io/agent-factory/
+https://catking01.github.io/agent-foundry/
 ```
 
 ---

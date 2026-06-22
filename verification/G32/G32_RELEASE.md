@@ -1,12 +1,14 @@
 # G32 Local Release Evidence
 
-Verdict: LOCAL VALIDATION ONLY / deployment pending
+Verdict: LOCAL VALIDATION PASS / public deployment evidence recorded separately
 
 ## Milestone
 
 G32 marks the public research demo release path for Agent Foundry. This file
 records local validation evidence for the sealed G31 Research UI. Public
 deployment and browser smoke evidence are tracked in the other G32 artifacts.
+The current canonical public demo is
+`https://catking01.github.io/agent-foundry/`.
 
 ## Sealed G31 Baseline
 
@@ -30,10 +32,13 @@ All required validators run against the sealed G31 Research UI baseline:
 - Exit code 0, no diagnostic output.
 
 ### Build
-- Command: `npx vite build --base=/agent-factory/`
+- Command: `npx vite build --base=/agent-foundry/`
 - Result: PASS
 - 645 modules transformed, build completed in ~3s.
 - Chunk-size warning is the existing Vite production warning (non-blocking).
+- Historical note: the earlier requested `/agent-factory/` build-base check is
+  retained only in `BUILD_OUTPUT_AGENT_FACTORY_BASE.txt` as pre-migration
+  evidence. It is not the current deployment base.
 
 ### Hygiene
 - Command: `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`
@@ -61,7 +66,6 @@ The G31 Research UI is read-only and provides:
 ## Boundary
 
 G32 release verification does not claim:
-- Production deployment or hosting
 - Real-world organization optimization
 - Live AI agent execution in the demo
 - Runtime Lab integration
@@ -72,4 +76,5 @@ G32 release verification does not claim:
 
 The release target is a research demo: a deterministic multi-agent organization
 simulator with read-only study dashboards and policy search results. Final G32
-release status requires public deployment and smoke evidence.
+deployment status is established by `G32_PUBLIC_RESEARCH_DEMO_RELEASE.md`,
+`DEPLOYMENT_CHECKLIST.md`, and post-deploy smoke artifacts.

@@ -1,0 +1,10 @@
+{
+  "apply_revert": false,
+  "decided_at": "2026-06-22T15:18:46Z",
+  "decision": "accept",
+  "human_gate_is_final": true,
+  "operator": "user-initial-commit-push-instruction",
+  "reason": "",
+  "reverted_files": [],
+  "task_id": "G32-S1-CANONICAL-URL-T001"
+}

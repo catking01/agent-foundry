@@ -1,0 +1,80 @@
+
+> agent-foundry@0.1.0 test
+> vitest run
+
+
+ RUN  v2.1.9 /Users/catking/Desktop/《群智工坊：Agent Foundry》/agent-foundry
+
+ ✓ tests/ai/shadowAuditCalibration.test.ts (11 tests) 13ms
+ ✓ tests/ai/ollamaClient.optin.test.ts (5 tests | 4 skipped) 6ms
+ ✓ tests/sim/orgHierarchy.test.ts (34 tests) 121ms
+ ✓ tests/sim/parallelDelivery.test.ts (3 tests) 6ms
+ ✓ tests/sim/parallelRoutes.test.ts (4 tests) 6ms
+ ✓ tests/sim/orgInterventionStudy.test.ts (14 tests) 141ms
+ ✓ tests/sim/orgMultiSeedStudy.test.ts (32 tests) 157ms
+ ✓ tests/game/workshopUpgrade.test.ts (11 tests) 7ms
+ ✓ tests/data/policySearchSummaries.test.ts (7 tests) 24ms
+ ✓ tests/sim/orgPolicySearch.test.ts (11 tests) 286ms
+ ✓ tests/sim/replay.test.ts (7 tests) 33ms
+ ✓ tests/sim/gameplayPressure.test.ts (8 tests) 602ms
+ ✓ tests/sim/agentProfiles.test.ts (14 tests) 16ms
+ ✓ tests/sim/strategyScenarios.test.ts (9 tests) 94ms
+ ✓ tests/sim/auditHandoff.test.ts (4 tests) 130ms
+ ✓ tests/sim/orgRoles.test.ts (22 tests) 71ms
+ ✓ tests/sim/validation.test.ts (9 tests) 11ms
+ ✓ tests/sim/orderFlow.test.ts (5 tests) 104ms
+ ✓ tests/sim/balanceTuningRegression.test.ts (8 tests) 853ms
+   ✓ Balance Tuning Regression > parallel-heavy spends more on routes than speed-first 301ms
+ ✓ tests/game/agentStatusSelectors.test.ts (8 tests) 90ms
+ ✓ tests/sim/explainRun.test.ts (7 tests) 213ms
+ ✓ tests/sim/audit.test.ts (7 tests) 5ms
+ ✓ tests/sim/pipelineClosure.test.ts (5 tests) 222ms
+ ✓ tests/ai/promptBuilder.test.ts (5 tests) 8ms
+ ✓ tests/sim/firstRunCompletion.test.ts (3 tests) 178ms
+ ✓ tests/sim/manualAudit.test.ts (4 tests) 11ms
+ ✓ tests/ai/shadowAuditBenchmark.optin.test.ts (9 tests | 8 skipped) 4ms
+ ✓ tests/sim/failureAttribution.test.ts (7 tests) 943ms
+   ✓ Failure Attribution > Cash burn is attributable to specific cost categories 330ms
+ ✓ tests/sim/ledgerAggregation.test.ts (5 tests) 694ms
+   ✓ Ledger Aggregation > different strategies produce different event profiles 503ms
+ ✓ tests/ai/shadowAuditBenchmarkFixtures.test.ts (8 tests) 14ms
+ ✓ tests/sim/economyBalance.test.ts (6 tests) 23ms
+ ✓ tests/ai/shadowAuditSchema.test.ts (6 tests) 9ms
+ ✓ tests/sim/g12ReportConsistency.test.ts (5 tests) 1354ms
+   ✓ G12 Report Consistency > explainRun regenerates consistent results (deterministic) 339ms
+   ✓ G12 Report Consistency > two independent report generations produce identical results 876ms
+ ✓ tests/sim/attributionReason.test.ts (4 tests) 673ms
+   ✓ Attribution Reason Hygiene > no reputation penalty uses AGENT_ASSIGNED as reason 586ms
+ ✓ tests/sim/tick.test.ts (6 tests) 41ms
+ ✓ tests/sim/metricSemantics.test.ts (9 tests) 7ms
+ ✓ tests/sim/explanationConsistency.test.ts (6 tests) 1122ms
+   ✓ Explanation Consistency > different seeds produce different explanations 322ms
+   ✓ Explanation Consistency > all 4 strategy explanations at seed=42 have valid attribution 409ms
+ ✓ tests/sim/rng.test.ts (8 tests) 56ms
+ ✓ tests/sim/paretoFrontier.test.ts (2 tests) 4ms
+ ✓ tests/data/orgStudySummaries.test.ts (3 tests) 3ms
+ ✓ tests/sim/rawRunEvidence.test.ts (4 tests) 3587ms
+   ✓ Raw Run Evidence > aggregates recomputed from raw runs match balance runner 1995ms
+   ✓ Raw Run Evidence > game-over rate recomputed from raw runs matches aggregate 1583ms
+ ✓ tests/sim/longRunBalanceTuning.test.ts (7 tests) 5ms
+ ✓ tests/sim/balanceExport.test.ts (5 tests) 5095ms
+   ✓ Balance Export > full balance export includes all sections 2609ms
+   ✓ Balance Export > full balance export is valid JSON when serialized 2472ms
+ ✓ tests/ui/AgentWorkStatusFloat.test.tsx (10 tests) 1045ms
+ ✓ tests/sim/strategyDominance.test.ts (6 tests) 18ms
+ ✓ tests/ui/TutorialChecklist.test.tsx (10 tests) 489ms
+ ✓ tests/ui/PolicySearchDashboard.test.tsx (10 tests) 1976ms
+   ✓ PolicySearchDashboard > renders G30 matrix shape and run count 762ms
+ ✓ tests/sim/hardDominanceGate.test.ts (8 tests) 5ms
+ ✓ tests/sim/longRunStability.test.ts (7 tests) 6ms
+ ✓ tests/ui/ShadowAdvisoryPanel.test.tsx (13 tests) 146ms
+ ✓ tests/sim/multiSeedBalance.test.ts (5 tests) 1040ms
+   ✓ Multi-Seed Balance > all strategies produce valid metrics across all seeds at horizon 60 875ms
+ ✓ tests/ui/ResearchDashboard.test.tsx (6 tests) 1499ms
+   ✓ App Research tab > includes a Research tab that renders the dashboard 892ms
+ ✓ tests/sim/tradeoffPreservation.test.ts (8 tests) 6ms
+
+ Test Files  53 passed (53)
+      Tests  428 passed | 12 skipped (440)
+   Start at  23:17:29
+   Duration  17.75s (transform 2.66s, setup 0ms, collect 78.62s, tests 23.27s, environment 9.46s, prepare 10.03s)

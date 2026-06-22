@@ -1,5 +1,11 @@
 # G24 Public Demo Deployment
 
+Historical path before repository/path migration. Current canonical demo:
+https://catking01.github.io/agent-foundry/
+
+The `agent-factory` build base below is retained as G24 historical deployment
+evidence, not as current deployment guidance.
+
 ## Build
 
 ```bash

@@ -1,0 +1,43 @@
+{
+  "allowed_paths": [
+    "README.md",
+    "src/sim/balanceExport.ts",
+    "tests/sim/balanceExport.test.ts",
+    "verification/G32/",
+    "verification/G32-S1/",
+    "verification/G23/",
+    "verification/G23-S1/",
+    "verification/G24/",
+    "verification/G24-S1/",
+    "verification/G25-S1/"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T15:07:29Z",
+  "approved_by": "codex",
+  "context_policy": "bounded-task-context-only",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/sim/orgMultiSeedStudy.ts",
+    "src/sim/orgPolicySearch.ts",
+    "src/sim/orgInterventionStudy.ts"
+  ],
+  "non_claims": [
+    "This approval authorizes CCA-bounded external LLM egress for this task only.",
+    "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+  ],
+  "provider": "Claude Code CLI / DeepSeek",
+  "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-foundry/"
+  ],
+  "task_id": "G32-S1-CANONICAL-URL-T001"
+}

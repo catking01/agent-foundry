@@ -1,0 +1,37 @@
+{
+  "allowed_paths": [
+    "README.md",
+    "src/sim/balanceExport.ts",
+    "tests/sim/balanceExport.test.ts",
+    "verification/G32/",
+    "verification/G32-S1/",
+    "verification/G23/",
+    "verification/G23-S1/",
+    "verification/G24/",
+    "verification/G24-S1/",
+    "verification/G25-S1/"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T15:07:29Z",
+  "approved_by": "codex",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/sim/orgMultiSeedStudy.ts",
+    "src/sim/orgPolicySearch.ts",
+    "src/sim/orgInterventionStudy.ts"
+  ],
+  "human_acceptance_required": true,
+  "required_tests": [
+    "npm run test",
+    "npx tsc -b",
+    "npx vite build --base=/agent-foundry/"
+  ],
+  "task_id": "G32-S1-CANONICAL-URL-T001"
+}

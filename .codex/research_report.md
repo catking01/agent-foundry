@@ -38,6 +38,11 @@
 - G32 main-session validation passed: `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, `npx vite build --base=/agent-factory/`, and corrected deployment build `npx vite build --base=/agent-foundry/`; Vite retained the existing chunk-size warning.
 - G32 public smoke passed on `https://catking01.github.io/agent-foundry/?g32=0b257ca`: app load, first-run tutorial handling, Agent HUD, Orders tab, Research tab, Policy Search Dashboard, objective rankings, Pareto frontier, risk semantics, non-claims, and Debugger tab were observed.
 - G32 CCA visible task `G32-CCA-RELEASE-T002` completed as auxiliary executor evidence with no P0 findings; Codex/main session retained final release authority.
+- G32-S1 canonical URL consistency seal updated current-facing demo references to `https://catking01.github.io/agent-foundry/` and current build/deploy docs to `--base=/agent-foundry/`.
+- G32-S1 updated balance export repo metadata from `catking01/agent-factory` to `catking01/agent-foundry`; this is metadata only and does not change deterministic simulation behavior.
+- G32-S1 added migration notes to G23/G24 historical deployment/tag/smoke docs where old `agent-factory` URLs or build bases remain.
+- G32-S1 validation passed locally: `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-foundry/` with the existing chunk-size warning.
+- G32-S1 CCA task `G32-S1-CANONICAL-URL-T001` generated a valid execution receipt/review/audit with no P0 findings; Codex main-session review applied an additional release-doc repair before final validation.
 
 ## Open Risks
 
@@ -55,3 +60,4 @@
 - G32's public URL changed from the earlier `agent-factory` path to `agent-foundry` because the GitHub repository moved; old links to `/agent-factory/` are not verified as live.
 - G32 does not change research logic, gameplay logic, G30/G31 results, or app source code; it is a release/deployment evidence milestone.
 - G32 public smoke observed a non-blocking missing `favicon.ico`; no app asset or runtime-blocking console error remained after the corrected base-path deployment.
+- Historical verification and raw-output files still contain `agent-factory` references by design; G32-S1 classifies them as historical, diagnostic, raw-output, or before/after explanation rather than current deployment guidance.

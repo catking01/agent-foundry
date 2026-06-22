@@ -1,0 +1,142 @@
+{
+  "adapter_failure_kind": null,
+  "boundary_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T15:07:29Z",
+    "approved_by": "codex",
+    "external_egress_approved": true
+  },
+  "changed_files": [
+    "README.md",
+    "src/sim/balanceExport.ts",
+    "tests/sim/balanceExport.test.ts",
+    "verification/G32-S1/CANONICAL_URL_CONSISTENCY.md",
+    "verification/G32-S1/URL_SCAN_REPORT.txt",
+    "verification/G32-S1/README_URL_FIX.md",
+    "verification/G32-S1/DEPLOYMENT_PATH_RECHECK.md",
+    "verification/G32-S1/TEST_OUTPUT.txt",
+    "verification/G32-S1/BUILD_OUTPUT.txt"
+  ],
+  "claude_black_box_execution": true,
+  "claude_result_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/claude_result.json",
+  "codex_tests_are_source_of_truth": true,
+  "commands": [
+    {
+      "argv": [
+        "claude",
+        "--bare",
+        "--model",
+        "deepseek-v4-pro",
+        "-p",
+        "# CCA Claude Code CLI Execution Contract: G32-S1-CANONICAL-URL-T001\n\nYou are Claude Code CLI running as an external black-box executor under Codex Control.\nCodex is the controller, reviewer, and only source of PASS/FAIL truth.\nYou may use any local Claude Code internal planning, dynamic workflow, ultracode, or fan-out subagents available in this CLI, but the final output must obey the boundary below.\nDo not ask the user to interact with Claude directly.\nDo not claim PASS. Codex will review Git diff, tests, policy events, and this run's receipt.\nExternal LLM egress for this bounded task has been approved by the CCA request artifact; do not request a separate user approval inside Claude.\n\n## Objective\nImplement G32-S1 canonical public demo URL consistency seal. Current public URL is https://catking01.github.io/agent-foundry/. Fix current-facing docs and repo metadata strings, mark retained old agent-factory references as historical in G32-S1 artifacts, generate verification/G32-S1/CANONICAL_URL_CONSISTENCY.md, URL_SCAN_REPORT.txt, README_URL_FIX.md, DEPLOYMENT_PATH_RECHECK.md, TEST_OUTPUT.txt, BUILD_OUTPUT.txt. Do not change simulation behavior, research results, UI features, Ollama settings, or start G33.\n\n## Codex plan\n- Implement the objective within the approved boundary.\n\n## Allowed write paths\n- README.md\n- src/sim/balanceExport.ts\n- tests/sim/balanceExport.test.ts\n- verification/G32/\n- verification/G32-S1/\n- verification/G23/\n- verification/G23-S1/\n- verification/G24/\n- verification/G24-S1/\n- verification/G25-S1/\n\n## Disallowed paths\n- .git/\n- .runtime/sealed/\n- .runtime/private_archives/\n- .claude/\n- .codex/memories/\n- .env\n- **/*secret*\n- **/*token*\n- src/sim/orgMultiSeedStudy.ts\n- src/sim/orgPolicySearch.ts\n- src/sim/orgInterventionStudy.ts\n\n## Required tests to run or leave for Codex verification\n- npm run test\n- npx tsc -b\n- npx vite build --base=/agent-foundry/\n\n## Required Runtime Kernel artifacts\nThe task-scoped Runtime artifact directory `.runtime/tasks/G32-S1-CANONICAL-URL-T001/` is allowed for heartbeat/result evidence even if it is not listed above as a product write path.\nCreate parent directories if needed, then write `.runtime/tasks/G32-S1-CANONICAL-URL-T001/worker_heartbeat.json` after you understand the task.\nBefore you stop, always write `.runtime/tasks/G32-S1-CANONICAL-URL-T001/worker_result.json`, even if you are blocked or failed.\nworker_result.json must be valid JSON and must include exactly these contract fields:\n- task_id: this task id\n- slot_id: CCA-CLI unless Runtime provided a different slot id\n- dispatch_id: the dispatch id from `.runtime/tasks/<task>/task.json` extra.dispatch_id when available\n- status: one of `done`, `blocked`, or `failed`; use `done` for completed work, never `completed`\n- changed_files: repo-relative paths you changed\n- tests_run_by_worker: commands you personally ran, or [] if Codex should run them\n- known_risks: concrete residual risks, or []\nDo not invent PASS. Codex will validate worker_result.json, git diff, tests, and policy events.\n",
+        "--setting-sources",
+        "project",
+        "--settings",
+        "/Users/catking/Desktop/\u300a\u7fa4\u667a\u5de5\u574a\uff1aAgent Foundry\u300b/agent-foundry/.runtime/tasks/G32-S1-CANONICAL-URL-T001/claude_settings.json",
+        "--permission-mode",
+        "auto",
+        "--tools",
+        "Read,Edit,Write,Bash",
+        "--disallowedTools",
+        "Bash(git push *)",
+        "Bash(git remote *)",
+        "Bash(git config --global *)",
+        "Bash(rm -rf *)",
+        "Bash(rm -r *)",
+        "--no-session-persistence",
+        "--output-format",
+        "json",
+        "--include-hook-events"
+      ],
+      "exit_code": 0,
+      "role": "claude_code_cli",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:d03155e11b9a8c43870c84f3e6773c93b5412205a337ff71753ed0ed7212524a"
+    },
+    {
+      "argv": [
+        "npm",
+        "run",
+        "test"
+      ],
+      "command": "npm run test",
+      "duration_ms": 15784,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:04821606945616a4362175989d90091c17532aa3952e7a9ad3042b314fe48c24"
+    },
+    {
+      "argv": [
+        "npx",
+        "tsc",
+        "-b"
+      ],
+      "command": "npx tsc -b",
+      "duration_ms": 3996,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "npx",
+        "vite",
+        "build",
+        "--base=/agent-foundry/"
+      ],
+      "command": "npx vite build --base=/agent-foundry/",
+      "duration_ms": 3024,
+      "exit_code": 0,
+      "role": "codex_required_test",
+      "stderr_digest": "sha256:ccb6bf354a0674eeb1e49df9a880a000b75240079fdb849282bb899d81eeb58c",
+      "stdout_digest": "sha256:7670357a7916781756b598bc18a5c112ae3c3b6dfb2cafc97654bb95c43306a5"
+    }
+  ],
+  "diff_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/diff.patch",
+  "diff_stat": " README.md                       | 2 +-\n src/sim/balanceExport.ts        | 2 +-\n tests/sim/balanceExport.test.ts | 2 +-\n 3 files changed, 3 insertions(+), 3 deletions(-)\n",
+  "duration_ms": 371412,
+  "executor": "claude-code-cli",
+  "external_egress_approval": {
+    "approved": true,
+    "approved_at": "2026-06-22T15:07:29Z",
+    "approved_by": "codex",
+    "context_policy": "bounded-task-context-only",
+    "provider": "Claude Code CLI / DeepSeek",
+    "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer."
+  },
+  "external_egress_approved": true,
+  "human_acceptance_required": true,
+  "launch_manifest_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/launch_manifest.json",
+  "model": "deepseek-v4-pro",
+  "notes": [
+    "Old bookmarks to /agent-factory/ URL will 404 \u2014 GitHub Pages does not auto-redirect renamed repos",
+    "External sites linking to old URL will break",
+    "27 historical verification files retain agent-factory references as immutable evidence \u2014 documented in URL_SCAN_REPORT.txt"
+  ],
+  "policy_events": [],
+  "policy_events_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/policy_events.jsonl",
+  "provider": "DeepSeek",
+  "receipt_hash": "1b0e96201262afea660d5432eca17ad8a3c1d19613cd8a09b8c68b0ec673a3f9",
+  "required_tests": [
+    {
+      "command": "npm run test",
+      "status": "passed"
+    },
+    {
+      "command": "npx tsc -b",
+      "status": "passed"
+    },
+    {
+      "command": "npx vite build --base=/agent-foundry/",
+      "status": "passed"
+    }
+  ],
+  "status": "completed",
+  "stderr_digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_digest": "sha256:d03155e11b9a8c43870c84f3e6773c93b5412205a337ff71753ed0ed7212524a",
+  "task_id": "G32-S1-CANONICAL-URL-T001",
+  "test_summary_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/test_summary.json",
+  "worker_result_path": ".runtime/tasks/G32-S1-CANONICAL-URL-T001/worker_result.json"
+}

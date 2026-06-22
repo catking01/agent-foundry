@@ -15,8 +15,12 @@ Status: DEPLOYED / PUBLIC SMOKE PASS
 
 - [x] `npm run test`
 - [x] `npx tsc -b`
-- [x] `npx vite build --base=/agent-factory/`
+- [x] `npx vite build --base=/agent-foundry/`
 - [x] `~/.codex/bin/codex_preclose_hygiene.sh . --mode fast`
+
+Historical note: the earlier `/agent-factory/` build-base validation is kept
+only as migration evidence in `BUILD_OUTPUT_AGENT_FACTORY_BASE.txt`; the
+canonical current deployment base is `/agent-foundry/`.
 
 ## Main Branch Release
 
@@ -26,8 +30,7 @@ Status: DEPLOYED / PUBLIC SMOKE PASS
 
 ## GitHub Pages Deployment
 
-- [x] Fresh `dist/` built with requested `/agent-factory/` base for validation evidence
-- [x] Fresh `dist/` rebuilt with actual `/agent-foundry/` Pages base after repo-move detection
+- [x] Fresh `dist/` built with canonical `/agent-foundry/` Pages base after repo-move detection
 - [x] `gh-pages` temporary clone prepared
 - [x] `dist/` copied to `gh-pages`
 - [x] `gh-pages` commit created
