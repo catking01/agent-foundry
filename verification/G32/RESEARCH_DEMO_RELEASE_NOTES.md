@@ -1,6 +1,9 @@
 # Research Demo Release Notes
 
-Release candidate: `v0.2.0-research-rc.1` pending tag creation.
+Release candidate name reserved: `v0.2.0-research-rc.1`.
+
+No tag was created in this run; the release is deployed through `gh-pages` and
+recorded on `main`.
 
 ## User-Visible Change
 

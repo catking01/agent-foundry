@@ -20,9 +20,9 @@ Status: DEPLOYED / PUBLIC SMOKE PASS
 
 ## Main Branch Release
 
-- [ ] G32 artifacts committed to `main`
-- [ ] `origin/main` updated to the G32 commit
-- [ ] Remote `main` ref recorded
+- [x] G32 artifacts committed to `main`
+- [x] `origin/main` updated to the G32 release evidence commit
+- [x] Remote `main` ref verified during closeout
 
 ## GitHub Pages Deployment
 
@@ -53,5 +53,5 @@ Status: DEPLOYED / PUBLIC SMOKE PASS
 
 ## Release Tag
 
-- [ ] Tag decision recorded
-- [ ] Tag pushed if created
+- [x] Tag decision recorded
+- [x] No tag created in this run; `v0.2.0-research-rc.1` remains available for a later explicit release-tag step.

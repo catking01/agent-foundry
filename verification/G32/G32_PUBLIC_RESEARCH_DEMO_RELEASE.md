@@ -39,6 +39,7 @@ remains final release authority.
 
 Completed:
 
+- Committed and pushed G32 release evidence to `main`.
 - Built static demo with base `/agent-foundry/` for the current repository path.
 - Deployed `dist/` to `gh-pages`.
 - Verified `origin/gh-pages` at `0b257cae23bb40b78812791fc3cd102805e3f82d`.
