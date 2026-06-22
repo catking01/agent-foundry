@@ -27,6 +27,9 @@
 - G31 shows the G30 matrix shape, objective rankings, Pareto frontier, dominated policies, policy config details, order complexity breakdown, scoring policy, risk semantics, and non-claims.
 - G31 validation passed locally: focused G31 tests (3 files, 23 passed), `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
 - G31 CCA visible-mode executor attempts were made, but no accepted CCA worker result/completion receipt was produced; final implementation evidence is Codex local validation plus repository artifacts.
+- G31 remote seal has been completed for implementation commit `c5916f412ce73c5e7c25e9b259d234411d4e4321`: `origin/main` was verified at that SHA after push.
+- G31 remote-seal CCA audit task `G31-REMOTE-SEAL-T001` verified the local/remote SHA match and required G31 files; its late `worker_result.json` reported `status: done`, while the original Runtime receipt retained a `worker_result_missing` timing caveat.
+- G31 remote-seal fresh validation passed after push: `npm run test` (53 files, 428 passed, 12 skipped), `npx tsc -b`, and `npx vite build --base=/agent-factory/` with the existing chunk-size warning.
 
 ## Open Risks
 
@@ -39,4 +42,5 @@
 - G30 reports objective-specific rankings and Pareto frontier; it does not claim a single best real-world organization policy.
 - G31 is a static summary UI; it does not expose the raw G30 288-run matrix in the browser bundle and does not generate new policy-search runs.
 - G31 does not claim a real-world optimal organization policy, real AI-agent execution, Runtime Lab validation, Ollama participation, or production governance readiness.
+- G31 remote seal does not start G32, deploy GitHub Pages, tag a release, or change public demo deployment state.
 - The Vite build still reports the existing chunk-size warning for the main bundle.

@@ -1,0 +1,24 @@
+{
+  "task_id": "G31-REMOTE-SEAL-T001",
+  "slot_id": "CCA-CLI",
+  "dispatch_id": "G31-REMOTE-SEAL-T001-cca",
+  "status": "done",
+  "changed_files": [
+    ".runtime/tasks/G31-REMOTE-SEAL-T001/worker_heartbeat.json",
+    ".runtime/tasks/G31-REMOTE-SEAL-T001/worker_result.json",
+    ".codex/audits/G31-REMOTE-SEAL-T001-codex-audit.md",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.json",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.md"
+  ],
+  "tests_run_by_worker": [
+    "git rev-parse HEAD",
+    "git ls-remote origin main",
+    "test -f src/data/policySearchSummaries.ts",
+    "test -f src/ui/PolicySearchDashboard.tsx",
+    "test -f verification/G31/TEST_OUTPUT.txt",
+    "test -f verification/G31/BUILD_OUTPUT.txt"
+  ],
+  "known_risks": [
+    "Pre-existing Vite production warning: some chunks larger than 500 kB after minification; unrelated to G31, present in build output but does not block functionality"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "allowed_paths": [
+    ".runtime/tasks/G31-REMOTE-SEAL-T001/",
+    ".codex/tasks/G31-REMOTE-SEAL-T001-cca-request.json",
+    ".codex/plans/G31-REMOTE-SEAL-T001-codex-plan.md",
+    ".codex/plans/G31-REMOTE-SEAL-T001-execution-details.json",
+    ".codex/approvals/G31-REMOTE-SEAL-T001-boundary-approval.json",
+    ".codex/approvals/G31-REMOTE-SEAL-T001-external-egress-approval.json",
+    ".codex/receipts/G31-REMOTE-SEAL-T001-execution-receipt.json",
+    ".codex/audits/G31-REMOTE-SEAL-T001-codex-audit.md",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.json",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.md"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T09:31:53Z",
+  "approved_by": "codex",
+  "context_policy": "bounded-task-context-only",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "verification/G31/"
+  ],
+  "non_claims": [
+    "This approval authorizes CCA-bounded external LLM egress for this task only.",
+    "It does not authorize commits, pushes, release actions, secrets access, or changes outside allowed_paths."
+  ],
+  "provider": "Claude Code CLI / DeepSeek",
+  "reason": "User approved CCA Skill use of Claude Code CLI as the execution layer.",
+  "required_tests": [
+    "git rev-parse HEAD",
+    "git ls-remote origin main",
+    "test -f src/data/policySearchSummaries.ts",
+    "test -f src/ui/PolicySearchDashboard.tsx",
+    "test -f verification/G31/TEST_OUTPUT.txt",
+    "test -f verification/G31/BUILD_OUTPUT.txt"
+  ],
+  "task_id": "G31-REMOTE-SEAL-T001"
+}

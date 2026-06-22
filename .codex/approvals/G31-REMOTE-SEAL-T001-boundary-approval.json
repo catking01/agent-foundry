@@ -1,0 +1,39 @@
+{
+  "allowed_paths": [
+    ".runtime/tasks/G31-REMOTE-SEAL-T001/",
+    ".codex/tasks/G31-REMOTE-SEAL-T001-cca-request.json",
+    ".codex/plans/G31-REMOTE-SEAL-T001-codex-plan.md",
+    ".codex/plans/G31-REMOTE-SEAL-T001-execution-details.json",
+    ".codex/approvals/G31-REMOTE-SEAL-T001-boundary-approval.json",
+    ".codex/approvals/G31-REMOTE-SEAL-T001-external-egress-approval.json",
+    ".codex/receipts/G31-REMOTE-SEAL-T001-execution-receipt.json",
+    ".codex/audits/G31-REMOTE-SEAL-T001-codex-audit.md",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.json",
+    ".codex/reviews/G31-REMOTE-SEAL-T001-cca-review.md"
+  ],
+  "approved": true,
+  "approved_at": "2026-06-22T09:31:53Z",
+  "approved_by": "codex",
+  "disallowed_paths": [
+    ".git/",
+    ".runtime/sealed/",
+    ".runtime/private_archives/",
+    ".claude/",
+    ".codex/memories/",
+    ".env",
+    "**/*secret*",
+    "**/*token*",
+    "src/",
+    "verification/G31/"
+  ],
+  "human_acceptance_required": true,
+  "required_tests": [
+    "git rev-parse HEAD",
+    "git ls-remote origin main",
+    "test -f src/data/policySearchSummaries.ts",
+    "test -f src/ui/PolicySearchDashboard.tsx",
+    "test -f verification/G31/TEST_OUTPUT.txt",
+    "test -f verification/G31/BUILD_OUTPUT.txt"
+  ],
+  "task_id": "G31-REMOTE-SEAL-T001"
+}

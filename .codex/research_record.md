@@ -105,3 +105,18 @@
 - Validation: focused G31 tests PASS with 3 files and 23 tests; `npm run test` PASS with 53 files passed, 428 passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
 - G31 boundary scan: PASS; no `fetch(`, `ollama`, `AGENT_FOUNDRY_ENABLE_OLLAMA`, `PlayerAction`, `GameState`, `applyPlayerAction`, `onDispatch`, or `setState` references in the G31 data/UI/test path.
 - Non-claims preserved: deterministic simulator summary UI only; no real organization optimum, no real AI agents, no Runtime Lab validation, no Ollama participation, and no claim that a G30 policy is generally best for real organizations.
+
+## 2026-06-22 17:37:02 CST
+
+- Task: seal `G31_POLICY_SEARCH_RESEARCH_UI` remotely.
+- Work contract: push existing G31 implementation commit only, verify remote, record seal evidence, do not start G32, do not change G31 implementation, do not call Ollama, do not alter public gameplay pipeline, and do not claim real-world organization conclusions.
+- Local pre-push state: `git status --short` clean; `git rev-parse HEAD` = `c5916f412ce73c5e7c25e9b259d234411d4e4321`; recent log showed `c5916f4 G31: Add policy search research UI` on top of `7120112 G30: Add organization policy search`.
+- Push command: `git push origin main`.
+- Push result: PASS; remote updated `7120112..c5916f4 main -> main`.
+- Remote confirmation: `git ls-remote origin main` returned `c5916f412ce73c5e7c25e9b259d234411d4e4321 refs/heads/main`.
+- Required G31 file checks: PASS for `src/data/policySearchSummaries.ts`, `src/ui/PolicySearchDashboard.tsx`, `verification/G31/TEST_OUTPUT.txt`, and `verification/G31/BUILD_OUTPUT.txt`.
+- CCA remote-seal audit: ran task `G31-REMOTE-SEAL-T001` through Runtime Kernel / Claude Code CLI / DeepSeek using visible mode and `cca_real_project_default`.
+- CCA audit evidence: required remote-seal checks passed; worker later wrote `worker_result.json` with `status: done`; Claude-written audit/review reported clean audit, local HEAD equals remote main, required files exist, no Ollama/fetch/push/G32 boundary violation, and empty implementation diff.
+- CCA timing caveat: Runtime's original execution receipt captured `status: worker_result_missing` before the late worker result was observed, so Codex records the CCA run as useful audit evidence with a receipt timing caveat, not as the sole source of PASS.
+- Fresh post-seal validation: `npm run test` PASS with 53 files passed, 428 passed, 12 skipped; `npx tsc -b` PASS; `npx vite build --base=/agent-factory/` PASS with the existing chunk-size warning.
+- Seal verdict: G31 implementation commit `c5916f412ce73c5e7c25e9b259d234411d4e4321` is pushed and remotely verified; G31 remote seal is PASS. Seal evidence is recorded in this note and `verification/G31/REMOTE_SEAL.md`.

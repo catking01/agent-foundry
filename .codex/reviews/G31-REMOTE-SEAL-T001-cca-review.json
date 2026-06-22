@@ -1,0 +1,46 @@
+{
+  "review_id": "G31-REMOTE-SEAL-T001-cca-review",
+  "task_id": "G31-REMOTE-SEAL-T001",
+  "auditor": "Claude Code CLI (DeepSeek-v4-pro)",
+  "timestamp": "2026-06-22T09:32:10Z",
+  "commit_verified": {
+    "local_head": "c5916f412ce73c5e7c25e9b259d234411d4e4321",
+    "remote_main": "c5916f412ce73c5e7c25e9b259d234411d4e4321",
+    "match": true
+  },
+  "evidence_files": {
+    "src/data/policySearchSummaries.ts": {"exists": true, "lines": 254},
+    "src/ui/PolicySearchDashboard.tsx": {"exists": true, "lines": 411},
+    "verification/G31/TEST_OUTPUT.txt": {"exists": true, "content_verified": true},
+    "verification/G31/BUILD_OUTPUT.txt": {"exists": true, "content_verified": true}
+  },
+  "tests_run": [
+    {"command": "git rev-parse HEAD", "result": "c5916f412ce73c5e7c25e9b259d234411d4e4321"},
+    {"command": "git ls-remote origin main", "result": "c5916f412ce73c5e7c25e9b259d234411d4e4321"},
+    {"command": "test -f src/data/policySearchSummaries.ts", "result": "exists"},
+    {"command": "test -f src/ui/PolicySearchDashboard.tsx", "result": "exists"},
+    {"command": "test -f verification/G31/TEST_OUTPUT.txt", "result": "exists"},
+    {"command": "test -f verification/G31/BUILD_OUTPUT.txt", "result": "exists"}
+  ],
+  "boundary_checks": {
+    "read_only": true,
+    "no_ollama": true,
+    "no_fetch": true,
+    "no_push": true,
+    "no_g32": true,
+    "only_allowed_paths_written": true,
+    "diff": "empty"
+  },
+  "evidence_summary": {
+    "test_report": "53 files, 428 tests passed, 12 skipped - all PASS",
+    "targeted_tests": "3 files, 23 tests - all PASS",
+    "typescript": "npx tsc -b exit 0, no diagnostics",
+    "ascii_audit": "no non-ASCII characters in source files",
+    "pattern_audit": "no fetch/ollama/game-state patterns found",
+    "build": "npx vite build successful, 645 modules"
+  },
+  "residual_risks": [
+    "Pre-existing Vite chunk-size warning (>500 kB) unrelated to G31"
+  ],
+  "audit_conclusion": "CLEAN - all checks pass, no violations detected, refer to Codex for official PASS/FAIL"
+}
